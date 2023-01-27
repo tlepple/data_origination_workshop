@@ -11,3 +11,18 @@ Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 
 ## Objective:
 
+---
+
+###  Install Git tools and pull this repo.
+*  ssh into your new Ubuntu 20.04 instance and run the below command:
+
+---
+
+```
+sudo apt-get install git-all -y
+
+cd ~
+git clone https://github.com/tlepple/data_origination_workshop.git
+```
+
+---
