@@ -33,7 +33,7 @@ try:
         printException (exception)
         exit (1)
     cursor = conn.cursor()
-    try:k
+    try:
         fpg = dg.fake_person_generator(startKey, iterateVal, fake)
         for person in fpg:
 #            print(simplejson.dumps(person, ensure_ascii=False, default = myconverter))
