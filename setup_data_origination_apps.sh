@@ -331,10 +331,16 @@ rm ~/kafka_connect/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz
 wget https://jdbc.postgresql.org/download/postgresql-42.5.1.jar -P ~/kafka_connect/plugins/debezium-connector-postgres/
 
 ##########################################################################################
+#  copy jars to the kafka libs folder
+##########################################################################################
+cp ~/kafka_connect/plugins/debezium-connector-postgres/*.jar ~/kafka_connect/kafka_2.13-3.3.2/libs/
+
+##########################################################################################
 #  move & set permissions
 ##########################################################################################
 sudo mv ~/kafka_connect/ /home/datagen/
 sudo chown datagen:datagen -R /home/datagen
+
 
 ##########################################################################################
 # source this to set our new variables in current session
