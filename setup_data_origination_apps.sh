@@ -295,7 +295,9 @@ sudo pip install kafka-python uuid simplejson faker psycopg2-binary
 ##########################################################################################
 #  kafka connect downloads
 ##########################################################################################
-mkdir -p ~/kafka_connect/
+#  create some directories
+mkdir -p ~/kafka_connect/configuration
+mkdir -p ~/kafka_connect/plugins
 
 #  get the public key
 sudo wget https://dlcdn.apache.org/kafka/KEYS
@@ -308,6 +310,10 @@ tar -xzf ~/kafka_connect/kafka_2.13-3.3.2.tgz --directory ~/kafka_connect/
 
 # remove the tar file:
 rm ~/kafka_connect/kafka_2.13-3.3.2.tgz
+
+# copy the properties files:
+cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/configuration/
+
 ##########################################################################################
 # source this to set our new variables in current session
 ##########################################################################################
