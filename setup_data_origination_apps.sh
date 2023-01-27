@@ -320,9 +320,22 @@ cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/config
 ##########################################################################################
 wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.1.1.Final/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz -P ~/kafka_connect
 
-
 # untar this file:
 tar -xzf ~/kafka_connect/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz --directory ~/kafka_connect/plugins/
+
+# remove tar file
+rm ~/kafka_connect/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz
+##########################################################################################
+#  postgresql jdbc download
+##########################################################################################
+wget https://jdbc.postgresql.org/download/postgresql-42.5.1.jar -P ~/kafka_connect/plugins/debezium-connector-postgres/
+
+##########################################################################################
+#  move & set permissions
+##########################################################################################
+sudo mv ~/kafka_connect/ /home/datagen/
+sudo chown datagen:datagen -R /home/datagen
+
 ##########################################################################################
 # source this to set our new variables in current session
 ##########################################################################################
