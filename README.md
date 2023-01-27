@@ -6,7 +6,7 @@ Comments:  This repo will evolve over time with new items.
 Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 ---
 
-# Data Origination
+# Data Origination Workshop
 ---
 
 ## Objective:
