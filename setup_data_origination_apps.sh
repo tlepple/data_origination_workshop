@@ -16,7 +16,6 @@ curl -1sLf 'https://dl.redpanda.com/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.deb
 sudo apt-get update
 sudo apt install redpanda -y
 
-
 ##########################################################################################
 #   download and install 'rpk' - cli tools for working with red panda
 #########################################################################################
@@ -89,12 +88,10 @@ sudo mv ~/redpanda-console-config.yaml /etc/redpanda/redpanda-console-config.yam
 sudo chown redpanda:redpanda -R /etc/redpanda
 
 ##########################################################################################
-#  start the red panda & the console:
+#  start redpanda & the console:
 ##########################################################################################
 sudo systemctl start redpanda
 sudo systemctl start redpanda-console
-
-
 
 ##########################################################################################
 #  install a specific version of postgresql (version 14)
@@ -160,7 +157,6 @@ sudo chmod 600 /etc/postgresql/14/main/pg_hba.conf
 #  restart postgresql
 ##########################################################################################
 sudo systemctl restart postgresql
-
 
 ###########################################################################################################
 ## Create a DDL file for all our Db’s
