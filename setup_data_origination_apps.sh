@@ -281,7 +281,7 @@ sudo mkdir -p /home/datagen/datagen
 
 sudo chown datagen:datagen -R /home/datagen
 
-#########################################################################################
+##########################################################################################
 #   copy these files to the os user 'datagen' and set owner and permissions
 ##########################################################################################
 sudo mv ~/data_origination_workshop/datagen/* /home/datagen/datagen/
@@ -292,7 +292,21 @@ sudo chown datagen:datagen -R /home/datagen/
 ##########################################################################################
 sudo pip install kafka-python uuid simplejson faker psycopg2-binary
 
-#########################################################################################
+##########################################################################################
+#  kafka connect downloads
+##########################################################################################
+mkdir -p ~/kafka_connect/
+
+#  get the public key
+sudo wget https://dlcdn.apache.org/kafka/KEYS
+
+# get the file:
+wget https://dlcdn.apache.org/kafka/3.3.2/kafka_2.13-3.3.2.tgz -P ~/kafka_connect
+
+#untar the file:
+tar -xzf ~/kafka_connect/kafka_2.13-3.3.2.tgz --directory ~/kafka_connect/
+
+##########################################################################################
 # source this to set our new variables in current session
-#########################################################################################
+##########################################################################################
 bash -l
