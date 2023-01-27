@@ -257,7 +257,8 @@ sudo apt install openjdk-11-jdk -y
 ##########################################################################################
 #  create an osuser datagen
 ##########################################################################################
-sudo adduser --disabled-login datagen
+#sudo adduser --disabled-login datagen
+sudo useadd -m -s /usr/bin/bash datagen
 
 echo supersecret1 > passwd.txt
 echo supersecret1 >> passwd.txt
