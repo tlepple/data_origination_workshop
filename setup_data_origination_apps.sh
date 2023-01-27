@@ -314,6 +314,15 @@ rm ~/kafka_connect/kafka_2.13-3.3.2.tgz
 # copy the properties files:
 cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/configuration/
 
+
+##########################################################################################
+#  debezium download
+##########################################################################################
+wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.1.1.Final/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz -P ~/kafka_connect
+
+
+# untar this file:
+tar -xzf ~/kafka_connect/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz --directory ~/kafka_connect/plugins/
 ##########################################################################################
 # source this to set our new variables in current session
 ##########################################################################################
