@@ -306,6 +306,8 @@ wget https://dlcdn.apache.org/kafka/3.3.2/kafka_2.13-3.3.2.tgz -P ~/kafka_connec
 #untar the file:
 tar -xzf ~/kafka_connect/kafka_2.13-3.3.2.tgz --directory ~/kafka_connect/
 
+# remove the tar file:
+rm ~/kafka_connect/kafka_2.13-3.3.2.tgz
 ##########################################################################################
 # source this to set our new variables in current session
 ##########################################################################################
