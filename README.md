@@ -31,10 +31,6 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 
 ---
 
-####  This script will setup and confgure the following tools on this one host:
- 
----
-
 ```
 #  run it:
 chomod +x ~/data_origination_workshop/setup_data_origination_apps.sh
