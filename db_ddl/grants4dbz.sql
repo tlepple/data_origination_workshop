@@ -1,0 +1,1 @@
+GRANT ALL ON ALL TABLES IN SCHEMA datagen TO datagen;
