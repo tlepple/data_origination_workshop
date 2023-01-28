@@ -16,3 +16,4 @@ CREATE TABLE datagen.customer
         cust_id integer NOT NULL,
     CONSTRAINT customer_pkey PRIMARY KEY (cust_id)
 );
+CREATE PUBLICATION dbz_publication FOR TABLE datagen.customer;
