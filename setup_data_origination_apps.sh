@@ -178,9 +178,9 @@ rm -f passwd.txt
 ##########################################################################################
 ## Run the sql file to create the schema for all DB’s
 ##########################################################################################
-sudo -u postgres psql < ~/db_ddl/create_user_datagen.sql
-sudo -u datagen psql < ~/db_ddl/create_ddl_datagen.sql
-sudo -u datagen psql < ~/db_ddl/grants4dbz.sql
+sudo -u postgres psql < ~/data_origination_workshop/db_ddl/create_user_datagen.sql
+sudo -u datagen psql < ~/data_origination_workshop/db_ddl/create_ddl_datagen.sql
+sudo -u datagen psql < ~/data_origination_workshop/db_ddl/grants4dbz.sql
 
 ##########################################################################################
 #  create a directory for data assets in our new 'datagen' user
