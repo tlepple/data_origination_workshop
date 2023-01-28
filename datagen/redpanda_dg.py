@@ -1,10 +1,9 @@
-import time
+from __future__ import print_function
 from faker import Faker
 from datagenerator import DataGenerator
-import simplejson as json
+import simplejson
 import argparse
-from kafka import KafkaProducer
-
+import psycopg2
 #########################################################################################
 #       Define variables
 #########################################################################################
@@ -14,61 +13,57 @@ parser = argparse.ArgumentParser()
 
 # define our required arguments to pass in:
 parser.add_argument("startingCustomerID", help="Enter int value to assign to the first customerID field", type=int)
-parser.add_argument("recordCount", help="Enter int value for desired number of records per group", type=int)
-parser.add_argument("loopCount", help="Enter int value for iteration count", type=int)
+parser.add_argument("recordCount", help="Enter int value for desired number of records", type=int)
 
 # parse these args
 args = parser.parse_args()
 
 # assign args to vars:
 startKey = int(args.startingCustomerID)
-iterateVal =  int(args.recordCount)
-stopVal = int(args.loopCount)
+stopVal =  int(args.recordCount)
 
-# Define some functions:
+
+# functions to display errors
+def printf (format,*args):
+        sys.stdout.write (format % args)
+def printException (exception):
+        error, = exception.args
+        printf("Error code = %s\n",error.code);
+        printf("Error message = %s\n",error.message);
 def myconverter(obj):
-    if isinstance(obj, (datetime.datetime)):
+        if isinstance(obj, (datetime.datetime)):
                 return obj.__str__()
-
-def encode_complex(obj):
-    if isinstance(obj, complex):
-        return [ojb.real, obj.imag]
-    raise TypeError(repr(obj) + " is not JSON serializable")
-
-# Messages will be serialized as JSON
-def my_serializer(message):
-    return json.dumps(message).encode('utf-8')
-
-#  define variable for our producer
-producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=my_serializer)
-
 #########################################################################################
 #       Code execution below
 #########################################################################################
-for i in range(stopVal):
-        fpg = dg.fake_person_generator(startKey, iterateVal, fake)
+try:
+    try:
+        conn = psycopg2.connect(host="127.0.0.1",database="datagen", user="datagen", password="supersecret1")
+        print("Connection Established")
+    except psycopg2.Error as exception:
+        printf ('Failed to connect to database')
+        printException (exception)
+        exit (1)
+    cursor = conn.cursor()
+    try:
+        fpg = dg.fake_person_generator(startKey, stopVal, fake)
         for person in fpg:
-                #print(json.dumps(person, ensure_ascii=False, default = myconverter))
-                #print("\n")
-                data = json.dumps(person, default = encode_complex)
-                print(data)
-                #print ("dataVarType", type(data))
-                # convert json string to dict obj
-                dictData = json.loads(data)
-                producer.send('dgCustomer', dictData)
-                #print("\n")
-        producer.flush()
-        print("Customer Done.")
-        print('\n')
-        txn = dg.fake_txn_generator(startKey, iterateVal, fake)
-        for tranx in txn:
-                #print(json.dumps(tranx, ensure_ascii=False, default = myconverter))
-                txnData = json.dumps(tranx, default = encode_complex)
-                print(txnData)
-                producer.send('dgTxn', tranx)
-        producer.flush()
-        print("Transaction Done.")
-        print('\n')
-# increment and sleep
-        startKey += iterateVal
-        time.sleep(2)
+            json_out = simplejson.dumps(person, ensure_ascii=False, default = myconverter)
+            print(json_out)
+            insert_stmt = "SELECT datagen.insert_from_json('" + json_out +"');"
+            cursor.execute(insert_stmt)
+        print("Records inserted successfully")
+    except psycopg2.Error as exception:
+        printf ('Failed to insert\n')
+        printException (exception)
+        exit (1)
+    finally:
+        if(conn):
+            conn.commit()
+            cursor.close()
+            conn.close()
+            print("PostgreSQL connection is closed")
+except (Exception, psycopg2.Error) as error:
+    print("Something else went wrong...\n", error)
+finally:
+    print("script complete!")
