@@ -72,3 +72,4 @@ ON CONFLICT (cust_id) DO UPDATE SET
 
 END;
 $BODY$;
+CREATE PUBLICATION dbz_publication FOR TABLE datagen.customer;
