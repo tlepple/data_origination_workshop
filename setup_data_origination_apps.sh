@@ -4,7 +4,6 @@
 #  install some OS utilities
 #########################################################################################
 sudo apt-get install wget curl apt-transport-https unzip -y
-
 sudo apt-get update
 
 ##########################################################################################
