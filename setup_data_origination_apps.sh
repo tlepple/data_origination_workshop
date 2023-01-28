@@ -158,12 +158,6 @@ sudo chmod 600 /etc/postgresql/14/main/pg_hba.conf
 ##########################################################################################
 sudo systemctl restart postgresql
 
-
-
-CREATE PUBLICATION dbz_publication FOR TABLE datagen.customer;
-GRANT ALL ON ALL TABLES IN SCHEMA datagen TO datagen;
-
-
 ##########################################################################################
 #  install Java 11
 ##########################################################################################
@@ -186,14 +180,13 @@ rm -f passwd.txt
 ## Run the sql file to create the schema for all DB’s
 ##########################################################################################
 sudo -u postgres psql < ~/create_user_datagen.sql
-
 sudo -u datagen psql < ~/create_ddl_datagen.sql
+sudo -u postgres psql < ~/grants4dbz.sql
 
 ##########################################################################################
 #  create a directory for data assets in our new 'datagen' user
 ##########################################################################################
 sudo mkdir -p /home/datagen/datagen
-
 sudo chown datagen:datagen -R /home/datagen
 
 ##########################################################################################
@@ -229,7 +222,6 @@ rm ~/kafka_connect/kafka_2.13-3.3.2.tgz
 # copy the properties files:
 cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/configuration/
 
-
 ##########################################################################################
 #  debezium download
 ##########################################################################################
@@ -255,7 +247,6 @@ cp ~/kafka_connect/plugins/debezium-connector-postgres/*.jar ~/kafka_connect/kaf
 ##########################################################################################
 sudo mv ~/kafka_connect/ /home/datagen/
 sudo chown datagen:datagen -R /home/datagen
-
 
 ##########################################################################################
 # source this to set our new variables in current session
