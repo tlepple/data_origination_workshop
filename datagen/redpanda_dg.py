@@ -2,7 +2,7 @@ import time
 from faker import Faker
 from datagenerator import DataGenerator
 import simplejson as json
-import sys
+import argparse
 from kafka import KafkaProducer
 
 #########################################################################################
@@ -10,11 +10,22 @@ from kafka import KafkaProducer
 #########################################################################################
 dg = DataGenerator()
 fake = Faker() # <--- Don't Forgot this
-startKey = int(sys.argv[1])
-iterateVal = int(sys.argv[2])
-stopVal = int(sys.argv[3])
+parser = argparse.ArgumentParser()
 
-# functions to display errors
+# define our required arguments to pass in:
+parser.add_argument("startingCustomerID", help="Enter int value to assign to the first customerID field", type=int)
+parser.add_argument("recordCount", help="Enter int value for desired number of records per group", type=int)
+parser.add_argument("loopCount", help="Enter int value for iteration count", type=int)
+
+# parse these args
+args = parser.parse_args()
+
+# assign args to vars:
+startKey = int(args.startingCustomerID)
+iterateVal =  int(args.recordCount)
+stopVal = int(args.loopCount)
+
+# Define some functions:
 def myconverter(obj):
     if isinstance(obj, (datetime.datetime)):
                 return obj.__str__()
@@ -28,10 +39,7 @@ def encode_complex(obj):
 def my_serializer(message):
     return json.dumps(message).encode('utf-8')
 
-
-#producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=lambda v: simplejson.dumps(v, default=myconverter).encode('utf-8'))
-#producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=lambda v: json.dumps(v, default=encode_complex).encode('utf-8'))
-#producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+#  define variable for our producer
 producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=my_serializer)
 
 #########################################################################################
