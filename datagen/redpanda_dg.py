@@ -2,7 +2,7 @@ import time
 from faker import Faker
 from datagenerator import DataGenerator
 import simplejson as json
-#import sys
+
 import argparse
 
 from kafka import KafkaProducer
@@ -12,10 +12,6 @@ from kafka import KafkaProducer
 #########################################################################################
 dg = DataGenerator()
 fake = Faker() # <--- Don't Forgot this
-
-#startKey = int(sys.argv[1])
-#iterateVal = int(sys.argv[2])
-#stopVal = int(sys.argv[3])
 parser = argparse.ArgumentParser()
 
 # define our required arguments to pass in:
