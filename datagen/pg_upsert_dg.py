@@ -2,27 +2,39 @@ from __future__ import print_function
 from faker import Faker
 from datagenerator import DataGenerator
 import simplejson
-import sys
+import argparse
 import psycopg2
 #########################################################################################
-#	Define variables
+#       Define variables
 #########################################################################################
 dg = DataGenerator()
 fake = Faker() # <--- Don't Forgot this
-startKey = int(sys.argv[1])
-iterateVal = int(sys.argv[2])
+parser = argparse.ArgumentParser()
+
+# define our required arguments to pass in:
+parser.add_argument("startingCustomerID", help="Enter int value to assign to the first customerID field", type=int)
+parser.add_argument("recordCount", help="Enter int value for desired number of records", type=int)
+
+# parse these args
+args = parser.parse_args()
+
+# assign args to vars:
+startKey = int(args.startingCustomerID)
+stopVal =  int(args.recordCount)
+
+
 # functions to display errors
 def printf (format,*args):
-	sys.stdout.write (format % args)
+        sys.stdout.write (format % args)
 def printException (exception):
-	error, = exception.args
-	printf("Error code = %s\n",error.code);
-	printf("Error message = %s\n",error.message);
+        error, = exception.args
+        printf("Error code = %s\n",error.code);
+        printf("Error message = %s\n",error.message);
 def myconverter(obj):
-	if isinstance(obj, (datetime.datetime)):
-		return obj.__str__()
+        if isinstance(obj, (datetime.datetime)):
+                return obj.__str__()
 #########################################################################################
-#	Code execution below
+#       Code execution below
 #########################################################################################
 try:
     try:
@@ -34,9 +46,8 @@ try:
         exit (1)
     cursor = conn.cursor()
     try:
-        fpg = dg.fake_person_generator(startKey, iterateVal, fake)
+        fpg = dg.fake_person_generator(startKey, stopVal, fake)
         for person in fpg:
-#            print(simplejson.dumps(person, ensure_ascii=False, default = myconverter))
             json_out = simplejson.dumps(person, ensure_ascii=False, default = myconverter)
             print(json_out)
             insert_stmt = "SELECT datagen.insert_from_json('" + json_out +"');"
