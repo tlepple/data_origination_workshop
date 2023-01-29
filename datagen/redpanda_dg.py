@@ -51,31 +51,50 @@ producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=my_
 #########################################################################################
 #       Code execution below
 #########################################################################################
-for i in range(stopVal):
-        fpg = dg.fake_person_generator(startKey, iterateVal, fake)
-        for person in fpg:
-                #print(json.dumps(person, ensure_ascii=False, default = myconverter))
-                #print("\n")
-                data = json.dumps(person, default = encode_complex)
-                print(data)
-                #print ("dataVarType", type(data))
-                # convert json string to dict obj
-                dictData = json.loads(data)
-                producer.send('dgCustomer', dictData)
-                #print("\n")
-        producer.flush()
-        print("Customer Done.")
-        print('\n')
-        txn = dg.fake_txn_generator(startKey, iterateVal, fake)
-        for tranx in txn:
-                #print(json.dumps(tranx, ensure_ascii=False, default = myconverter))
-                txnData = json.dumps(tranx, default = encode_complex)
-                print(txnData)
-                producer.send('dgTxn', tranx)
-        producer.flush()
-        print("Transaction Done.")
-        print('\n')
-# increment and sleep
-        startKey += iterateVal
-        time.sleep(2)
+try:
+     for i in range(stopVal):
+        # person start here:
+        try:
+             fpg = dg.fake_person_generator(startKey, iterateVal, fake)
+             for person in fpg:
+                  #print(json.dumps(person, ensure_ascii=False, default = myconverter))
+                  #print("\n")
+                  data = json.dumps(person, default = encode_complex)
+                  print(data)
+                  #print ("dataVarType", type(data))
+                  # convert json string to dict obj
+                  dictData = json.loads(data)
+                  producer.send('dgCustomer', dictData)
+                  #print("\n")
+             producer.flush()
+             print("Customer Done.")
+             print('\n')
+        except:
+             print("failing in person generator")
+             producer.flush()
+
+        # txn start here:
+        try:
+             txn = dg.fake_txn_generator(startKey, iterateVal, fake)
+             for tranx in txn:
+                     #print(json.dumps(tranx, ensure_ascii=False, default = myconverter))
+                     txnData = json.dumps(tranx, default = encode_complex)
+                     print(txnData)
+                     producer.send('dgTxn', tranx)
+             producer.flush()
+             print("Transaction Done.")
+             print('\n')
+
+        #txn ends here:
+        except:
+            print("failing in txn generator")
+            producer.flush()
+       # increment counter and sleep
+            startKey += iterateVal
+            time.sleep(2)
+
+except:
+     print("failing in loop.")
+finally:
+     print("script complete")
 
