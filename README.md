@@ -188,5 +188,7 @@ Transaction Done.
 
 *  insert pic here:
 
+Click on the topic `dgCustomer` from the list.
 
+*  insert pic here:
   
