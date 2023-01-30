@@ -41,14 +41,6 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 ---
 ---
 
-##  Let's check some things out.
-  *  Open a browswer and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
-
----
-  ###  screenshot goes here:
-  
----
-
 ###  Explore the Red Panda CLI tool `RPK`  
   *   Add link to RPK descriptions here:
 
@@ -121,13 +113,16 @@ rpk topic consume movie_list --num 2
 
 ---
 
-###  Open panda gui and review the topics:
 
-*  screenshots here:
+##  Let's explore the Red Panda GUI.
+  *  Open a browswer and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
 
 ---
+  ###  screenshot goes here:
+  
 
-####  Delete the topic:
+
+####  Delete the topic from the CLI:
 
 ```
 rpk topic delete movie_list
