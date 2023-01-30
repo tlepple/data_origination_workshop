@@ -119,3 +119,22 @@ rpk topic consume movie_list --num 2
 
 ```
 
+---
+
+###  Open panda gui and review the topics:
+
+*  screenshots here:
+
+---
+
+####  Delete the topic:
+
+```
+rpk topic delete movie_list
+
+```
+
+---
+
+#  Document datagenerator steps below here:
+
