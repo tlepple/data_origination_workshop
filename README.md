@@ -160,7 +160,7 @@ cd ~/datagen
 python3 redpanda_dg.py 10 3 2
 ```
 
-This will load sample data into our two new topics and write out those records to your terminal that looks something like this:
+This will load sample json data into our two new topics and write out those records to your terminal that looks something like this:
 
 ```
 {"last_name": "Mcmillan", "first_name": "Linda", "street_address": "7471 Charlotte Fall Suite 835", "city": "Lake Richardborough", "state": "OH", "zip_code": "25649", "email": "tim47@example.org", "home_phone": "001-133-135-5972", "mobile": "001-942-819-7717", "ssn": "321-16-7039", "job_title": "Tourism officer", "create_date": "2022-12-19 20:45:34", "cust_id": 10}
