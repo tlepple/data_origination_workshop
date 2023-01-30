@@ -182,3 +182,11 @@ Customer Done.
 Transaction Done.
 
 ```
+
+####  Let's Explore those messages in our topics in the Red Panda GUI in our browser
+  * `http:\\<your ip address>:8080`  Make sure to click the `Topics` tab in the left side of our Console Application:
+
+*  insert pic here:
+
+
+  
