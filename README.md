@@ -102,6 +102,20 @@ rpk topic consume movie_list --num 2
 ####  Expected Output:
 
 ```
+{
+  "topic": "movie_list",
+  "value": "Top Gun Maverick",
+  "timestamp": 1675085635701,
+  "partition": 0,
+  "offset": 0
+}
+{
+  "topic": "movie_list",
+  "value": "Star Wars - Return of the Jedi",
+  "timestamp": 1675085644895,
+  "partition": 0,
+  "offset": 1
+}
 
 ```
 
