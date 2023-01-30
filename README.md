@@ -80,6 +80,16 @@ Star Wars - Return of the Jedi
 
   *  exit producer:  `<ctrl> + d`
 
+
+
+#### Output:
+```
+Produced to partition 0 at offset 0 with timestamp 1675085635701.
+Star Wars - Return of the Jedi
+Produced to partition 0 at offset 1 with timestamp 1675085644895.
+
+```
+
 ####  Let's consume these messages from CLI:
 
 ```
