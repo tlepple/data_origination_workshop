@@ -129,6 +129,7 @@ rpk topic delete movie_list
 ---
 
 #  Stream some data to our topics:
+
     We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed in the build.  From a terminal window run:
 
 ```
