@@ -93,7 +93,7 @@ Produced to partition 0 at offset 1 with timestamp 1675085644895.
 ####  Let's consume these messages from CLI:
 
 ```
-rpk top consume movie_list --num 2
+rpk topic consume movie_list --num 2
 
 ```
 
