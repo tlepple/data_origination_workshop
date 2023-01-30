@@ -67,7 +67,6 @@ Top Gun Maverick
 
 #  Entry 2:
 Star Wars - Return of the Jedi
-
 ```
 
   *  exit producer:  `<ctrl> + d`
@@ -86,7 +85,6 @@ Produced to partition 0 at offset 1 with timestamp 1675085644895.
 
 ```
 rpk topic consume movie_list --num 2
-
 ```
 
 ---
@@ -126,7 +124,6 @@ rpk topic consume movie_list --num 2
 
 ```
 rpk topic delete movie_list
-
 ```
 
 ---
