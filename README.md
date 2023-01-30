@@ -130,10 +130,18 @@ rpk topic delete movie_list
 
 #  Stream some data to our topics:
 
-We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed in the build.  From a terminal window run:
+We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed during setup.  From a terminal window run:
 
 ```
 su - datagen
+```
+---
+
+###  Let's create some topics for our data generator:
+
+```
+rpk topic create dgCustomer
+rpk topic create dgTxn
 ```
 
 
