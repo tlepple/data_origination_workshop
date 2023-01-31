@@ -51,7 +51,7 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 ---
 
 ### Start the build:
-
+  *  This should complete within 5 minutes.
 ---
 
 ```
