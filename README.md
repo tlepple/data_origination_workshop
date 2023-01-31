@@ -108,6 +108,13 @@ rpk topic consume movie_list --num 2
 }
 
 ```
+---
+
+####  Delete the topic from the CLI:
+
+```
+rpk topic delete movie_list
+```
 
 ---
 
