@@ -1183,3 +1183,30 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 ---
 #####  Exit out of Kafka Connect with: `[<control> + c`
 ---
+---
+
+---
+### Explore our new Redpanda topic `pg_datagen2panda.datagen.customer` in the console from a browser:
+`
+---
+#####  Console View of topic:
+
+  ![](./images/panda_topic_view_connect_topic.png)
+  
+---
+---
+##### Click on the topic `pg_datagen2panda.datagen.customer` from the list.
+
+---
+
+ ![](./images/connect_output_summary_msg.png)
+ 
+---
+
+##### Click on the topic '+' icon under the `Value` column to see the record details of a message.
+
+---
+
+ ![](./images/connect_output_detail_msg.png)
+ 
+---
