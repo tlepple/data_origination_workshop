@@ -13,7 +13,7 @@ Tags:  Redpanda | PostgreSQL | Kafka Connect | Python
 ## Objective:
   *  To evaluate Red Panda and Kafka Connect and setup a data origination system that streams events to this platform.  In an upcoming workshop we will integrate this data and stream to Apache Iceberg.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
 
-My goal in this workshop was to go a little deeper than your typical `How To` guide that uses docker to spin up an enviroment. I am old school and like to know how things are wired together. I took the time to install all the components manually and then I built the setup script in this repo so others could try it out too. Please take the time to review that script `setup_data_origination_apps.sh`. Hopefully it becomes a reference for you one day.
+My goal in this workshop was to go a little deeper than your typical `How To` guide that uses docker to spin up an environment. I am old school and like to know how things are wired together. I took the time to install all the components manually and then I built the setup script in this repo so others could try it out too. Please take the time to review that script `setup_data_origination_apps.sh`. Hopefully it becomes a reference for you one day.
 
 ---
 ---
@@ -22,7 +22,7 @@ My goal in this workshop was to go a little deeper than your typical `How To` gu
 
 ---
 
-The setup script will build and install our `Data Origination Platform` onto a single linux instances.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance and a stand-alone Kafka Connect instance and configures them all to work together.   
+The setup script will build and install our `Data Origination Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance and a stand-alone Kafka Connect instance and configures them all to work together.   
  
 ---
 ---
@@ -86,7 +86,7 @@ Event streaming lets you extract value out of each event by analyzing, mining, o
 
 
 ####  Redpanda differentiators:
-Redpanda is less complex and less costly than any other commericial mission-critical event streaming platform. It's fast, it's easy, and it keeps your data safe.
+Redpanda is less complex and less costly than any other commerecial mission-critical event streaming platform. It's fast, it's easy, and it keeps your data safe.
 
   *  Redpanda is designed for maximum performance on any data streaming workload.
 
@@ -278,7 +278,7 @@ Transaction Done.
  
 ---
 
-##### Click on the topic '+' icon under the `Value` column to see the record details a message.
+##### Click on the topic '+' icon under the `Value` column to see the record details of a message.
 
 ---
 
@@ -304,7 +304,7 @@ Kafka Connect is a tool for scalable and reliable data import/export between Apa
 
 ##### Why use these tools together?
 
-By combining CDC with Kafa Connect we easily roll out a new system that could elimate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. For more information on that see my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) where we explore one of these new data lakes.  This approach requires very little configuration and will have a minimal performance impact our your legacy databases.   It will also allow you harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
+By combining CDC with Kafa Connect we easily roll out a new system that could eliminate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. For more information on that see my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) where we explore one of these new data lakes.  This approach requires very little configuration and will have a minimal performance impact on your legacy databases.   It will also allow you harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
 
 ---
 ---
@@ -360,7 +360,7 @@ script complete!
 
 ####  Kafka Connect Setup:
 
-In the setup scipt, we downloaded and installed all the components and needed jar files that Kafka Connect will use.  Please review that setup file again if you want a refresher.  The script also configured the settings for our integration of PostgreSQL with Red Panda.   Let's review the configuration files that make it all work.
+In the setup script, we downloaded and installed all the components and needed jar files that Kafka Connect will use.  Please review that setup file again if you want a refresher.  The script also configured the settings for our integration of PostgreSQL with Red Panda.   Let's review the configuration files that make it all work.
 
 ---
 
@@ -433,7 +433,7 @@ topic.prefix=pg_datagen2panda
 ---
 ###  Start the `Kafka Connect` processor:
   *  This will start our processor and pull all the CDC records out of the PostgreSQL database for our 'customer' table and ship them to a new Redpanda topic.  
-  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the procecessor when it completes use the commands `<control> + c`.
+  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the processor when it completes use the commands `<control> + c`.
 ---
 
 ##### Start Kafka Connect:
@@ -1221,7 +1221,7 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 ###  Observations:
 ---
 
-As you can see this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database.   This will become invaluable in our next workshop where we will setup the integration bewteen this workhop and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).
+As you can see this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database.   This will become invaluable in our next workshop where we will set up the integration between this workshop and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).
 
 ---
 ---
