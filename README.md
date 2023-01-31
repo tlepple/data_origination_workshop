@@ -10,7 +10,7 @@ Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 ---
 
 ## Objective:
-  *  To evaluate Red Panda and Kafka Connect and setup a data origination system that streams events to this platform.  In an upcoming workshop we will integrate this data and stream to Apache Iceberg.   Here is a link to the [Apache Iceberg Integration Workshop[(https://github.com/tlepple/iceberg-intro-workshop) earlier. 
+  *  To evaluate Red Panda and Kafka Connect and setup a data origination system that streams events to this platform.  In an upcoming workshop we will integrate this data and stream to Apache Iceberg.   Here is a link to the [Apache Iceberg Integration Workshop](https://github.com/tlepple/iceberg-intro-workshop) earlier. 
 ---
 
 ###  Install Git tools and pull this repo.
