@@ -320,15 +320,15 @@ In these next few exercises we will load data into a sql database and configure 
 
 #### Data Generator to load data into PostgreSQL:
 
-There is a second data generator application that will stream json record and load them directly into a Postgresql database.
+There is a second data generator application that will stream json records and load them directly into a Postgresql database.
 
 ---
 ---
 
 #####  Data Generator Notes for stream to PostgreSQL:   
-
-The data generator is written in python and accepts 2 integer arguments:  
-  *  An integer value for the `customer key`.
+---
+This data generator application accepts 2 integer arguments:  
+  *  An integer value for the starting `customer key`.
   *  An integer value for N number of records to produce and load to the database.
 
 #####  Call the Data Generator:
@@ -342,9 +342,7 @@ python3 pg_upsert_dg.py 10 4
 ```
 
 ##### Sample Output:
-
 ---
-
 ```
 Connection Established
 {"last_name": "Carson", "first_name": "Aaron", "street_address": "124 Campbell Overpass", "city": "Cummingsburgh", "state": "MT", "zip_code": "76816", "email": "aaron08@example.net", "home_phone": "786-888-8409x21666", "mobile": "001-737-014-7684x1271", "ssn": "394-84-0730", "job_title": "Tourist information centre manager", "create_date": "2022-12-04 00:00:13", "cust_id": 10}
@@ -356,7 +354,6 @@ PostgreSQL connection is closed
 script complete!
 
 ```
-
 ---
 ---
 
