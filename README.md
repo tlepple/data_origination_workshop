@@ -52,7 +52,7 @@ Consumers are client applications that subscribe to Redpanda topics to asynchron
 
 Redpanda decouples producers from consumers to allow for asynchronous event processing, event tracking, event manipulation, and event archiving. Producers and consumers interact with Redpanda using the Apache Kafka® API.
 
-| Syntax      | Description |
+| Event-driven architecture (Redpanda)     | Message-driven architecture |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
