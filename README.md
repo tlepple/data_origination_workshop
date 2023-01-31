@@ -13,6 +13,16 @@ Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
   *  To evaluate Red Panda and Kafka Connect and setup a data origination system that streams events to this platform.  In an upcoming workshop we will integrate this data and stream to Apache Iceberg.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
 ---
 
+
+###  Pre-Requisites:
+
+---
+
+ * I built this on a new install of Ubuntu Server
+ * Version: 20.04.5 LTS 
+ * Instance Specs: (min 4 core w/ 8 GB ram & 30 GB of disk) -- add more RAM if you have it to spare.
+
+---
 ###  Install Git tools and pull this repo.
 *  ssh into your new Ubuntu 20.04 instance and run the below command:
 
