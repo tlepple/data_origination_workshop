@@ -148,11 +148,18 @@ rpk topic create dgCustomer
 rpk topic create dgTxn
 ```
 ---
+##### Console view of our new `Topics`:
+  ![](./images/panda_view_dg_load_topics.png)
+---
 
-####  Data Generator:
+---
+---
+
+### Data Generator:
 
 I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.
 
+---
 ---
 
 #####  Data Generator Notes:   
