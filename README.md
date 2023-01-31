@@ -226,5 +226,8 @@ Transaction Done.
 ---
 ---
 Explore Change Data Capture (CDC) via `Kafka Connect`
+
+Change Data Capture (CDC) is a database technique used to track and record changes made to data in a database. The changes are captured as soon as they occur and stored in a separate log or table, allowing applications to access the most up-to-date information without having to perform a full database query. CDC is often used for real-time data integration and data replication, enabling organizations to maintain a consistent view of their data across multiple systems.
+
 ---
 ---
