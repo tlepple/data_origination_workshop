@@ -125,11 +125,13 @@ rpk topic produce movie_list
 
 ####  Add some messages to the `movie_list` topic:
 
-```
-#  Entry 1:
-Top Gun Maverick
 
-#  Entry 2:
+######  Entry 1:
+```
+Top Gun Maverick
+```
+######  Entry 2:
+```
 Star Wars - Return of the Jedi
 ```
 
