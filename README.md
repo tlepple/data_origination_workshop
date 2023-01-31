@@ -1,8 +1,8 @@
 ---
 Title:  Data Origination Workshop 
 Author:  Tim Lepple
-Last Updated:  1.30.2023
-Comments:  This repo will evolve over time with new items.
+Last Updated:  1.31.2023
+Comments:  This repo will setup a data integration platform to evaluate some technology.
 Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 ---
 
