@@ -128,6 +128,7 @@ rpk topic delete movie_list
 ---
 
 #  Stream some data to our topics:
+---
 
 We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed during setup.  From a terminal window run:
 
@@ -136,21 +137,28 @@ su - datagen
 ```
 ---
 
-###  Let's create some topics for our data generator:
+#####  Let's create some topics for our data generator using the CLI:
 
 ```
 rpk topic create dgCustomer
 rpk topic create dgTxn
 ```
+---
 
-####  Run the data generator and load some fake data to our 2 new topics.   
+####  Data Generator:
 
-The data generator is written in python and accepts 3 integer parameters.  
+I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.
+
+---
+
+#####  Data Generator Notes:   
+
+The data generator is written in python and accepts 3 integer parameters:  
   *  An integer value for the `customer key`.
   *  An integer value for the N number of groups to produce in small batches.
   *  An integer value for N number of times to loop until it will exit the script.
 
-####  Call the Data Generator:
+#####  Call the Data Generator:
 
 ```
 cd ~/datagen
@@ -159,7 +167,11 @@ cd ~/datagen
 python3 redpanda_dg.py 10 3 2
 ```
 
+##### Sample Output:
+
 This will load sample json data into our two new topics and write out those records to your terminal that looks something like this:
+
+---
 
 ```
 {"last_name": "Mcmillan", "first_name": "Linda", "street_address": "7471 Charlotte Fall Suite 835", "city": "Lake Richardborough", "state": "OH", "zip_code": "25649", "email": "tim47@example.org", "home_phone": "001-133-135-5972", "mobile": "001-942-819-7717", "ssn": "321-16-7039", "job_title": "Tourism officer", "create_date": "2022-12-19 20:45:34", "cust_id": 10}
@@ -181,13 +193,14 @@ Customer Done.
 Transaction Done.
 
 ```
+---
 
-####  Let's Explore those messages in our topics in the Red Panda GUI in our browser
+####  Explore Data in the Red Panda Console from a browser
   * `http:\\<your ip address>:8080`  Make sure to click the `Topics` tab in the left side of our Console Application:
 
 *  insert pic here:
 
-Click on the topic `dgCustomer` from the list.
+##### Click on the topic `dgCustomer` from the list.
 
 *  insert pic here:
   
