@@ -225,9 +225,19 @@ Transaction Done.
  
 ---
 ---
-Explore Change Data Capture (CDC) via `Kafka Connect`
+## Explore Change Data Capture (CDC) via `Kafka Connect`
+
+---
+
+##### Define Change Data Capture (CDC):
 
 Change Data Capture (CDC) is a database technique used to track and record changes made to data in a database. The changes are captured as soon as they occur and stored in a separate log or table, allowing applications to access the most up-to-date information without having to perform a full database query. CDC is often used for real-time data integration and data replication, enabling organizations to maintain a consistent view of their data across multiple systems.
+
+---
+
+##### Define `Kafka Connect`:
+
+Kafka Connect is a tool for scalable and reliable data import/export between Apache Kafka and other data systems. It allows you to integrate Kafka with sources such as databases, key-value stores, and file systems, as well as with sinks such as data warehouses and NoSQL databases. Kafka Connect provides pre-built connectors for popular data sources, and also supports custom connectors developed by users. It uses the publish-subscribe model of Kafka to ensure that data is transported between systems in a fault-tolerant and scalable manner.
 
 ---
 ---
