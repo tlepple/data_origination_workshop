@@ -40,7 +40,7 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 
 ---
 ---
-###  What is Red Panda:
+###  What is Red Panda?
 
 ---
 
