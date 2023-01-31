@@ -175,7 +175,7 @@ rpk topic consume movie_list --num 2
 ---
 
 ##  Explore the Red Panda GUI:
-  *  Open a browswer and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
+  *  Open a browser and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
 
 ---
 ---
