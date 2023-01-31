@@ -105,11 +105,14 @@ Redpanda is less complex and less costly than any other commericial mission-crit
 
 ---
 ---
+###  Hands On Workshop begins here:
+---
+---
 
-###  Explore the Red Panda CLI tool `RPK`  
-  *   Add link to RPK descriptions here:
+####  Explore the Red Panda CLI tool `RPK`  
+  *   Redpanda Keeper `rpk` is Redpanda's command line interface (CLI) utility.  Detailed documentation of the CLI can be explored further here: [Redpanda Keeper Commands](https://docs.redpanda.com/docs/reference/rpk/)
 
-####  From a terminal window run:
+#####  From a terminal window run:
 
 ```
 #  Let's create a topic with RPK
