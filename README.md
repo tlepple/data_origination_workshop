@@ -6,7 +6,7 @@ Comments:  This repo will setup a data integration platform to evaluate some tec
 Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 ---
 
-# Data Origination Workshop (WIP)
+# Data Origination Workshop 
 ---
 ---
 
