@@ -1186,8 +1186,8 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 ---
 
 ---
-### Explore our new Redpanda topic `pg_datagen2panda.datagen.customer` in the console from a browser:
-`
+#### Explore our new Redpanda topic `pg_datagen2panda.datagen.customer` in the console from a browser:
+
 ---
 #####  Console View of topic:
 
