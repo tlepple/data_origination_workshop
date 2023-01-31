@@ -1229,7 +1229,7 @@ Integrating a SQL database using Kafka Connect to stream data to Red Panda can h
 
   3.  Ease of use: Kafka Connect simplifies the process of integrating the SQL database with Red Panda, making it easier for developers to set up and maintain.
 
-  4.  Improved data consistency: The integration helps ensure data consistency by providing a single source of truth for data being streamed to Red Panda.
+  4.  Improved data consistency: The integration helps ensure data consistency by providing a single source of truth for data being streamed to Red Panda or any other downstream consumer.
 
 However, the integration may also have challenges such as data compatibility, security, and performance. It is important to thoroughly assess the requirements and constraints before implementing the integration.
 
