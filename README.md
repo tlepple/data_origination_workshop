@@ -240,4 +240,10 @@ Change Data Capture (CDC) is a database technique used to track and record chang
 Kafka Connect is a tool for scalable and reliable data import/export between Apache Kafka and other data systems. It allows you to integrate Kafka with sources such as databases, key-value stores, and file systems, as well as with sinks such as data warehouses and NoSQL databases. Kafka Connect provides pre-built connectors for popular data sources, and also supports custom connectors developed by users. It uses the publish-subscribe model of Kafka to ensure that data is transported between systems in a fault-tolerant and scalable manner.
 
 ---
+
+##### Why use these tools together:
+
+By combining CDC with Kafa Connect we easily roll out a new system that could elimate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. For more information on that see my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) where we explore one of these new data lakes.  This approach requires very little configuration and will have a minimal performance impact our your legacy databases.   
+
+---
 ---
