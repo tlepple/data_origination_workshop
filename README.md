@@ -213,17 +213,15 @@ rpk topic create dgTxn
 ---
 
 #####  Data Generator Notes:   
+---
 
 The data generator is written in python and accepts 3 integer arguments:  
   *  An integer value for the `customer key`.
   *  An integer value for the N number of groups to produce in small batches.
   *  An integer value for N number of times to loop until it will exit the script.
 
-#####  Call the Data Generator:
 ---
-
-####  Stream some data to our topics:
-
+#####  Call the Data Generators tream some data to our topics:
 ---
 
 We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed during setup.  From a terminal window run:
