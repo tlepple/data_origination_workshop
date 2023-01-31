@@ -207,7 +207,7 @@ rpk topic create dgCustomer
 rpk topic create dgTxn
 ```
 ---
-##### Console view of our new `Topics`:
+##### Console view of our `Topics`:
   ![](./images/panda_view__dg_load_topics.png)
 
 ---
