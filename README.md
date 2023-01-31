@@ -435,7 +435,19 @@ topic.prefix=pg_datagen2panda
 ---
 ###  Start the `Kafka Connect` processor:
   *  This will start our processor and pull all the CDC records out of the PostgreSQL database for our 'customer' table and ship them to a new Redpanda topic.  
-  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the procecessor when it haults use the commands `<control> + c`.
+  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the procecessor when it completes use the commands `<control> + c`.
+---
 
+##### Start Kafka Connect:
+```
+su - datagen
+
+cd ~/kafka_connect/configuration
+../kafka_2.13-3.3.2/bin/connect-standalone.sh connect.properties pg-source-connector.properties
+```
 ---
----
+
+#####  Expected Output:
+```
+
+```
