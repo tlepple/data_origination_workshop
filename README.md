@@ -1207,6 +1207,6 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 
 ---
 
- ![](./images/connect_output_detail_msg.png)
+ ![](./images/connect_ouput_detail_msg.png)
  
 ---
