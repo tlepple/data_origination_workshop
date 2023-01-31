@@ -81,7 +81,7 @@ Produced to partition 0 at offset 1 with timestamp 1675085644895.
 
 ```
 
-####  Let's consume these messages from CLI:
+####  View these messages from CLI with the `Consumer`:
 
 ```
 rpk topic consume movie_list --num 2
@@ -110,28 +110,31 @@ rpk topic consume movie_list --num 2
 ```
 ---
 
-####  Delete the topic from the CLI:
+####  Delete this topic from the CLI:
 
 ```
 rpk topic delete movie_list
 ```
 
 ---
+---
 
-
-##  Let's explore the Red Panda GUI.
+##  Explore the Red Panda GUI:
   *  Open a browswer and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
 
+--
 ---
   ###  screenshot goes here:
   
 ---
 
-#  Stream some data to our topics:
+####  Stream some data to our topics:
+
 ---
 
 We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed during setup.  From a terminal window run:
 
+##### Command:
 ```
 su - datagen
 ```
