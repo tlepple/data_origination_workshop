@@ -118,7 +118,7 @@ Redpanda is less complex and less costly than any other commericial mission-crit
 #  Let's create a topic with RPK
 rpk topic create movie_list
 ```
-####  Start a Redpanda `Producer` to add messages:
+####  Start a Redpanda `Producer` using the `rpk` CLI to add messages:
   *  this will open a producer session and await your input until you close it with `<ctrl> + d`
 ```
 rpk topic produce movie_list
@@ -146,7 +146,7 @@ Produced to partition 0 at offset 1 with timestamp 1675085644895.
 
 ```
 
-####  View these messages from CLI with the `Consumer`:
+####  View these messages from Redpanda `Consumer` using the `rpk` CLI:
 
 ```
 rpk topic consume movie_list --num 2
