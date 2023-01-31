@@ -124,7 +124,8 @@ rpk topic delete movie_list
 
 ---
 ---
-  ###  screenshot goes here:
+  
+  ![](./images/pand_view_topics.png)
   
 ---
 
