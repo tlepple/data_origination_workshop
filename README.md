@@ -41,7 +41,7 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 ---
 ---
 ###  What is Red Panda?
-  * Information in this section was gathered from their website.  You can find more detailed information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
+  * Information in this section was gathered from their website.  You can find more detailed information about there platform here:  [Red Panda](https://redpanda.com/platform)
 ---
 
 Redpanda is an event streaming platform: it provides the infrastructure for streaming real-time data.  It has been proven to be 10x faster and 6x lower in total costs. It is also JVM-free, ZooKeeper®-free, Jepsen-tested and source available.
