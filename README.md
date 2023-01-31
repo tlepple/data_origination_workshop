@@ -302,3 +302,48 @@ script complete!
 
 ```
 
+---
+---
+
+####  Kafka Connect:
+
+In the setup scipt we downloaded and installed all the components and needed jar files that Kafka Connect will use.   It auto configured the settings for integrating PostgreSQL and Red Panda.   Let's review the configuration files.
+
+#####  Kafka Connect configuration file is located here:
+  * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
+  
+```
+su - datagen
+
+cd ~/kafka_connect/configuration
+
+cat connect.properties
+
+```
+
+---
+
+##### Expected output:
+
+```
+#Kafka broker addresses
+bootstrap.servers=localhost:9092
+
+#Cluster level converters
+#These applies when the connectors don't define any converter
+key.converter=org.apache.kafka.connect.json.JsonConverter
+value.converter=org.apache.kafka.connect.json.JsonConverter
+
+#JSON schemas enabled to false in cluster level
+key.converter.schemas.enable=true
+value.converter.schemas.enable=true
+
+#Where to keep the Connect topic offset configurations
+offset.storage.file.filename=/tmp/connect.offsets
+offset.flush.interval.ms=10000
+
+#Plugin path to put the connector binaries
+plugin.path=:~/kafka_connect/plugins/debezium-connector-postgres/
+
+```
+
