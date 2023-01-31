@@ -125,14 +125,6 @@ rpk topic delete movie_list
 ---
   ###  screenshot goes here:
   
-
-
-####  Delete the topic from the CLI:
-
-```
-rpk topic delete movie_list
-```
-
 ---
 
 #  Stream some data to our topics:
