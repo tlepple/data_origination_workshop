@@ -174,14 +174,6 @@ rpk topic consume movie_list --num 2
 
 ```
 ---
-
-####  Delete this topic from the CLI:
-
-```
-rpk topic delete movie_list
-```
-
----
 ---
 
 ##  Explore the Red Panda GUI:
@@ -192,6 +184,19 @@ rpk topic delete movie_list
   
   ![](./images/panda_view_topics.png)
   
+---
+
+####  We can delete this topic from the `rpk` CLI:
+
+```
+rpk topic delete movie_list
+```
+
+
+---
+---
+
+---
 ---
 
 ####  Stream some data to our topics:
