@@ -22,7 +22,7 @@ My goal in this workshop was to go a little deeper than your typical `How To` gu
 
 ---
 
-The setup script will build and insall our `Data Origination Platform` onto a single linux instances.  It will install a data generating application, a local SQL database (PostgreSQL), a Red Panda instance and a stand-alone Kafka Connect instance and configure them all to work together.   
+The setup script will build and install our `Data Origination Platform` onto a single linux instances.  It will install a data generating application, a local SQL database (PostgreSQL), a Red Panda instance and a stand-alone Kafka Connect instance and configure them all to work together.   
  
 ---
 ---
