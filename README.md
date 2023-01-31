@@ -8,6 +8,7 @@ Tags:  Red Panda | PostgreSQL | Kafka Connect | Python
 
 # Data Origination Workshop (WIP)
 ---
+---
 
 ## Objective:
   *  To evaluate Red Panda and Kafka Connect and setup a data origination system that streams events to this platform.  In an upcoming workshop we will integrate this data and stream to Apache Iceberg.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
