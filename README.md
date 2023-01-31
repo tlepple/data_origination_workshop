@@ -305,11 +305,13 @@ script complete!
 ---
 ---
 
-####  Kafka Connect:
+####  Kafka Connect Setup:
 
-In the setup scipt, we downloaded and installed all the components and needed jar files that Kafka Connect will use.   It also configured the settings for our integrating of PostgreSQL with Red Panda.   Let's review the configuration files that make it all work.
+In the setup scipt, we downloaded and installed all the components and needed jar files that Kafka Connect will use.  Please review that setup file again if you want a refresher.  The script also configured the settings for our integration of PostgreSQL with Red Panda.   Let's review the configuration files that make it all work.
 
-#####  Kafka Connect configuration file is located here:
+---
+
+#####  The  property file that will link Kafka Connect to Red Panda is located here:
   * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
   
 ```
@@ -344,3 +346,35 @@ plugin.path=:~/kafka_connect/plugins/debezium-connector-postgres/
 
 ```
 
+
+---
+
+#####  The  property file that will link Kafka Connect to PostgreSQL is located here:
+  * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
+  
+```
+su - datagen
+
+cd ~/kafka_connect/configuration
+cat pg-source-connector.properties
+```
+---
+
+##### Expected output:
+
+```
+connector.class=io.debezium.connector.postgresql.PostgresConnector
+offset.storage=org.apache.kafka.connect.storage.FileOffsetBackingStore
+offset.storage.file.filename=offset.dat
+offset.flush.interval.ms=5000
+name=postgres-dbz-connector
+database.hostname=localhost
+database.port=5432
+database.user=datagen
+database.password=supersecret1
+database.dbname=datagen
+schema.include.list=datagen
+plugin.name=pgoutput
+topic.prefix=pg_datagen2panda
+
+```
