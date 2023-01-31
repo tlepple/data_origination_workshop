@@ -356,6 +356,9 @@ script complete!
 ```
 ---
 ---
+### Configure Integration of `Redpanda` and `Kafka Connect`
+---
+---
 
 ####  Kafka Connect Setup:
 
