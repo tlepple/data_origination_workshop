@@ -209,4 +209,12 @@ Transaction Done.
  ![](./images/topic_customer_view.png)
  
 ---
+
+##### Click on the topic '+' icon under the `Value` column to see the record details of this message.
+
+---
+
+ ![](./images/detail_view_of_cust_msg.png)
+ 
+---
   
