@@ -41,7 +41,7 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 ---
 ---
 ###  What is Red Panda?
-  * Information in this section was gather from their website.  You can find more detailed information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
+  * Information in this section was gathered from their website.  You can find more detailed information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
 ---
 
 Redpanda is an event streaming platform: it provides the infrastructure for streaming real-time data.  It has been proven to be 10x faster and 6x lower in total costs. It is also JVM-free, ZooKeeper®-free, Jepsen-tested and source available.
@@ -63,6 +63,24 @@ Event streaming lets you extract value out of each event by analyzing, mining, o
   *  Replay events from the past and route them to new processes in your application.
   *  Run transformations on the data in real-time or historically.
   *  Integrate with other event processing systems that use the Kafka API.
+
+
+####  Redpanda differentiators:
+Redpanda is less complex and less costly than any other commericial mission-critical event streaming platform. It's fast, it's easy, and it keeps your data safe.
+
+  *  Redpanda is designed for maximum performance on any data streaming workload.
+
+  *  It can scale up to use all available resources on a single machine and scale out to distribute performance across multiple nodes. Built on C++, Redpanda delivers greater throughput and up to 10x lower p99 latencies than other platforms. This enables previously-unimaginable use cases that require high throughput, low latency, and a minimal hardware footprint.
+
+  *  Redpanda is packaged as a single binary: it doesn't rely on any external systems.
+
+  *  It's compatible with the Kafka API, so it works with the full ecosystem of tools and integrations built on Kafka. Redpanda can be deployed on bare metal, containers, or virtual machines in a data center or in the cloud. And Redpanda Console makes it easy to set up, manage, and monitor your clusters. Additionally, Tiered Storage lets you offload log segments to cloud storage in near real time, providing infinite data retention and topic recovery.
+
+  *  Redpanda uses the Raft consensus algorithm throughout the platform to coordinate writing data to log files and replicating that data across multiple servers.
+
+  *  Raft facilitates communication between the nodes in a Redpanda cluster to make sure that they agree on changes and remain in sync, even if a minority of them are in a failure state. This allows Redpanda to tolerate partial environmental failures and deliver predictable performance, even at high loads.
+
+  *  Redpanda provides data sovereignty.
 
 ---
 ---
