@@ -117,7 +117,6 @@ Redpanda is less complex and less costly than any other commericial mission-crit
 ```
 #  Let's create a topic with RPK
 rpk topic create movie_list
-
 ```
 
 ####  Let's add a few messages to this topic:
