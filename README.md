@@ -196,7 +196,18 @@ rpk topic delete movie_list
 
 ### Data Generator:
 
-I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to our 2 new topics.
+I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to some topics.
+
+---
+
+#####  Let's create some topics for our data generator using the CLI:
+```
+rpk topic create dgCustomer
+rpk topic create dgTxn
+```
+---
+##### Console view of our new `Topics`:
+  ![](./images/panda_view__dg_load_topics.png)
 
 ---
 ---
@@ -221,18 +232,7 @@ We will switch to a different OS user `datagen` (password for user: `supersecret
 ```
 su - datagen
 ```
----
 
-#####  Let's create some topics for our data generator using the CLI:
-
-```
-rpk topic create dgCustomer
-rpk topic create dgTxn
-```
----
-##### Console view of our new `Topics`:
-  ![](./images/panda_view__dg_load_topics.png)
----
 
 
 ```
