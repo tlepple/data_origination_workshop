@@ -210,7 +210,7 @@ Transaction Done.
  
 ---
 
-##### Click on the topic '+' icon under the `Value` column to see the record details of this message.
+##### Click on the topic '+' icon under the `Value` column to see the record details a message.
 
 ---
 
