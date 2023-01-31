@@ -224,4 +224,7 @@ Transaction Done.
  ![](./images/detail_view_of_cust_msg.png)
  
 ---
-  
+---
+Explore Change Data Capture (CDC) via `Kafka Connect`
+---
+---
