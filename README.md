@@ -325,7 +325,7 @@ There is a second data generator application that will stream json record and lo
 ---
 ---
 
-#####  Data Generator Notes:   
+#####  Data Generator Notes for stream to PostgreSQL:   
 
 The data generator is written in python and accepts 2 integer arguments:  
   *  An integer value for the `customer key`.
