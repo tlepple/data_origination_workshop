@@ -206,5 +206,9 @@ Transaction Done.
 
 ##### Click on the topic `dgCustomer` from the list.
 
-*  insert pic here:
+---
+
+ ![](./images/topic_customer_view.png)
+ 
+---
   
