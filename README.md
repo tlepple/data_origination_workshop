@@ -118,10 +118,8 @@ Redpanda is less complex and less costly than any other commericial mission-crit
 #  Let's create a topic with RPK
 rpk topic create movie_list
 ```
-
-####  Let's add a few messages to this topic:
+####  Start a Redpanda `Producer` to add messages:
   *  this will open a producer session and await your input until you close it with `<ctrl> + d`
-
 ```
 rpk topic produce movie_list
 ```
