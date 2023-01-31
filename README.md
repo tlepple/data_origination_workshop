@@ -307,7 +307,7 @@ script complete!
 
 ####  Kafka Connect:
 
-In the setup scipt we downloaded and installed all the components and needed jar files that Kafka Connect will use.   It auto configured the settings for integrating PostgreSQL and Red Panda.   Let's review the configuration files.
+In the setup scipt, we downloaded and installed all the components and needed jar files that Kafka Connect will use.   It also configured the settings for our integrating of PostgreSQL with Red Panda.   Let's review the configuration files that make it all work.
 
 #####  Kafka Connect configuration file is located here:
   * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
@@ -316,11 +316,8 @@ In the setup scipt we downloaded and installed all the components and needed jar
 su - datagen
 
 cd ~/kafka_connect/configuration
-
 cat connect.properties
-
 ```
-
 ---
 
 ##### Expected output:
