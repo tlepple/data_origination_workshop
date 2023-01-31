@@ -112,9 +112,8 @@ Redpanda is less complex and less costly than any other commericial mission-crit
 ####  Explore the Red Panda CLI tool `RPK`  
   *   Redpanda Keeper `rpk` is Redpanda's command line interface (CLI) utility.  Detailed documentation of the CLI can be explored further here: [Redpanda Keeper Commands](https://docs.redpanda.com/docs/reference/rpk/)
 
-#####  Create our first Redpanda topic
+#####  Create our first Redpanda topic with the CLI:
 *  run this from a terminal window run:
-
 ```
 #  Let's create a topic with RPK
 rpk topic create movie_list
