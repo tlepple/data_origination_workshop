@@ -287,6 +287,14 @@ python3 pg_upsert_dg.py 10 4
 ---
 
 ```
+Connection Established
+{"last_name": "Carson", "first_name": "Aaron", "street_address": "124 Campbell Overpass", "city": "Cummingsburgh", "state": "MT", "zip_code": "76816", "email": "aaron08@example.net", "home_phone": "786-888-8409x21666", "mobile": "001-737-014-7684x1271", "ssn": "394-84-0730", "job_title": "Tourist information centre manager", "create_date": "2022-12-04 00:00:13", "cust_id": 10}
+{"last_name": "Allen", "first_name": "Kristen", "street_address": "00782 Richard Freeway", "city": "East Josephfurt", "state": "NJ", "zip_code": "87309", "email": "xwyatt@example.com", "home_phone": "085-622-1720x88354", "mobile": "4849824808", "ssn": "130-35-4851", "job_title": "Psychologist, occupational", "create_date": "2022-12-23 14:33:56", "cust_id": 11}
+{"last_name": "Knight", "first_name": "William", "street_address": "1959 Coleman Drives", "city": "Williamsville", "state": "OH", "zip_code": "31621", "email": "farrellchristopher@example.org", "home_phone": "(572)744-6444x306", "mobile": "+1-587-017-1677", "ssn": "797-80-6749", "job_title": "Visual merchandiser", "create_date": "2022-12-11 03:57:01", "cust_id": 12}
+{"last_name": "Joyce", "first_name": "Susan", "street_address": "137 Butler Via Suite 789", "city": "West Linda", "state": "IN", "zip_code": "63240", "email": "jeffreyjohnson@example.org", "home_phone": "+1-422-918-6473x3418", "mobile": "483-124-5433x956", "ssn": "435-50-2408", "job_title": "Gaffer", "create_date": "2022-12-14 01:20:02", "cust_id": 13}
+Records inserted successfully
+PostgreSQL connection is closed
+script complete!
 
 ```
 
