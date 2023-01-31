@@ -41,11 +41,28 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 ---
 ---
 ###  What is Red Panda?
-
+  * Information in this section was gather from their website.  You can find more detailed information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
 ---
-Redpanda is a Kafka®-compatible streaming data platform that is proven to be 10x faster and 6x lower in total costs. It is also JVM-free, ZooKeeper®-free, Jepsen-tested and source available.  It is a open-source data processing library for Python. It provides a high-level API for efficiently manipulating, transforming, and aggregating large datasets using a functional programming style. Red Panda is built on top of Apache Arrow, which provides a standard for in-memory data representation, allowing Red Panda to work with data stored in different formats, such as Parquet, Avro, and CSV, with good performance. Some of the main features of Red Panda include support for distributed processing, handling missing data, and performing complex data transformations using a concise and readable syntax.
 
-You can find more detailed information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
+Redpanda is an event streaming platform: it provides the infrastructure for streaming real-time data.  It has been proven to be 10x faster and 6x lower in total costs. It is also JVM-free, ZooKeeper®-free, Jepsen-tested and source available.
+
+Producers are client applications that send data to Redpanda in the form of events. Redpanda safely stores these events in sequence and organizes them into topics, which represent a replayable log of changes in the system.
+
+Consumers are client applications that subscribe to Redpanda topics to asynchronously read events. Consumers can store, process, or react to the events.
+
+Redpanda decouples producers from consumers to allow for asynchronous event processing, event tracking, event manipulation, and event archiving. Producers and consumers interact with Redpanda using the Apache Kafka® API.
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
+Event streaming lets you extract value out of each event by analyzing, mining, or transforming it for insights. You can:
+
+  *  Take one event and consume it in multiple ways.
+  *  Replay events from the past and route them to new processes in your application.
+  *  Run transformations on the data in real-time or historically.
+  *  Integrate with other event processing systems that use the Kafka API.
 
 ---
 ---
