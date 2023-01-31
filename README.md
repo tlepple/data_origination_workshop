@@ -56,7 +56,6 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 
 ```
 #  run it:
-chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 . ~/data_origination_workshop/setup_data_origination_apps.sh
 ```
 ---
