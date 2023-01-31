@@ -1182,13 +1182,13 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 [2023-01-31 16:00:57,191] INFO [postgres-dbz-connector|task-0] Searching for WAL resume position (io.debezium.connector.postgresql.PostgresStreamingChangeEventSource:323)
 ```
 ---
-##### Explore the `Connect` inside of the Redpanda Console in a browser:
+##### Explore the `Connect` tab in the console from a browser:
   ![](./images/console_view_run_connect.png)
 ---
-#####  Exit out of Kafka Connect with: `[<control> + c`
----
----
 
+#####  Exit out of Kafka Connect with: `[<control> + c`
+
+---
 ---
 #### Explore our new Redpanda topic `pg_datagen2panda.datagen.customer` in the console from a browser:
 
