@@ -122,7 +122,7 @@ rpk topic delete movie_list
 ##  Explore the Red Panda GUI:
   *  Open a browswer and navigate to your host ip address:  `http:\\<your ip address>:8080`  This will open the Red Panda GUI
 
---
+---
 ---
   ###  screenshot goes here:
   
