@@ -149,7 +149,7 @@ rpk topic create dgTxn
 ```
 ---
 ##### Console view of our new `Topics`:
-  ![](./images/panda__view_dg_load_topics.png)
+  ![](./images/panda_view_dg_load_topics.png)
 ---
 
 ---
