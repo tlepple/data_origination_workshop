@@ -126,7 +126,7 @@ rpk topic create movie_list
 rpk topic produce movie_list
 ```
 
-####  Add some movies:
+####  Add some messages to the `movie_list` topic:
 
 ```
 #  Entry 1:
