@@ -124,6 +124,7 @@ rpk topic produce movie_list
 ```
 
 ####  Add some messages to the `movie_list` topic:
+  *  The producer will appear to be hung in the terminal window.   It is really just waiting for you to type in a message and hit `<return`.
 
 
 ######  Entry 1:
