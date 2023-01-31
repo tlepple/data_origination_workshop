@@ -1188,7 +1188,7 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
   ![](./images/console_view_run_connect.png)
 ---
 
-#####  Exit out of Kafka Connect with: `[<control> + c`
+#####  Exit out of Kafka Connect from the terminal with: `[<control> + c`
 
 ---
 ---
