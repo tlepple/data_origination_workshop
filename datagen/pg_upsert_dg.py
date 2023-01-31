@@ -2,6 +2,7 @@ from __future__ import print_function
 from faker import Faker
 from datagenerator import DataGenerator
 import simplejson
+import sys
 import argparse
 import psycopg2
 #########################################################################################
