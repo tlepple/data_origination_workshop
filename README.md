@@ -59,8 +59,6 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 . ~/data_origination_workshop/setup_data_origination_apps.sh
 ```
- * Refill your coffee, this will run for about 5 min.
-
 ---
 ---
 ###  What is Red Panda?
