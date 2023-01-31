@@ -46,6 +46,8 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 
 Red Panda is a open-source data processing library for Python. It provides a high-level API for efficiently manipulating, transforming, and aggregating large datasets using a functional programming style. Red Panda is built on top of Apache Arrow, which provides a standard for in-memory data representation, allowing Red Panda to work with data stored in different formats, such as Parquet, Avro, and CSV, with good performance. Some of the main features of Red Panda include support for distributed processing, handling missing data, and performing complex data transformations using a concise and readable syntax.
 
+You can find more information about there platform from their website here:  [Red Panda](https://redpanda.com/platform)
+
 ---
 ---
 
