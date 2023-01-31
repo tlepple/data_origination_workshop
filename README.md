@@ -350,11 +350,8 @@ plugin.path=:~/kafka_connect/plugins/debezium-connector-postgres/
 ---
 
 #####  The  property file that will link Kafka Connect to PostgreSQL is located here:
-  * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
   
 ```
-su - datagen
-
 cd ~/kafka_connect/configuration
 cat pg-source-connector.properties
 ```
