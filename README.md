@@ -201,9 +201,7 @@ Transaction Done.
 
 ####  Explore Data in the Red Panda Console from a browser
   * `http:\\<your ip address>:8080`  Make sure to click the `Topics` tab in the left side of our Console Application:
-
-*  insert pic here:
-
+---
 ##### Click on the topic `dgCustomer` from the list.
 
 ---
