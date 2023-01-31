@@ -61,7 +61,7 @@ chmod +x ~/data_origination_workshop/setup_data_origination_apps.sh
 ```
 ---
 ---
-###  What is Red Panda?
+###  What is Redpanda?
   * Information in this section was gathered from their website.  You can find more detailed information about their platform here:  [Red Panda](https://redpanda.com/platform)
 ---
 
