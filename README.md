@@ -195,6 +195,7 @@ rpk topic delete movie_list
 ---
 
 ### Data Generator:
+---
 
 I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to some topics.
 
