@@ -1215,3 +1215,10 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 ###  Observations:
 ---`
 As you can see this message contains the values of the record `before` and `after` a message (CDC) from our PostgreSQL database.   This will become invaluable in our next workshop where we will setup the integration bewteen this workhop and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).
+---
+---
+
+###  Summary:
+
+---
+---
