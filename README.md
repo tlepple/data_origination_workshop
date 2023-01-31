@@ -221,7 +221,7 @@ The data generator is written in python and accepts 3 integer arguments:
   *  An integer value for N number of times to loop until it will exit the script.
 
 ---
-#####  Call the Data Generators tream some data to our topics:
+#####  Call the `Data Generator` stream some data to our topics:
 ---
 
 We will switch to a different OS user `datagen` (password for user: `supersecret1` where some data generation tools were installed during setup.  From a terminal window run:
