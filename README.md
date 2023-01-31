@@ -172,7 +172,7 @@ I have written a data generator CLI application and included it in this workshop
 
 #####  Data Generator Notes:   
 
-The data generator is written in python and accepts 3 integer parameters:  
+The data generator is written in python and accepts 3 integer arguments:  
   *  An integer value for the `customer key`.
   *  An integer value for the N number of groups to produce in small batches.
   *  An integer value for N number of times to loop until it will exit the script.
@@ -255,3 +255,38 @@ By combining CDC with Kafa Connect we easily roll out a new system that could el
 
 ---
 ---
+
+---
+---
+
+### Data Generator to load data into PostgreSQL:
+
+There is a second data generator application that will stream json record and load them directly into a Postgresql database.
+
+---
+---
+
+#####  Data Generator Notes:   
+
+The data generator is written in python and accepts 2 integer arguments:  
+  *  An integer value for the `customer key`.
+  *  An integer value for N number of records to produce and load to the database.
+
+#####  Call the Data Generator:
+
+```
+cd ~/datagen
+
+#  start the script:
+python3 pg_upsert_dg.py 10 4
+
+```
+
+##### Sample Output:
+
+---
+
+```
+
+```
+
