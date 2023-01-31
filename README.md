@@ -256,10 +256,14 @@ By combining CDC with Kafa Connect we easily roll out a new system that could el
 ---
 ---
 
+#### Integrate PostgreSQL with Kafka Connect:
+
+In these next few exercises we will load data into a sql database and configure Kafka Connect to extract the CDC records and stream them to a new topic in Red Panda.
+
 ---
 ---
 
-### Data Generator to load data into PostgreSQL:
+#### Data Generator to load data into PostgreSQL:
 
 There is a second data generator application that will stream json record and load them directly into a Postgresql database.
 
