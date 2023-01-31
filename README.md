@@ -134,18 +134,14 @@ Top Gun Maverick
 ```
 Star Wars - Return of the Jedi
 ```
-
-  *  exit producer:  `<ctrl> + d`
-
-
-
-#### Output:
+#### Expected Output:
 ```
 Produced to partition 0 at offset 0 with timestamp 1675085635701.
 Star Wars - Return of the Jedi
 Produced to partition 0 at offset 1 with timestamp 1675085644895.
-
 ```
+
+##### Exit the producer:  `<ctrl> + d`
 
 ####  View these messages from Redpanda `Consumer` using the `rpk` CLI:
 
