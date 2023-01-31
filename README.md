@@ -125,7 +125,7 @@ rpk topic delete movie_list
 ---
 ---
   
-  ![](./images/pand_view_topics.png)
+  ![](./images/panda_view_topics.png)
   
 ---
 
