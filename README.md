@@ -191,12 +191,24 @@ rpk topic consume movie_list --num 2
 ```
 rpk topic delete movie_list
 ```
+---
+---
 
+### Data Generator:
+
+I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to our 2 new topics.
 
 ---
 ---
 
----
+#####  Data Generator Notes:   
+
+The data generator is written in python and accepts 3 integer arguments:  
+  *  An integer value for the `customer key`.
+  *  An integer value for the N number of groups to produce in small batches.
+  *  An integer value for N number of times to loop until it will exit the script.
+
+#####  Call the Data Generator:
 ---
 
 ####  Stream some data to our topics:
@@ -222,24 +234,6 @@ rpk topic create dgTxn
   ![](./images/panda_view__dg_load_topics.png)
 ---
 
----
----
-
-### Data Generator:
-
-I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to our 2 new topics.
-
----
----
-
-#####  Data Generator Notes:   
-
-The data generator is written in python and accepts 3 integer arguments:  
-  *  An integer value for the `customer key`.
-  *  An integer value for the N number of groups to produce in small batches.
-  *  An integer value for N number of times to loop until it will exit the script.
-
-#####  Call the Data Generator:
 
 ```
 cd ~/datagen
