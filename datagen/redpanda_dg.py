@@ -86,11 +86,12 @@ try:
             print("failing in txn generator")
             producer.flush()
        # increment counter and sleep
-            startKey += iterateVal
-            time.sleep(2)
+        startKey += iterateVal
+        time.sleep(5)
 
 except:
      print("failing in loop.")
 finally:
      print("script complete")
+
 
