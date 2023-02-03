@@ -40,7 +40,7 @@ The setup script will build and install our `Data Origination Platform` onto a s
 ---
 
 ```
-sudo apt-get install git-all -y
+sudo apt-get install git -y
 
 cd ~
 git clone https://github.com/tlepple/data_origination_workshop.git
