@@ -20,7 +20,7 @@ The goal of this workshop was to evaluate Red Panda and Kafka Connect and set up
 
 ---
 
-The setup script will build and install our `Data Origination Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance and a stand-alone Kafka Connect instance and configures them all to work together.   
+The setup script will build and install our `Data Origination Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance, a stand-alone Kafka Connect instance, a Debezium plugin to Connect and configures them all to work together.   
  
 ---
 ---
