@@ -441,6 +441,8 @@ topic.prefix=pg_datagen2panda
 ---
 
 ##### Start Kafka Connect:
+  * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
+
 ```
 su - datagen
 
