@@ -1224,10 +1224,10 @@ SET TRANSACTION SNAPSHOT '00000004-00000003-1'; (io.debezium.connector.postgresq
 ---
 ---
 
-###  Observations:
+#### Kafka Connect Observations:
 ---
 
-As you can see this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database.   This will become invaluable in our next workshop where we will set up the integration between this workshop and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).
+As you can see this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database.   This will become invaluable in our next workshop where we will set up the integration between this workshop and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).  With the data it generates we will be able to pick up these CDC records and deliver them downsteam into our data lake.
 
 ---
 ---
