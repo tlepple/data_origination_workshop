@@ -193,7 +193,7 @@ rpk topic delete movie_list
 ### Data Generator:
 ---
 
-I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some data directly to some topics.
+I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some realistic data directly into some topics (and later into a database).  The data generator is written in python and uses the component [Faker](https://faker.readthedocs.io/en/master/).  I encourage you to look at the code here if you want to look deeper into it.  [Data Generator Items]()   
 
 ---
 
@@ -212,7 +212,7 @@ rpk topic create dgTxn
 #####  Data Generator Notes:   
 ---
 
-The data generator is written in python and accepts 3 integer arguments:  
+The data generator app in this section accepts 3 integer arguments:  
   *  An integer value for the `customer key`.
   *  An integer value for the N number of groups to produce in small batches.
   *  An integer value for N number of times to loop until it will exit the script.
@@ -284,7 +284,7 @@ Transaction Done.
  
 ---
 ---
-## Explore Change Data Capture (CDC) via `Kafka Connect`
+## Explore Change Data Capture (CDC) via `Kafka Connect` and `Debezium`
 
 ---
 
@@ -300,9 +300,15 @@ Kafka Connect is a tool for scalable and reliable data import/export between Apa
 
 ---
 
+##### Define `Debezium`:
+
+Debezium is an open-source change data capture (CDC) platform that helps to stream changes from databases such as MySQL, PostgreSQL, and MongoDB into Apache Kafka, among other data sources and sinks. Debezium is designed to be used for real-time data streaming and change data capture for applications, data integration, and analytics.  This component is a must for getting at legacy data in an effecient manner.
+
+---
+
 ##### Why use these tools together?
 
-By combining CDC with Kafa Connect we easily roll out a new system that could eliminate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. For more information on that see my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) where we explore one of these new data lakes.  This approach requires very little configuration and will have a minimal performance impact on your legacy databases.   It will also allow you harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
+By combining CDC with Kafa Connect (and using the Debezium plugin) we easily roll out a new system that could eliminate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. For more information on that see my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) where we explore one of these new data lakes.  This approach requires very little configuration and will have a minimal performance impact on your legacy databases.   It will also allow you harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
 
 ---
 ---
