@@ -193,7 +193,7 @@ rpk topic delete movie_list
 ### Data Generator:
 ---
 
-I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some realistic data directly into some topics (and later into a database).  The data generator is written in python and uses the component [Faker](https://faker.readthedocs.io/en/master/).  I encourage you to look at the code here if you want to look deeper into it.  [Data Generator Items]()   
+I have written a data generator CLI application and included it in this workshop to simplify creating some realistic data for us to explore.  We will use this data generator application to stream some realistic data directly into some topics (and later into a database).  The data generator is written in python and uses the component [Faker](https://faker.readthedocs.io/en/master/).  I encourage you to look at the code here if you want to look deeper into it.  [Data Generator Items](./datagen)   
 
 ---
 
