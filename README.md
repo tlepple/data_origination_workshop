@@ -52,15 +52,13 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 
 ### Start the build:
 
----
-
 ```
 #  run it:
 . ~/data_origination_workshop/setup_data_origination_apps.sh
 ```
   *  This should complete within 5 minutes.
 ---
----
+
 ###  What is Redpanda?
   * Information in this section was gathered from their website.  You can find more detailed information about their platform here:  [Red Panda](https://redpanda.com/platform)
 ---
