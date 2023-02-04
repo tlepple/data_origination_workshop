@@ -11,9 +11,9 @@ Tags:  Redpanda | PostgreSQL | Kafka Connect | Python | Debezium
 ---
 
 ## Objective:
-The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the Debezium CDC plugin) and set up a data origination system that streams events to this platform. My good friend an collegue (Craig Nelson) wrote a great blog recently on on doing this in docker.  Check it out here:  [Craig's Blog](https://electricboogaloo.home.blog/2023/01/18/postgres-cdc-with-redpanda-in-six-easy-pieces-part-1-0/)
+The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the Debezium CDC plugin) and set up a data generator that streams events to this platform. My good friend an collegue (Craig Nelson), wrote a great blog recently on on doing this via docker.  Check it out here:  [Craig's Blog](https://electricboogaloo.home.blog/2023/01/18/postgres-cdc-with-redpanda-in-six-easy-pieces-part-1-0/)
 
-I took the time to install it manually on a tradition linux server (and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day.  In an upcoming workshop, we will integrate this data platform and stream data to our Apache Iceberg data lake from a previous workshop.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
+I took the time to install it manually on a tradition linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  In an upcoming workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
 
 ---
 ---
