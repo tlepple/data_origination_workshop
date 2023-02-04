@@ -240,7 +240,7 @@ python3 redpanda_dg.py 10 3 2
 
 ##### Sample Output:
 
-This will load sample json data into our two new topics and write out a copy of those records to your terminal that looks something like this:
+This will load sample JSON data into our two new topics and write out a copy of those records to your terminal that looks something like this:
 
 ---
 
