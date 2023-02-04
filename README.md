@@ -332,7 +332,7 @@ There is a second data generator application and we will use it to stream JSON r
 ---
 This data generator application accepts 2 integer arguments:  
   *  An integer value for the starting `customer key`.
-  *  An integer value for N number of records to produce and load to the database.
+  *  An integer value for `N` number of records to produce and load to the database.
 
 #####  Call the Data Generator:
 
