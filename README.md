@@ -1248,7 +1248,8 @@ However, the integration may also have challenges such as data compatibility, se
 
 If you have made it this far, I want to thank you for spending your time reviewing the materials. Please give me a 'Star' at the top of this page if you found it useful.
 
---Cheers,
+--Cheers
+
 Tim Lepple
 
 ---
