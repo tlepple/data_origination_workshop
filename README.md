@@ -222,7 +222,7 @@ The data generator app in this section accepts 3 integer arguments:
 #####  Call the `Data Generator` to stream some messages to our topics:
 ---
 
-We will switch to a different OS user `datagen` (password for user: `supersecret1` where the data generation tool was installed during setup.  From a terminal window run:
+We will switch to a different OS user `datagen` (password for user: `supersecret1`) where the data generation tool was installed during setup.  From a terminal window run:
 
 ##### Command:
 ```
