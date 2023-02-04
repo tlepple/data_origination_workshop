@@ -215,8 +215,8 @@ rpk topic create dgTxn
 
 The data generator app in this section accepts 3 integer arguments:  
   *  An integer value for the `customer key`.
-  *  An integer value for the N number of groups to produce in small batches.
-  *  An integer value for N number of times to loop until it will exit the script.
+  *  An integer value for the `N` number of groups to produce in small batches.
+  *  An integer value for `N` number of times to loop until it will exit the script.
 
 ---
 #####  Call the `Data Generator` to stream some messages to our topics:
