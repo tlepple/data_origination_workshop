@@ -1234,7 +1234,7 @@ As you can see, this message contains the values of the record `before` and `aft
 ---
 
 ###  Final Summary:
-Integrating a SQL database using Kafka Connect to stream data to Red Panda can have several benefits:
+Integrating a database using Kafka Connect (via Debezium plugins) to stream data to a system like Red Panda can have several benefits:
 
   1.  **Real-time data streaming:** The integration provides a real-time stream of data from the SQL database to Red Panda, making it easier to analyze and process data in real-time.
 
