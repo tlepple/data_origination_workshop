@@ -1253,7 +1253,7 @@ If you have made it this far, I want to thank you for spending your time reviewi
 
   ![](./images/drunk-cheers.gif)
 
-Tim Lepple
+[Tim Lepple](www.linkedin.com/in/tim-lepple-9141452)
 
 ---
 ---
