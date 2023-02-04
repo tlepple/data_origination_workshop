@@ -103,7 +103,7 @@ Redpanda is less complex and less costly than any other commerecial mission-crit
 
 ---
 ---
-###  Hands On Workshop begins here:
+###  Hands-On Workshop begins here:
 ---
 ---
 
