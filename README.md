@@ -323,7 +323,7 @@ In these next few exercises we will load data into a sql database and configure 
 
 #### Data Generator to load data into PostgreSQL:
 
-There is a second data generator application that will stream json records and load them directly into a Postgresql database.
+There is a second data generator application and we will use it to stream JSON records and load them directly into a Postgresql database.
 
 ---
 ---
