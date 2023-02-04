@@ -303,7 +303,7 @@ Kafka Connect is a tool for scalable and reliable data import/export between Apa
 
 ##### Define `Debezium`:
 
-Debezium is an open-source change data capture (CDC) platform that helps to stream changes from databases such as MySQL, PostgreSQL, and MongoDB into Apache Kafka, among other data sources and sinks. Debezium is designed to be used for real-time data streaming and change data capture for applications, data integration, and analytics.  This component is a must for getting at legacy data in an effecient manner.
+Debezium is an open-source change data capture (CDC) platform that helps to stream changes from databases such as MySQL, PostgreSQL, and MongoDB into Red Panda and Apache Kafka, among other data sources and sinks. Debezium is designed to be used for real-time data streaming and change data capture for applications, data integration, and analytics.  This component is a must for getting at legacy data in an effecient manner.
 
 ---
 
