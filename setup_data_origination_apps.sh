@@ -543,7 +543,21 @@ echo
 cd ~
 git clone https://github.com/memiiso/debezium-server-iceberg.git
 cd debezium-server-iceberg
+
+
+echo
+echo "---------------------------------------------------------------------"
+echo "starting maven build of Debezium Server..."
+echo "---------------------------------------------------------------------"
+echo
 mvn -Passembly -Dmaven.test.skip package
+
+
+echo
+echo "---------------------------------------------------------------------"
+echo "install of Debezium Server complete..."
+echo "---------------------------------------------------------------------"
+echo
 
 cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
 cd ~
