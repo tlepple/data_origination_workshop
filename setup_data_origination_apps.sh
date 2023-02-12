@@ -283,24 +283,24 @@ sudo apt install -y mlocate
 ##########################################################################################
 wget https://jdbc.postgresql.org/download/postgresql-42.5.1.jar
 
-sudo cp postgresql-42.5.1.jar /opt/spark/jars/
+sudo mv postgresql-42.5.1.jar /opt/spark/jars/
 
 ##########################################################################################
 # download some aws jars:
 ##########################################################################################
 wget https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/2.19.19/bundle-2.19.19.jar
 
-sudo cp bundle-2.19.19.jar /opt/spark/jars/
+sudo mv bundle-2.19.19.jar /opt/spark/jars/
 
 wget https://repo1.maven.org/maven2/software/amazon/awssdk/url-connection-client/2.19.19/url-connection-client-2.19.19.jar
-cp url-connection-client-2.19.19.jar /opt/spark/jars/
+mv url-connection-client-2.19.19.jar /opt/spark/jars/
 
 ##########################################################################################
 #  download iceberg spark runtime 
 ##########################################################################################
 wget https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.1.0/iceberg-spark-runtime-3.3_2.12-1.1.0.jar
 
-cp ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
+mv ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
 
 ##########################################################################################
 #  download minio debian package
