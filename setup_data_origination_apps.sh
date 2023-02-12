@@ -585,6 +585,12 @@ sudo chown ${USER}:${USER} -R /appdist
 #########################################################################################
 # need to change the spark master gui port from 8080 to 8085 to avoid conflict with redpanda
 #########################################################################################
+
+echo
+echo "---------------------------------------------------------------------"
+echo "configure Spark and start master and worker services..."
+echo "---------------------------------------------------------------------"
+echo
 sudo sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
 
 echo "starting spark master..."
