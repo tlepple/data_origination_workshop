@@ -548,7 +548,7 @@ unzip debezium-server-iceberg-dist*.zip -d appdist
 #########################################################################################
 # configure our dbz source-sink.properties file
 #########################################################################################
-
+cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezium-server-iceberg/conf/
 #########################################################################################
 # source this to set our new variables in current session
 #########################################################################################
