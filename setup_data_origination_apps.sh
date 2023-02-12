@@ -556,8 +556,8 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 
 . ~/minio-output.properties
 
-sed -i "s/<your S3 access-key> /$access_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -i "s/<your S3 access-key> /$access_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
 
 #########################################################################################
