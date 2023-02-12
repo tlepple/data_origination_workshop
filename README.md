@@ -24,7 +24,7 @@ In this workshop, we will integrate this data platform and stream data from here
 
 ---
 
-The setup script will build and install our `Data Origination Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance, a stand-alone Kafka Connect instance, a Debezium plugin for Kafka Connect and configures them all to work together.   
+The setup script will build and install our `Data Origination Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance, a stand-alone Kafka Connect instance, a Debezium plugin for Kafka Connect, a Debezium Server, Minio, Spark, Apache Iceberg and configures them all to work together.   
  
 ---
 ---
