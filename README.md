@@ -15,7 +15,7 @@ The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the 
 
 I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  
 
-In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will installed here too). For step by step instruction on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on working with that.
+In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will installed here too). For step-by-step instruction on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on working with that.
 
 ---
 ---
