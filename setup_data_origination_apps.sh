@@ -183,7 +183,7 @@ sudo -u postgres psql < ~/data_origination_workshop/db_ddl/create_user_datagen.s
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_function_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/grants4dbz.sql
-sudo -u datagen psql < ~/data_origination_workshop/create_ddl_icecatalog.sql
+sudo -u postgres psql < ~/data_origination_workshop/create_ddl_icecatalog.sql
 
 ##########################################################################################
 #  create a directory for data assets in our new 'datagen' user
