@@ -552,10 +552,13 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 
 
 ##########################################################################################
-#  let's reformat the output of access keys from an earlier step
+#  let's update the properties files to use our minio keys.
 ##########################################################################################
-sed -i "s/Access Key: /access_key=/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-sed -i "s/Secret Key: /secret_key=/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+
+. ~/minio-output.properties
+
+sed -i "s/<your S3 access-key> /$access_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
 #########################################################################################
 # source this to set our new variables in current session
