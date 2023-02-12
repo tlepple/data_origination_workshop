@@ -430,6 +430,7 @@ echo
 mkdir -p /opt/spark/logs
 mkdir -p /opt/spark/spark-events
 mkdir -p /opt/spark/input
+mkdir -p /opt/spark/checkpoint
 
 ##########################################################################################
 #  Create a json records file of sample customer data to be used in a lab
