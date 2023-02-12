@@ -550,7 +550,6 @@ unzip debezium-server-iceberg-dist*.zip -d appdist
 #########################################################################################
 cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezium-server-iceberg/conf/
 
-
 ##########################################################################################
 #  let's update the properties files to use our minio keys.
 ##########################################################################################
@@ -560,6 +559,21 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 sed -i "s/<your S3 access-key> /$access_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
+
+#########################################################################################
+# let's start our spark master and workers.
+#########################################################################################
+
+
+#########################################################################################
+# need to change the spark master gui port from 8080 to 8085 to avoid conflict with redpanda
+#########################################################################################
+sed -i "s/SPARK_MASTER_WEBUI_PORT=8080 /SPARK_MASTER_WEBUI_PORT=8085/g" /opt/spark/sbin/start-master.sh
+
+
+#########################################################################################
+# 
+#########################################################################################
 #########################################################################################
 # source this to set our new variables in current session
 #########################################################################################
