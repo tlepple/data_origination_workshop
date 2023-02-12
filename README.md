@@ -11,9 +11,9 @@ Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezi
 ---
 
 ## Objective:
-The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform. My good friend and collegue [Craig Nelson](https://www.linkedin.com/in/craig-nelson-4333972/), wrote a great blog recently on doing some of these things via docker.  Check it out here:  [Craig's Blog](https://electricboogaloo.home.blog/2023/01/18/postgres-cdc-with-redpanda-in-six-easy-pieces-part-1-0/)
+The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
 
-I took the time to install it manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  In an upcoming workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop.   Check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on that.
+I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will installed here too). For step by step instruction on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details on working with that.
 
 ---
 ---
