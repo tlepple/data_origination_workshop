@@ -559,6 +559,8 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
+# change ownership
+sudo chown ${USER}:${USER} -R /appdist
 #########################################################################################
 # let's start our spark master and workers.
 #########################################################################################
