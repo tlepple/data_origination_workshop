@@ -556,9 +556,8 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 
 . ~/minio-output.properties
 
-sudo sed -i "s/<your S3 access-key> /$access_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-sudo sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-
+sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
 #########################################################################################
 # let's start our spark master and workers.
@@ -566,7 +565,6 @@ sudo sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-ic
 #########################################################################################
 # need to change the spark master gui port from 8080 to 8085 to avoid conflict with redpanda
 #########################################################################################
-
 sudo sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
 
 echo "starting spark master..."
