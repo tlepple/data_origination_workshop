@@ -299,8 +299,9 @@ mv url-connection-client-2.19.19.jar /opt/spark/jars/
 #  download iceberg spark runtime 
 ##########################################################################################
 wget https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.1.0/iceberg-spark-runtime-3.3_2.12-1.1.0.jar
-
+wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.1/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars
 mv ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
+mv ~/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars /opt/spark/jars/
 
 ##########################################################################################
 #  download minio debian package
