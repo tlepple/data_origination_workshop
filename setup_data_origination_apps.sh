@@ -563,13 +563,18 @@ sed -i "s/<your s3 secret-key> /$secret_key/g" ~/appdist/debezium-server-iceberg
 #########################################################################################
 # let's start our spark master and workers.
 #########################################################################################
-
-
 #########################################################################################
 # need to change the spark master gui port from 8080 to 8085 to avoid conflict with redpanda
 #########################################################################################
-sed -i "s/SPARK_MASTER_WEBUI_PORT=8080 /SPARK_MASTER_WEBUI_PORT=8085/g" /opt/spark/sbin/start-master.sh
 
+sudo sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
+
+echo "starting spark master..."
+/opt/spark/sbin/start-master.sh
+echo
+echo "starting spark worker..."
+/opt/spark/sbin/start-worker.sh spark://$(hostname -f):7077
+echo
 
 #########################################################################################
 # 
