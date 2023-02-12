@@ -1,0 +1,5 @@
+CREATE ROLE icecatalog LOGIN PASSWORD 'supersecret1';
+CREATE DATABASE icecatalog OWNER icecatalog ENCODING 'UTF-8';
+ALTER USER icecatalog WITH SUPERUSER;
+ALTER USER icecatalog WITH CREATEDB;
+CREATE SCHEMA icecatalog;
