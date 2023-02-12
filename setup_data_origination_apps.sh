@@ -559,14 +559,14 @@ echo "maven build of Debezium Server complete..."
 echo "---------------------------------------------------------------------"
 echo
 
-cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
-cd ~
-unzip debezium-server-iceberg-dist*.zip -d appdist
+sudo cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip /home/datagen/
+
+sudo unzip /home/datagen/debezium-server-iceberg-dist*.zip -d /home/datagen/appdist
 
 #########################################################################################
 # configure our dbz source-sink.properties file
 #########################################################################################
-cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezium-server-iceberg/conf/
+sudo cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties /home/datagen/appdist/debezium-server-iceberg/conf/
 
 ##########################################################################################
 #  let's update the properties files to use our minio keys.
@@ -574,14 +574,14 @@ cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezi
 
 . ~/minio-output.properties
 
-sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -e "s,<your S3 access-key>,$access_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
 # change ownership
-sudo chown ${USER}:${USER} -R ~/appdist
+sudo chown datagen:datagen -R /home/datagen/appdist
 
 # remove the example file:
-sudo rm ~/appdist/debezium-server-iceberg/conf/application.properties.example
+sudo rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
 
 #########################################################################################
 # let's start our spark master and workers.
