@@ -578,7 +578,11 @@ sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-
 sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
 
 # change ownership
-sudo chown ${USER}:${USER} -R /appdist
+sudo chown ${USER}:${USER} -R ~/appdist
+
+# remove the example file:
+sudo rm ~/appdist/debezium-server-iceberg/conf/application.properties.example
+
 #########################################################################################
 # let's start our spark master and workers.
 #########################################################################################
