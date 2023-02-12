@@ -3,7 +3,7 @@ Title:  Data Origination Workshop
 Author:  Tim Lepple
 Last Updated:  2.12.2023
 Comments:  This repo will setup a data integration platform to evaluate some technology.
-Tags:  Redpanda | PostgreSQL | Kafka Connect | Python | Debezium
+Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium
 ---
 
 # End to End Data Integration with Iceberg
