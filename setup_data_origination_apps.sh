@@ -518,6 +518,37 @@ echo "export SPARK_HOME=/opt/spark" >> ~/.profile
 
 echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/minio-binaries" >> ~/.profile
 
+# let's make this visible
+. ~/.profile
+
+#########################################################################################
+# install docker ce (needed for dbz server build with maven)
+#########################################################################################
+sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
+apt-cache policy docker-ce
+sudo apt install -y docker-ce
+sudo chmod 666 /var/run/docker.sock
+sudo usermod -aG docker ${USER}
+
+
+#########################################################################################
+# install debezium server items
+#########################################################################################
+cd ~
+git clone https://github.com/memiiso/debezium-server-iceberg.git
+cd debezium-server-iceberg
+mvn -Passembly -Dmaven.test.skip package
+
+cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
+cd ~
+unzip debezium-server-iceberg-dist*.zip -d appdist
+
+#########################################################################################
+# configure our dbz source-sink.properties file
+#########################################################################################
+
 #########################################################################################
 # source this to set our new variables in current session
 #########################################################################################
