@@ -11,7 +11,7 @@ Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezi
 ---
 
 ## Objective:
-The goal of this workshop was to evaluate Red Panda and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
+The goal of this workshop was to evaluate [Red Panda](https://redpanda.com/) and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
 
 I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  
 
