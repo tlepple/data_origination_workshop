@@ -549,6 +549,13 @@ unzip debezium-server-iceberg-dist*.zip -d appdist
 # configure our dbz source-sink.properties file
 #########################################################################################
 cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties ~/appdist/debezium-server-iceberg/conf/
+
+
+##########################################################################################
+#  let's reformat the output of access keys from an earlier step
+##########################################################################################
+sed -i "s/Access Key: /access_key=/g" ~/minio-output.properties
+sed -i "s/Secret Key: /secret_key=/g" ~/minio-output.properties
 #########################################################################################
 # source this to set our new variables in current session
 #########################################################################################
