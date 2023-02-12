@@ -555,7 +555,7 @@ mvn -Passembly -Dmaven.test.skip package
 
 echo
 echo "---------------------------------------------------------------------"
-echo "install of Debezium Server complete..."
+echo "maven build of Debezium Server complete..."
 echo "---------------------------------------------------------------------"
 echo
 
