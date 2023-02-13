@@ -6,7 +6,7 @@ Comments:  This repo will setup a data integration platform to evaluate some tec
 Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium | Minio
 ---
 
-# End to End Data Integration with Red Panda & Apache Iceberg
+# End to End Data Integration with Red Panda & Apache Iceberg (WIP)
 ---
 ---
 
