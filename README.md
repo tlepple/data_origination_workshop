@@ -1,12 +1,12 @@
 ---
-Title:  End to End Data Integration with Iceberg
+Title:  The Journey to Apache Iceberg with Red Panda & Debezium
 Author:  Tim Lepple
 Last Updated:  2.12.2023
 Comments:  This repo will setup a data integration platform to evaluate some technology.
 Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium | Minio
 ---
 
-# End to End Data Integration with Red Panda & Apache Iceberg (WIP)
+# The Journey to Apache Iceberg with Red Panda & Debezium (WIP)
 ---
 ---
 
