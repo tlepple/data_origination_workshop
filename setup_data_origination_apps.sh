@@ -12,7 +12,7 @@ sudo apt-get update
 
 echo
 echo "---------------------------------------------------------------------"
-echo "starting red panda install ..."
+echo "starting redpanda install ..."
 echo "---------------------------------------------------------------------"
 echo
 
