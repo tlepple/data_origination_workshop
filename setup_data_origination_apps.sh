@@ -691,7 +691,7 @@ echo
 #########################################################################################
 #  let's copy the aws config files setup earlier into user datagen for use with debezium server items
 #########################################################################################
-sudo cp ~/.aws/* /home/datagen/
+sudo cp -R ~/.aws /home/datagen
 sudo chown datagen:datagen -R /home/datagen/.aws
 
 #########################################################################################
