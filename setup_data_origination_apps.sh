@@ -661,6 +661,9 @@ sudo chown datagen:datagen -R /home/datagen/appdist
 # remove the example file:
 sudo rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
 
+# remove the zip file:
+sudo rm /home/datagen/debezium-server-iceberg-dist-*-SNAPSHOT.zip
+
 echo
 echo "---------------------------------------------------------------------"
 echo "Debezium Server setup complete..."
