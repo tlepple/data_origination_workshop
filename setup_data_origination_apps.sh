@@ -65,7 +65,7 @@ sudo apt install python3-pip -y
 sudo apt install -y jq
 
 ##########################################################################################
-#  create the redpanda conig.yaml
+#  create the redpanda conig.yaml  #  needed to change default console port to 8888 to avoid conflict with debezium server
 ##########################################################################################
 cat <<EOF > ~/redpanda-console-config.yaml
 kafka:
@@ -78,6 +78,8 @@ connect:
   clusters:
     - name: postgres-dbz-connector
       url: http://localhost:8083
+server:
+    listenPort: 8888
 EOF
 
 ##########################################################################################
