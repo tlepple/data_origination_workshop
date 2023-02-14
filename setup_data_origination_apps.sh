@@ -568,7 +568,7 @@ sudo unzip /home/datagen/debezium-server-iceberg-dist*.zip -d /home/datagen/appd
 #########################################################################################
 # configure our dbz source-sink.properties file
 #########################################################################################
-sudo cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties /home/datagen/appdist/debezium-server-iceberg/conf/
+sudo cp ~/data_origination_workshop/dbz_server/application.properties /home/datagen/appdist/debezium-server-iceberg/conf/
 
 ##########################################################################################
 #  let's update the properties files to use our minio keys.
@@ -576,8 +576,8 @@ sudo cp ~/data_origination_workshop/dbz_server/pg2iceberg.properties /home/datag
 
 . ~/minio-output.properties
 
-sudo sed -e "s,<your S3 access-key>,$access_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
-sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/pg2iceberg.properties
+sudo sed -e "s,<your S3 access-key>,$access_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/application.properties
+sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/application.properties
 
 # change ownership
 sudo chown datagen:datagen -R /home/datagen/appdist
