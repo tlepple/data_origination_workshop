@@ -9,6 +9,13 @@ sudo apt-get update
 ##########################################################################################
 #  download and install community edition of redpanda
 ##########################################################################################
+
+echo
+echo "---------------------------------------------------------------------"
+echo "starting red panda install ..."
+echo "---------------------------------------------------------------------"
+echo
+
 ## Run the setup script to download and install the repo
 curl -1sLf 'https://dl.redpanda.com/nzc4ZYQK3WRGd9sy/redpanda/cfg/setup/bash.deb.sh' | sudo -E bash
 
@@ -94,9 +101,20 @@ sudo chown redpanda:redpanda -R /etc/redpanda
 sudo systemctl start redpanda
 sudo systemctl start redpanda-console
 
+echo
+echo "---------------------------------------------------------------------"
+echo "redpanda setup completed..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 #  install a specific version of postgresql (version 14)
 ##########################################################################################
+echo
+echo "---------------------------------------------------------------------"
+echo "installing postgresql..."
+echo "---------------------------------------------------------------------"
+echo
+
 apt policy postgresql
 
 ##########################################################################################
@@ -187,9 +205,21 @@ sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_function_ddl.
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/grants4dbz.sql
 sudo -u postgres psql < ~/data_origination_workshop/db_ddl/create_ddl_icecatalog.sql
 
+echo
+echo "---------------------------------------------------------------------"
+echo "postgresql install completed..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 #  create a directory for data assets in our new 'datagen' user
 ##########################################################################################
+
+echo
+echo "---------------------------------------------------------------------"
+echo "setup data generator items..."
+echo "---------------------------------------------------------------------"
+echo
+
 sudo mkdir -p /home/datagen/datagen
 sudo chown datagen:datagen -R /home/datagen
 
@@ -204,9 +234,20 @@ sudo chown datagen:datagen -R /home/datagen/
 ##########################################################################################
 sudo pip install kafka-python uuid simplejson faker psycopg2-binary
 
+echo
+echo "---------------------------------------------------------------------"
+echo "data generator setup completed..."
+echo "---------------------------------------------------------------------"
+echo
+
 ##########################################################################################
 #  kafka connect downloads
 ##########################################################################################
+echo
+echo "---------------------------------------------------------------------"
+echo "installing kafka-connect..."
+echo "---------------------------------------------------------------------"
+echo
 #  create some directories
 mkdir -p ~/kafka_connect/configuration
 mkdir -p ~/kafka_connect/plugins
@@ -252,16 +293,25 @@ cp ~/kafka_connect/plugins/debezium-connector-postgres/*.jar ~/kafka_connect/kaf
 sudo mv ~/kafka_connect/ /home/datagen/
 sudo chown datagen:datagen -R /home/datagen
 
+echo
+echo "---------------------------------------------------------------------"
+echo "kafka-connect setup completed..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 # Items below this line are from the iceberg workshop & tweaked to run here:
 ##########################################################################################
-
+echo
+echo "---------------------------------------------------------------------"
+echo "install apache iceberg & spark stand alone..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 #  Install maven 
 ##########################################################################################
 sudo apt install maven -y
 
-#########################################################################################
+##########################################################################################
 #  download apache spark standalone
 ##########################################################################################
 wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
@@ -305,9 +355,20 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-
 mv ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
 mv ~/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars /opt/spark/jars/
 
+echo
+echo "---------------------------------------------------------------------"
+echo "iceberg & spark items completed..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 #  download minio debian package
 ##########################################################################################
+
+echo
+echo "---------------------------------------------------------------------"
+echo "install minio..."
+echo "---------------------------------------------------------------------"
+echo
 wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230112020616.0.0_amd64.deb -O minio.deb
 
 ##########################################################################################
@@ -414,6 +475,11 @@ sed -i "s/Secret Key: /secret_key=/g" ~/minio-output.properties
 ##########################################################################################
 . ~/minio-output.properties
 
+echo
+echo "---------------------------------------------------------------------"
+echo "minio install completed..."
+echo "---------------------------------------------------------------------"
+echo
 ##########################################################################################
 #  let's set up aws configure files from code (this is using the minio credentials) - The default region doesn't get used in minio
 ##########################################################################################
@@ -563,9 +629,17 @@ echo "maven build of Debezium Server complete..."
 echo "---------------------------------------------------------------------"
 echo
 
+echo
+echo "---------------------------------------------------------------------"
+echo "configure Debezium Server items..."
+echo "---------------------------------------------------------------------"
+echo
 sudo cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip /home/datagen/
 
 sudo unzip /home/datagen/debezium-server-iceberg-dist*.zip -d /home/datagen/appdist
+
+sudo mkdir -p /home/datagen/appdist/debezium-server-iceberg/data
+
 
 #########################################################################################
 # configure our dbz source-sink.properties file
@@ -586,6 +660,12 @@ sudo chown datagen:datagen -R /home/datagen/appdist
 
 # remove the example file:
 sudo rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
+
+echo
+echo "---------------------------------------------------------------------"
+echo "Debezium Server setup complete..."
+echo "---------------------------------------------------------------------"
+echo
 
 #########################################################################################
 # let's start our spark master and workers.
