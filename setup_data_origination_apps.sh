@@ -488,6 +488,10 @@ sed -i "s/Secret Key: /secret_key=/g" ~/minio-output.properties
 ##########################################################################################
 . ~/minio-output.properties
 
+# copy to user datagen too
+sudo cp ~/minio-ouptut.properties /home/datagen/
+sudo chown datagen:datagen /home/datagen/minio-output.properties
+
 echo
 echo "---------------------------------------------------------------------"
 echo "minio install completed..."
