@@ -366,6 +366,7 @@ sudo adduser datagen spark
 
 #  change to files in /opt/spark to group spark
 sudo chown -R :spark /opt/spark
+sudo chmod -R 771 /opt/spark
 
 echo
 echo "---------------------------------------------------------------------"
