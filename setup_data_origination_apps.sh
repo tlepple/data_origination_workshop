@@ -164,6 +164,7 @@ cat <<EOF > pg_hba.conf
   local   all             all                                     peer
   host    datagen         datagen        0.0.0.0/0                md5
   host    icecatalog      icecatalog     0.0.0.0/0                md5
+  host    hive_metastore  hive           0.0.0.0/0                md5
 EOF
 
 ##########################################################################################
