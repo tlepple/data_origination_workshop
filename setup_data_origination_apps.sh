@@ -603,6 +603,15 @@ echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/mi
 # let's make this visible
 . ~/.profile
 
+# let's add some path items for user 'datagen
+echo "" >> /home/datagen/.profile
+echo "#  set path variables here:" >> /home/datagen/.profile
+echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> /home/datagen/.profile
+echo "export SPARK_HOME=/opt/spark" >> /home/datagen/.profile
+
+echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/minio-binaries" >> /home/datagen/.profile
+
+
 #########################################################################################
 # install docker ce (needed for dbz server build with maven)
 #########################################################################################
