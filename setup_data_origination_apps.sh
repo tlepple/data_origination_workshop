@@ -619,12 +619,12 @@ echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/mi
 . ~/.profile
 
 # let's add some path items for user 'datagen
-echo "" >> /home/datagen/.profile
-echo "#  set path variables here:" >> /home/datagen/.profile
-echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> /home/datagen/.profile
-echo "export SPARK_HOME=/opt/spark" >> /home/datagen/.profile
+sudo echo "" >> /home/datagen/.profile
+sudo echo "#  set path variables here:" >> /home/datagen/.profile
+sudo echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> /home/datagen/.profile
+sudo echo "export SPARK_HOME=/opt/spark" >> /home/datagen/.profile
 
-echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/minio-binaries" >> /home/datagen/.profile
+sudo echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:/home/datagen/minio-binaries" >> /home/datagen/.profile
 
 
 #########################################################################################
