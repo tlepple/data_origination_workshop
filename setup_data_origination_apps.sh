@@ -356,6 +356,17 @@ wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-
 mv ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
 mv ~/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars /opt/spark/jars/
 
+##########################################################################################
+#  create a os group called 'spark' and add user datagen and ${USER}
+##########################################################################################
+
+sudo addgroup spark
+sudo adduser ${USER} spark
+sudo adduser datagen spark
+
+#  change to files in /opt/spark to group spark
+sudo chown -R :spark /opt/spark
+
 echo
 echo "---------------------------------------------------------------------"
 echo "iceberg & spark items completed..."
