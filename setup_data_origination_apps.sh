@@ -431,9 +431,7 @@ sudo mv ~/minio.properties /etc/default/minio
 
 sudo chown root:root /etc/default/minio
 
-# copy to user datagen too
-sudo cp ~/minio.properties /home/datagen/
-sudo chown datagen:datagen /home/datagen/minio.properties
+
 ##########################################################################################
 #  start the minio server:
 ##########################################################################################
