@@ -205,6 +205,7 @@ sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_function_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/grants4dbz.sql
 sudo -u postgres psql < ~/data_origination_workshop/db_ddl/create_ddl_icecatalog.sql
+sudo -u postgres psql < ~/data_origination_workshop/db_ddl/hive_metastore_ddl.sql
 
 echo
 echo "---------------------------------------------------------------------"
