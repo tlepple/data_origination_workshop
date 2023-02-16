@@ -649,17 +649,17 @@ sudo cp ~/data_origination_workshop/dbz_server/application.properties ~/appdist/
 
 . ~/minio-output.properties
 
-sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
-sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
+sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
+sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
 
 # change ownership
 sudo chown datagen:datagen -R /home/datagen/appdist
 
 # remove the example file:
-sudo rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
+rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
 
 # remove the zip file:
-sudo rm /home/datagen/debezium-server-iceberg-dist-*-SNAPSHOT.zip
+rm /home/datagen/debezium-server-iceberg-dist-*-SNAPSHOT.zip
 
 echo
 echo "---------------------------------------------------------------------"
@@ -679,7 +679,7 @@ echo "---------------------------------------------------------------------"
 echo "configure Spark and start master and worker services..."
 echo "---------------------------------------------------------------------"
 echo
-sudo sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
+sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
 
 echo "starting spark master..."
 /opt/spark/sbin/start-master.sh
