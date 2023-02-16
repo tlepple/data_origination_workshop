@@ -16,6 +16,12 @@ rm -f passwd.txt
 sudo usermod -aG sudo datagen
 
 ##########################################################################################
+#  let's complete this install as this user:
+##########################################################################################
+
+su - datagen 
+
+##########################################################################################
 #  install some OS utilities
 #########################################################################################
 sudo apt-get install wget curl apt-transport-https unzip chrony -y
@@ -179,7 +185,6 @@ cat <<EOF > pg_hba.conf
   local   all             all                                     peer
   host    datagen         datagen        0.0.0.0/0                md5
   host    icecatalog      icecatalog     0.0.0.0/0                md5
-  host    hive_metastore  hive           0.0.0.0/0                md5
 EOF
 
 ##########################################################################################
@@ -207,7 +212,7 @@ sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/customer_function_ddl.sql
 sudo -u datagen psql < ~/data_origination_workshop/db_ddl/grants4dbz.sql
 sudo -u postgres psql < ~/data_origination_workshop/db_ddl/create_ddl_icecatalog.sql
-sudo -u postgres psql < ~/data_origination_workshop/db_ddl/hive_metastore_ddl.sql
+#sudo -u postgres psql < ~/data_origination_workshop/db_ddl/hive_metastore_ddl.sql
 
 echo
 echo "---------------------------------------------------------------------"
@@ -224,8 +229,6 @@ echo "setup data generator items..."
 echo "---------------------------------------------------------------------"
 echo
 
-sudo mkdir -p /home/datagen/datagen
-sudo chown datagen:datagen -R /home/datagen
 
 ##########################################################################################
 #   copy these files to the os user 'datagen' and set owner and permissions
@@ -291,11 +294,7 @@ wget https://jdbc.postgresql.org/download/postgresql-42.5.1.jar -P ~/kafka_conne
 ##########################################################################################
 cp ~/kafka_connect/plugins/debezium-connector-postgres/*.jar ~/kafka_connect/kafka_2.13-3.3.2/libs/
 
-##########################################################################################
-#  move & set permissions
-##########################################################################################
-sudo mv ~/kafka_connect/ /home/datagen/
-sudo chown datagen:datagen -R /home/datagen
+
 
 echo
 echo "---------------------------------------------------------------------"
@@ -358,26 +357,6 @@ wget https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runti
 wget https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.1/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars
 mv ~/iceberg-spark-runtime-3.3_2.12-1.1.0.jar /opt/spark/jars/
 mv ~/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars /opt/spark/jars/
-
-
-##########################################################################################
-# setup a hive-site.xml to point to postgres over using the derby database for standalone
-##########################################################################################
-sudo cp ~/data_origination_workshop/hive_metastore/hive-site.xml /opt/spark/conf
-sudo chown centos:spark hive-site.xml
-
-
-##########################################################################################
-#  create a os group called 'spark' and add user datagen and ${USER}
-##########################################################################################
-
-sudo addgroup spark
-sudo adduser ${USER} spark
-sudo adduser datagen spark
-
-#  change to files in /opt/spark to group spark
-sudo chown -R :spark /opt/spark
-sudo chmod -R 771 /opt/spark
 
 echo
 echo "---------------------------------------------------------------------"
@@ -510,10 +489,6 @@ sed -i "s/Secret Key: /secret_key=/g" ~/minio-output.properties
 ##########################################################################################
 . ~/minio-output.properties
 
-# copy to user datagen too
-sudo cp ~/minio-output.properties /home/datagen/
-sudo chown datagen:datagen /home/datagen/minio-output.properties
-
 echo
 echo "---------------------------------------------------------------------"
 echo "minio install completed..."
@@ -630,14 +605,6 @@ echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:$HOME/mi
 # let's make this visible
 . ~/.profile
 
-# let's add some path items for user 'datagen
-sudo echo "" >> /home/datagen/.profile
-sudo echo "#  set path variables here:" >> /home/datagen/.profile
-sudo echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> /home/datagen/.profile
-sudo echo "export SPARK_HOME=/opt/spark" >> /home/datagen/.profile
-
-sudo echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin:$JAVA_HOME/bin:/home/datagen/minio-binaries" >> /home/datagen/.profile
-
 
 #########################################################################################
 # install docker ce (needed for dbz server build with maven)
@@ -682,17 +649,17 @@ echo "---------------------------------------------------------------------"
 echo "configure Debezium Server items..."
 echo "---------------------------------------------------------------------"
 echo
-sudo cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip /home/datagen/
+sudo cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
 
-sudo unzip /home/datagen/debezium-server-iceberg-dist*.zip -d /home/datagen/appdist
+unzip ~/debezium-server-iceberg-dist*.zip -d ~/appdist
 
-sudo mkdir -p /home/datagen/appdist/debezium-server-iceberg/data
+mkdir -p ~/debezium-server-iceberg/data
 
 
 #########################################################################################
 # configure our dbz source-sink.properties file
 #########################################################################################
-sudo cp ~/data_origination_workshop/dbz_server/application.properties /home/datagen/appdist/debezium-server-iceberg/conf/
+sudo cp ~/data_origination_workshop/dbz_server/application.properties ~/appdist/debezium-server-iceberg/conf/
 
 ##########################################################################################
 #  let's update the properties files to use our minio keys.
@@ -700,8 +667,8 @@ sudo cp ~/data_origination_workshop/dbz_server/application.properties /home/data
 
 . ~/minio-output.properties
 
-sudo sed -e "s,<your S3 access-key>,$access_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/application.properties
-sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i /home/datagen/appdist/debezium-server-iceberg/conf/application.properties
+sudo sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
+sudo sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
 
 # change ownership
 sudo chown datagen:datagen -R /home/datagen/appdist
@@ -739,11 +706,6 @@ echo "starting spark worker..."
 /opt/spark/sbin/start-worker.sh spark://$(hostname -f):7077
 echo
 
-#########################################################################################
-#  let's copy the aws config files setup earlier into user datagen for use with debezium server items
-#########################################################################################
-sudo cp -R ~/.aws /home/datagen
-sudo chown datagen:datagen -R /home/datagen/.aws
 
 #########################################################################################
 # source this to set our new variables in current session
