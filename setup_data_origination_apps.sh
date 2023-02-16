@@ -363,6 +363,8 @@ mv ~/spark-token-provider-kafka-0-10_2.12-3.3.1-preview2.jars /opt/spark/jars/
 # setup a hive-site.xml to point to postgres over using the derby database for standalone
 ##########################################################################################
 sudo cp ~/data_origination_workshop/hive_metastore/hive-site.xml /opt/spark/conf
+sudo chown centos:spark hive-site.xml
+
 
 ##########################################################################################
 #  create a os group called 'spark' and add user datagen and ${USER}
