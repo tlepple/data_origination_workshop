@@ -258,6 +258,10 @@ rm ~/kafka_connect/kafka_2.13-3.3.2.tgz
 # copy the properties files:
 cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/configuration/
 
+# update the private IP address in this config file:
+
+sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/kafka_connect/configuration/connect.properties
+
 ##########################################################################################
 #  debezium download
 ##########################################################################################
