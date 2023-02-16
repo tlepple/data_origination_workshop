@@ -86,7 +86,7 @@ connect:
   enabled: true
   clusters:
     - name: postgres-dbz-connector
-      url: http://<private_ip>:8090
+      url: http://<private_ip>:8083
 server:
     listenPort: 8888
 EOF
