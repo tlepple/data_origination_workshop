@@ -1,6 +1,20 @@
 
 #!/bin/bash
 
+
+##########################################################################################
+#  create an osuser datagen and add to sudo file
+##########################################################################################
+sudo useradd -m -s /usr/bin/bash datagen
+
+echo supersecret1 > passwd.txt
+echo supersecret1 >> passwd.txt
+
+sudo passwd datagen < passwd.txt
+
+rm -f passwd.txt
+sudo usermod -aG sudo datagen
+
 ##########################################################################################
 #  install some OS utilities
 #########################################################################################
@@ -184,20 +198,6 @@ sudo systemctl restart postgresql
 #  install Java 11
 ##########################################################################################
 sudo apt install openjdk-11-jdk -y
-
-##########################################################################################
-#  create an osuser datagen and add to sudo file
-##########################################################################################
-#sudo adduser --disabled-login datagen
-sudo useradd -m -s /usr/bin/bash datagen
-
-echo supersecret1 > passwd.txt
-echo supersecret1 >> passwd.txt
-
-sudo passwd datagen < passwd.txt
-
-rm -f passwd.txt
-sudo usermod -aG sudo datagen
 
 ##########################################################################################
 ## Run the sql file to create the schema for all DB’s
