@@ -3,25 +3,6 @@
 
 
 ##########################################################################################
-#  create an osuser datagen and add to sudo file
-##########################################################################################
-sudo useradd -m -s /usr/bin/bash datagen
-
-echo supersecret1 > passwd.txt
-echo supersecret1 >> passwd.txt
-
-sudo passwd datagen < passwd.txt
-
-rm -f passwd.txt
-sudo usermod -aG sudo datagen
-
-##########################################################################################
-#  let's complete this install as this user:
-##########################################################################################
-
-su - datagen 
-
-##########################################################################################
 #  install some OS utilities
 #########################################################################################
 sudo apt-get install wget curl apt-transport-https unzip chrony -y
