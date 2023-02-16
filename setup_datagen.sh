@@ -220,7 +220,7 @@ echo "postgresql install completed..."
 echo "---------------------------------------------------------------------"
 echo
 ##########################################################################################
-#  create a directory for data assets in our new 'datagen' user
+#  
 ##########################################################################################
 
 echo
@@ -438,15 +438,6 @@ curl https://dl.min.io/client/mc/release/linux-amd64/mc \
 chmod +x $HOME/minio-binaries/mc
 export PATH=$PATH:$HOME/minio-binaries/
 
-
-
-#  need this installed for user datagen too:
-sudo curl https://dl.min.io/client/mc/release/linux-amd64/mc \
-  --create-dirs \
-  -o /home/datagen/minio-binaries/mc
-  
- sudo chmod +x /home/datagen/minio-binaries/mc 
- 
 
 ##########################################################################################
 #  create an alias on this host for the minio cli (using the minio root credentials)
