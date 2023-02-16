@@ -631,7 +631,7 @@ echo "---------------------------------------------------------------------"
 echo "configure Debezium Server items..."
 echo "---------------------------------------------------------------------"
 echo
-sudo cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
+cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
 
 unzip ~/debezium-server-iceberg-dist*.zip -d ~/appdist
 
