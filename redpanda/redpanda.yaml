@@ -2,13 +2,13 @@ redpanda:
     data_directory: /var/lib/redpanda/data
     seed_servers: []
     rpc_server:
-        address: 192.168.1.43
+        address: <private_ip>
         port: 33145
     kafka_api:
-        - address: 192.168.1.43
+        - address: <private_ip>
           port: 9092
     admin:
-        - address: 192.168.1.43
+        - address: <private_ip>
           port: 9644
     developer_mode: true
     auto_create_topics_enabled: true
