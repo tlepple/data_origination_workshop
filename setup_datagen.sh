@@ -679,7 +679,12 @@ echo "---------------------------------------------------------------------"
 echo "configure Spark and start master and worker services..."
 echo "---------------------------------------------------------------------"
 echo
+
+#########################################################################################
+#  need to change the default ports for master and workers to avoid conflicts with red panda and kafka connect
+#########################################################################################
 sed -e 's,SPARK_MASTER_WEBUI_PORT=8080,SPARK_MASTER_WEBUI_PORT=8085,g' -i /opt/spark/sbin/start-master.sh
+sed -e 's,SPARK_WORKER_WEBUI_PORT=8081,SPARK_WORKER_WEBUI_PORT=8090,g' -i /opt/spark/sbin/start-worker.sh
 
 echo "starting spark master..."
 /opt/spark/sbin/start-master.sh
