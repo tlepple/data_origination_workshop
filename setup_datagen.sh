@@ -92,6 +92,7 @@ server:
 EOF
 
 PRIVATE_IP=`ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'`
+sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/redpanda-console-config.yaml
 
 ##########################################################################################
 #   move this file to proper directory
