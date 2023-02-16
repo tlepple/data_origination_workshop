@@ -78,18 +78,20 @@ sudo apt install -y jq
 ##########################################################################################
 cat <<EOF > ~/redpanda-console-config.yaml
 kafka:
-  brokers: "localhost:9092"
+  brokers: "<private_ip>:9092"
   schemaRegistry:
     enabled: true
-    urls: ["http://localhost:8081"]
+    urls: ["http://<private_ip>:8081"]
 connect:
   enabled: true
   clusters:
     - name: postgres-dbz-connector
-      url: http://localhost:8083
+      url: http://<private_ip>:8090
 server:
     listenPort: 8888
 EOF
+
+PRIVATE_IP=`ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'`
 
 ##########################################################################################
 #   move this file to proper directory
