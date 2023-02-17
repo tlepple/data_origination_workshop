@@ -6,6 +6,7 @@
 #  install some OS utilities
 #########################################################################################
 sudo apt-get install wget curl apt-transport-https unzip chrony -y
+sudo apt-get install -y figlet cowsay
 sudo apt-get update
 
 ##########################################################################################
@@ -693,6 +694,10 @@ echo "starting spark worker..."
 /opt/spark/sbin/start-worker.sh spark://$(hostname -f):7077
 echo
 
+#########################################################################################
+#  setup complete.
+#########################################################################################
+figlet -f small -w 300  "Setup is complete!"'!' | cowsay -n -f "$(ls -1 /usr/share/cowsay/cows | grep "\.cow" | sed 's/\.cow//' | egrep -v "bong|head-in|sodomized|telebears" | shuf -n 1)"
 
 #########################################################################################
 # source this to set our new variables in current session
