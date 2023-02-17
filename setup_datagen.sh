@@ -102,13 +102,13 @@ PRIVATE_IP=`ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'`
 sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/redpanda-console-config.yaml
 sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i /etc/redpanda/redpanda.yaml
 
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/comsume_topic_dgCustomer.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/consume_panda_2_iceberg_customer.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/consume_stream_customer_2_console.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/consume_stream_txn_2_console.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/pg_upsert_dg.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/redpanda_dg.py
-sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/spark_from_dbz_customer_2_iceberg.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagem/comsume_topic_dgCustomer.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/consume_panda_2_iceberg_customer.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/consume_stream_customer_2_console.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/consume_stream_txn_2_console.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/pg_upsert_dg.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/redpanda_dg.py
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/data_origination_workshop/datagen/spark_from_dbz_customer_2_iceberg.py
 
 ##########################################################################################
 #   move this file to proper directory
