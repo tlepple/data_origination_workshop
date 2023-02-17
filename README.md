@@ -24,6 +24,17 @@ sudo passwd datagen < passwd.txt
 rm -f passwd.txt
 sudo usermod -aG sudo datagen
 
+##########################################################################################
+#  let's complete this install as this user:
+##########################################################################################
+
+su - datagen 
+
+
+##########################################################################################
+# install github cli and setup cli access to a private repo
+##########################################################################################
+
 type -p curl >/dev/null || sudo apt install curl -y
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
