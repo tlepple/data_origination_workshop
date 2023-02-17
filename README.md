@@ -82,7 +82,7 @@ git config --global user.name tlepple
 ## Objective:
 The goal of this workshop was to evaluate [Red Panda](https://redpanda.com/) and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
 
-I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_data_origination_apps.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  
+I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_datagen.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  
 
 In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will be installed here too). For step-by-step instruction on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details.  All of the tasks from that workshop can be run on this new server.
 
