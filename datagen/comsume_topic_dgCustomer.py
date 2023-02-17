@@ -21,7 +21,7 @@ try:
     # define our Kafka Consumer 
     consumer = KafkaConsumer(
         'dgCustomer',
-        bootstrap_servers='localhost:9092',
+        bootstrap_servers='<private_ip>:9092',
         auto_offset_reset='earliest',
         value_deserializer=lambda m: json.loads(m.decode('utf-8'))
     )
