@@ -233,8 +233,11 @@ echo
 ##########################################################################################
 #   copy these files to the os user 'datagen' and set owner and permissions
 ##########################################################################################
-sudo mv ~/data_origination_workshop/datagen/* /home/datagen/datagen/
-sudo chown datagen:datagen -R /home/datagen/
+#sudo mv ~/data_origination_workshop/datagen/* /home/datagen/datagen/
+#sudo chown datagen:datagen -R /home/datagen/
+
+mv ~/data_origination_workshop/datagen/* /home/datagen/datagen/
+chown datagen:datagen -R /home/datagen/
 
 ##########################################################################################
 #  pip install some items
@@ -276,7 +279,8 @@ cp ~/data_origination_workshop/kafka_connect/*.properties ~/kafka_connect/config
 
 # update the private IP address in this config file:
 
-sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/kafka_connect/configuration/connect.properties
+#sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/kafka_connect/configuration/connect.properties
+sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/kafka_connect/configuration/connect.properties
 
 ##########################################################################################
 #  debezium download
@@ -325,7 +329,8 @@ wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 
 tar -xzvf spark-3.3.1-bin-hadoop3.tgz
 
-sudo mv spark-3.3.1-bin-hadoop3/ /opt/spark
+#sudo mv spark-3.3.1-bin-hadoop3/ /opt/spark
+mv spark-3.3.1-bin-hadoop3/ /opt/spark
 
 ##########################################################################################
 #  install aws cli
@@ -342,14 +347,18 @@ sudo apt install -y mlocate
 ##########################################################################################
 wget https://jdbc.postgresql.org/download/postgresql-42.5.1.jar
 
-sudo mv postgresql-42.5.1.jar /opt/spark/jars/
+#sudo mv postgresql-42.5.1.jar /opt/spark/jars/
+mv postgresql-42.5.1.jar /opt/spark/jars/
+
 
 ##########################################################################################
 # download some aws jars:
 ##########################################################################################
 wget https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/2.19.19/bundle-2.19.19.jar
 
-sudo mv bundle-2.19.19.jar /opt/spark/jars/
+#sudo mv bundle-2.19.19.jar /opt/spark/jars/
+mv bundle-2.19.19.jar /opt/spark/jars/
+
 
 wget https://repo1.maven.org/maven2/software/amazon/awssdk/url-connection-client/2.19.19/url-connection-client-2.19.19.jar
 mv url-connection-client-2.19.19.jar /opt/spark/jars/
@@ -654,7 +663,8 @@ mkdir -p ~/debezium-server-iceberg/data
 #########################################################################################
 # configure our dbz source-sink.properties file
 #########################################################################################
-sudo cp ~/data_origination_workshop/dbz_server/application.properties ~/appdist/debezium-server-iceberg/conf/
+#sudo cp ~/data_origination_workshop/dbz_server/application.properties ~/appdist/debezium-server-iceberg/conf/
+cp ~/data_origination_workshop/dbz_server/application.properties ~/appdist/debezium-server-iceberg/conf/
 
 ##########################################################################################
 #  let's update the properties files to use our minio keys.
@@ -666,7 +676,7 @@ sed -e "s,<your S3 access-key>,$access_key,g" -i ~/appdist/debezium-server-icebe
 sed -e "s,<your s3 secret-key>,$secret_key,g" -i ~/appdist/debezium-server-iceberg/conf/application.properties
 
 # change ownership
-sudo chown datagen:datagen -R /home/datagen/appdist
+#sudo chown datagen:datagen -R /home/datagen/appdist
 
 # remove the example file:
 rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.example
