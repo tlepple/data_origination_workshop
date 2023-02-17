@@ -94,6 +94,10 @@ EOF
 
 sudo cp ~/data_origination_workshop/redpanda/redpanda.yaml /etc/redpanda/
 
+
+##########################################################################################
+#  Need to update the value of '<private_ip>' in a bunch of files
+##########################################################################################
 PRIVATE_IP=`ip -o route get to 8.8.8.8 | sed -n 's/.*src \([0-9.]\+\).*/\1/p'`
 sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i ~/redpanda-console-config.yaml
 sudo sed -e "s,<private_ip>,$PRIVATE_IP,g" -i /etc/redpanda/redpanda.yaml
