@@ -42,7 +42,7 @@ def my_serializer(message):
     return json.dumps(message).encode('utf-8')
 
 #  define variable for our producer
-producer = KafkaProducer(bootstrap_servers="localhost:9092",value_serializer=my_serializer)
+producer = KafkaProducer(bootstrap_servers="<private_ip>:9092",value_serializer=my_serializer)
 
 #########################################################################################
 #       Code execution below
