@@ -59,7 +59,7 @@ spark = SparkSession \
 parsed  = spark \
   .readStream \
   .format("kafka") \
-  .option("kafka.bootstrap.servers", "127.0.0.1:9092") \
+  .option("kafka.bootstrap.servers", "<private_ip>:9092") \
   .option("subscribe", "dgCustomer") \
   .option("startingOffsets", "earliest") \
   .option("kafka.session.timeout.ms", "10000") \
