@@ -6,6 +6,64 @@ Comments:  This repo will setup a data integration platform to evaluate some tec
 Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium | Minio
 ---
 
+
+---
+---
+# Temp items for my setup  (Delete before releasing):
+```
+##########################################################################################
+#  create an osuser datagen and add to sudo file
+##########################################################################################
+sudo useradd -m -s /usr/bin/bash datagen
+
+echo supersecret1 > passwd.txt
+echo supersecret1 >> passwd.txt
+
+sudo passwd datagen < passwd.txt
+
+rm -f passwd.txt
+sudo usermod -aG sudo datagen
+
+type -p curl >/dev/null || sudo apt install curl -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+
+
+
+
+gh auth login
+
+
+centos@spark-ice2:/usr/share/keyrings$ gh auth login
+? What account do you want to log into? GitHub.com
+? What is your preferred protocol for Git operations? HTTPS
+? Authenticate Git with your GitHub credentials? Yes
+? How would you like to authenticate GitHub CLI? Login with a web browser
+
+! First copy your one-time code: 3FDF-53F5
+Press Enter to open github.com in your browser...
+! Failed opening a web browser at https://github.com/login/device
+  exec: "xdg-open,x-www-browser,www-browser,wslview": executable file not found in $PATH
+  Please try entering the URL in your browser manually
+✓ Authentication complete.
+- gh config set -h github.com git_protocol https
+✓ Configured git protocol
+✓ Logged in as tlepple
+
+
+
+git config --global user.email "rtlepple@gmail.com"
+git config --global user.name tlepple
+
+
+```
+---
+---
+
+
 # The Journey to Apache Iceberg with Red Panda & Debezium (WIP)
 ---
 ---
@@ -56,7 +114,7 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 
 ```
 #  run it:
-. ~/data_origination_workshop/setup_data_origination_apps.sh
+. ~/data_origination_workshop/setup_datagen.sh
 ```
   *  This should complete within 5 minutes.
 ---
