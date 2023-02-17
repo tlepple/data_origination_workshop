@@ -74,22 +74,8 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 gh auth login
 
-centos@spark-ice2:/usr/share/keyrings$ gh auth login
-? What account do you want to log into? GitHub.com
-? What is your preferred protocol for Git operations? HTTPS
-? Authenticate Git with your GitHub credentials? Yes
-? How would you like to authenticate GitHub CLI? Login with a web browser
-
-! First copy your one-time code: 3FDF-53F5
-Press Enter to open github.com in your browser...
-! Failed opening a web browser at https://github.com/login/device
-  exec: "xdg-open,x-www-browser,www-browser,wslview": executable file not found in $PATH
-  Please try entering the URL in your browser manually
-✓ Authentication complete.
-- gh config set -h github.com git_protocol https
-✓ Configured git protocol
-✓ Logged in as tlepple
-
+https://github.com/login/device
+ 
 git config --global user.email "rtlepple@gmail.com"
 git config --global user.name tlepple
 
