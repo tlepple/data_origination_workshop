@@ -113,7 +113,7 @@ The setup script will build and install our `Data Integration Platform` onto a s
 
  * I built this on a new install of Ubuntu Server
  * Version: 20.04.5 LTS 
- * Instance Specs: (min 4 core w/ 8 GB ram & 30 GB of disk) -- add more RAM if you have it to spare.
+ * Instance Specs: (min 4 core w/ 16 GB ram & 30 GB of disk) -- add more RAM if you have it to spare.
 
 ---
 ###  Install Git tools and pull this repo.
