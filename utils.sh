@@ -11,12 +11,13 @@ function validate_url(){
 
 function get_valid_url(){
 if validate_url $url; then
-    # Do something when exists
+    # Download when exists
     echo "file exists.  downloading..."
-    wget $url
+    wget $1 -P ~/downloads
   else
-    # Return or print some error
-    echo "file: $url -- does not exist"
-    exit 
+    # print error and exit the install
+     echo "file: $1 -- does not exist.  Aborting the install."
+     exit 1
 fi
 }
+
