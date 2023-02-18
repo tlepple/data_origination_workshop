@@ -323,6 +323,14 @@ echo
 sudo apt install maven -y
 
 ##########################################################################################
+#   create a directory for spark events, logs and some json files to be used 
+##########################################################################################
+mkdir -p /opt/spark/logs
+mkdir -p /opt/spark/spark-events
+mkdir -p /opt/spark/input
+mkdir -p /opt/spark/checkpoint
+
+##########################################################################################
 #  download apache spark standalone
 ##########################################################################################
 wget https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
@@ -518,13 +526,7 @@ aws configure set default.region us-east-1
 aws --endpoint-url http://127.0.0.1:9000 s3 ls
 
 echo
-##########################################################################################
-#   create a directory for spark events, logs and some json files to be used in a lab
-##########################################################################################
-mkdir -p /opt/spark/logs
-mkdir -p /opt/spark/spark-events
-mkdir -p /opt/spark/input
-mkdir -p /opt/spark/checkpoint
+
 
 ##########################################################################################
 #  Create a json records file of sample customer data to be used in a lab
