@@ -146,6 +146,9 @@ sudo chown redpanda:redpanda -R /etc/redpanda
 ##########################################################################################
 #  start redpanda & the console:
 ##########################################################################################
+sudo systemctl enable redpanda
+sudo systemctl enable redpanda-console
+
 sudo systemctl start redpanda
 sudo systemctl start redpanda-console
 
