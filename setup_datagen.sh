@@ -50,7 +50,7 @@ echo
 sudo -E bash  ~/data_origination_workshop/downloads/$PANDA_REPO_FILE
 
 sudo apt-get update
-sudo apt install redpanda -y
+sudo apt-get install redpanda=22.3.12-1 -y
 
 ##########################################################################################
 #   install 'rpk' - cli tools for working with red panda
@@ -89,7 +89,7 @@ sleep 10
 #  Install the red panda console package
 ##########################################################################################
 
-sudo apt-get install redpanda-console -y
+sudo apt-get install redpanda-console=2.1.1 -y
 
 ##########################################################################################
 #  install pip for python3
