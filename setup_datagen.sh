@@ -83,6 +83,8 @@ echo "PATH=$PATH:$REDPANDA_HOME" >> ~/.profile
 #unzip rpk-linux-amd64.zip -d ~/.local/bin/
 unzip ~/data_origination_workshop/downloads/$PANDA_FILE -d ~/.local/bin/
 
+sleep 10
+
 ##########################################################################################
 #  Install the red panda console package
 ##########################################################################################
