@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function validate_url(){
-    if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
+    if [[ `wget -S --spider $1 --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 --tries=4 2>&1 | grep 'HTTP/1.1 200 OK'` ]]; then
     return 0
   else
     return 1
