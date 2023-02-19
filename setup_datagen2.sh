@@ -333,7 +333,7 @@ tar -xzf ~/data_origination_workshop/downloads/$DEBEZIUM_CONNECT_FILE --director
 ##########################################################################################
 #cp ~/kafka_connect/plugins/debezium-connector-postgres/*.jar ~/kafka_connect/kafka_2.13-3.3.2/libs/
 
-cp ~/downlo/plugins/debezium-connector-postgres/$KCONNECT_JDBC_FILE ~/kafka_connect/kafka_2.13-3.3.2/libs/
+cp ~/data_origination_workshop/downloads/$KCONNECT_JDBC_FILE ~/kafka_connect/kafka_2.13-3.3.2/libs/
 
 
 
