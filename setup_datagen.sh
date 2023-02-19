@@ -797,6 +797,11 @@ echo "starting spark worker..."
 echo
 
 #########################################################################################
+#  copy spark-sql and pyspark items
+#########################################################################################
+cp ~/data_origination_workshop/spark_items/* /opt/spark/sql
+
+#########################################################################################
 #  setup complete.
 #########################################################################################
 figlet -f small -w 300  "Setup is complete!"'!' | cowsay -n -f "$(ls -1 /usr/share/cowsay/cows | grep "\.cow" | sed 's/\.cow//' | egrep -v "bong|head-in|sodomized|telebears" | shuf -n 1)"
