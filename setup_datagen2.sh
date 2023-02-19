@@ -461,7 +461,7 @@ echo
 #   install minio
 ##########################################################################################
 #sudo dpkg -i minio.deb
-sudo dkpg -i ~/data_origination_workshop/downloads/$MINIO_PACKAGE_FILE
+sudo dpkg -i ~/data_origination_workshop/downloads/$MINIO_PACKAGE_FILE
 
 ##########################################################################################
 #  create directory for minio data to be stored
