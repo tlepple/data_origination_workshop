@@ -363,7 +363,7 @@ tar -xzvf ~/data_origination_workshop/downloads/$SPARK_STANDALONE_FILE --directo
 
 SPARK_DIR_NAME=$(basename $SPARK_STANDALONE_FILE .tgz)
 
-sudo mv ~/$SPARK_DIR_NAME
+sudo mv ~/$SPARK_DIR_NAME /opt/spark
 #mv spark-3.3.1-bin-hadoop3/ /opt/spark
 
 ##########################################################################################
