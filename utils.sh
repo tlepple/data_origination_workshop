@@ -13,7 +13,7 @@ function get_valid_url(){
 if validate_url $1; then
     # Download when exists
     echo "file exists.  downloading..."
-    wget $1 --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 --tries=4 -P ~/downloads
+    wget $1 --retry-connrefused --waitretry=1 --read-timeout=20 --timeout=15 --tries=4 -P ~/data_origination_workshop/downloads
 
   else
     # print error and exit the install
