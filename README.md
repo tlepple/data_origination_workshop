@@ -456,6 +456,7 @@ In the setup script, we downloaded and installed all the components and needed j
 ```
 su - datagen
 
+export CLASSPATH=/home/datagen/kafka_connect/plugins/debezium-connector-postgres/*
 cd ~/kafka_connect/configuration
 cat connect.properties
 ```
