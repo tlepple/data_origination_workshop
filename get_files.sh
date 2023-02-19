@@ -48,7 +48,7 @@ REDPANDA_FILE=https://github.com/redpanda-data/redpanda/releases/latest/download
 ##########################################################################################
 #  POSTGRESQL ITEMS:
 ##########################################################################################
-PSQL_REPO_KEY=https://www.postgresql.org/media/keys/ACCC4CF8.asc; echo "POSTGRESQL_KEY_FILELE=${PSQL_REPO_KEY##*/}" >> ~/file_variables.output
+PSQL_REPO_KEY=https://www.postgresql.org/media/keys/ACCC4CF8.asc; echo "POSTGRESQL_KEY_FILE=${PSQL_REPO_KEY##*/}" >> ~/file_variables.output
 PSQL_JDBC_JAR=https://jdbc.postgresql.org/download/postgresql-42.5.1.jar; echo "POSTGRESQL_FILE=${KCONNECT_JDBC_JAR##*/}" >> ~/file_variables.output
 
 ##########################################################################################
