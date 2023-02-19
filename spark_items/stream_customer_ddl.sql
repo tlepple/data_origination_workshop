@@ -1,4 +1,4 @@
-CREATE TABLE icecatalog.icecatalog.cust_from_bash2 (
+CREATE TABLE icecatalog.icecatalog.stream_customer (
     type STRING,
     event_ts LONG,
     tx_id STRING,
