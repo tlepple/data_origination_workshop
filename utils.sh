@@ -10,7 +10,7 @@ function validate_url(){
 }
 
 function get_valid_url(){
-if validate_url $url; then
+if validate_url $1; then
     # Download when exists
     echo "file exists.  downloading..."
     wget $1 -P ~/downloads
