@@ -5,7 +5,18 @@
 #  let's caputure install output to a log file
 ##########################################################################################
 # exec 1> >(tee -a "/tmp/${0##*/}.log")
-exec 1 | tee -a /tmp/data_orig_install.log
+#exec 1 | tee -a /tmp/data_orig_install.log
+
+LOGPATH=${HOME}/data_origination_workshop/logs
+OUTPUTLOG=${LOGPATH}/logouput_`date +%d_%m_%y_%H.%M.%S`.log
+ERRORLOG=${LOGPATH}/logerror_`date +%d_%m_%y_%H.%M.%S`.log
+mkdir -p "$(dirname "$OUTPUTLOG")"
+# Redirect all stdout and stderr to respective files
+exec 1> >( tee -a "$OUTPUTLOG" )
+exec 2> >( tee -a "$ERRORLOG" )
+
+
+
 
 ##########################################################################################
 #  install some OS utilities
@@ -791,3 +802,5 @@ sleep 5
 # source this to set our new variables in current session
 #########################################################################################
 bash -l
+
+exit 
