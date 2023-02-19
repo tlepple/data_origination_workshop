@@ -24,7 +24,7 @@ echo
 #SPARK_FILE=https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz
 SPARK_FILE=https://dlcdn.apache.org/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz; echo "SPARK_STANDALONE_FILE=${SPARK_FILE##*/}" >> ~/file_variables.output
 COMMONS_POOL2_JAR=https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar; echo "COMMONS_POOL2_FILE=${COMMONS_POOL2_JAR##*/}" >> ~/file_variables.output 
-KAFKA_CLIENT_JAR=https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.3.1/kafka-clients-3.3.1.jar; echo "SPARK_STANDALONE_FILE=${KAFKA_CLIENT_JAR##*/}" >> ~/file_variables.output
+KAFKA_CLIENT_JAR=https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.3.1/kafka-clients-3.3.1.jar; echo "KAFKA_CLIENT_FILE=${KAFKA_CLIENT_JAR##*/}" >> ~/file_variables.output
 SPARK_TOKEN_JAR=https://repo.mavenlibs.com/maven/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.3.1/spark-token-provider-kafka-0-10_2.12-3.3.1.jar; echo "SPARK_TOKEN_FILE=${SPARK_TOKEN_JAR##*/}" >> ~/file_variables.output
 SPARK_SQL_KAFKA_JAR=https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.3.1/spark-sql-kafka-0-10_2.12-3.3.1.jar; echo "SPARK_SQL_KAFKA_FILE=${SPARK_SQL_KAFKA_JAR##*/}" >> ~/file_variables.output
 ICEBERG_SPARK_JAR=https://repo.maven.apache.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.1.0/iceberg-spark-runtime-3.3_2.12-1.1.0.jar; echo "SPARK_ICEBERG_FILE=${ICEBERG_SPARK_JAR##*/}" >> ~/file_variables.output
