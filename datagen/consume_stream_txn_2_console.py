@@ -67,3 +67,5 @@ query = projected \
     .trigger(processingTime='6 seconds') \
     .start() \
     .awaitTermination()
+
+spark.stop()
