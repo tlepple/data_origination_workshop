@@ -1,5 +1,3 @@
-
-
 CREATE TABLE icecatalog.icecatalog.stream_customer_event_history (
     first_name STRING,
     last_name STRING,
