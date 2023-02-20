@@ -1,4 +1,4 @@
-CREATE TABLE icecatalog.icecatalog.stream_customer (
+CREATE TABLE icecatalog.icecatalog.stream_customer_event_history (
     type STRING,
     event_ts LONG,
     tx_id STRING,
