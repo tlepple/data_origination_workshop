@@ -16,5 +16,5 @@ spark-sql --packages \
   software.amazon.awssdk:bundle:2.19.19, \
   software.amazon.awssdk:url-connection-client:2.19.19 \
 --properties-file /opt/spark/sql/conf.properties \
--f /opt/spark/sql/merge_ice_customer_batch.sql \ 
+-f /opt/spark/sql/all_workshop1_items.sql \ 
 --verbose
