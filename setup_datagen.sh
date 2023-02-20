@@ -16,6 +16,8 @@ exec 1> >( tee -a "$OUTPUTLOG" )
 exec 2> >( tee -a "$ERRORLOG" )
 
 
+#  start a timer:
+OVERALL_START="$(date +%s)"
 
 
 ##########################################################################################
@@ -816,4 +818,8 @@ sleep 5
 #########################################################################################
 . ~/.profile
 
-exit 
+OVERALL_END="$(date +%s)"
+echo
+echo "The overall code took: $[ (${OVERALL_END} - ${OVERALL_START}) / 60 ] minutes to run"
+
+
