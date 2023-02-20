@@ -88,5 +88,6 @@ query = projected.writeStream \
     .start() \
     .awaitTermination()
 
+spark.stop()
 
 #     .trigger(Trigger.ProcessingTime(60, TimeUnit.SECONDS)) \
