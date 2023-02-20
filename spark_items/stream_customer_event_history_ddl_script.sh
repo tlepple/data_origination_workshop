@@ -16,5 +16,5 @@ spark-sql --packages \
   software.amazon.awssdk:bundle:2.19.19, \
   software.amazon.awssdk:url-connection-client:2.19.19 \
 --properties-file /opt/spark/sql/conf.properties \
--f /opt/spark/sql/stream_customer_ddl.sql \
+-f /opt/spark/sql/stream_customer_event_history_ddl.sql \
 --verbose
