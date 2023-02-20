@@ -83,7 +83,7 @@ def foreach_batch_function(microdf, batchId):
     print(f"inside forEachBatch for batchid:{batchId}. Rows in passed dataframe:{microdf.count()}")
     microdf.show()
 #    microdf.printSchema()
-    microdf.filter((microdf.op == "c") | (microdf.op == "u")) \
+    microdf.filter((microdf.op == "r") | (microdf.op == "c") | (microdf.op == "u")) \
         .select(microdf.op.alias("type"), \
         microdf.ts_ms.alias("event_ts"), \
         microdf.source.txId.alias("tx_id"), \
