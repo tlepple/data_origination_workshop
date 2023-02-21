@@ -537,7 +537,7 @@ export CLASSPATH=/home/datagen/kafka_connect/plugins/debezium-connector-postgres
 
 #####  Expected Output:
 
-In this link you can see the output:  [`connect.output`](./sample_output/connect.output) 
+In this link you can see the expected sample output:  [`connect.output`](./sample_output/connect.output) 
 
 
 
