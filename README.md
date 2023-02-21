@@ -626,7 +626,7 @@ In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/c
 In this shell script  [`stream_customer_event_history_ddl_script.sh`](./spark_items/stream_customer_event_history_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_event_history_ddl.sql`](./spark_items/stream_customer_event_history_ddl.sql) to create our `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.
 
 ```
-. /opt/spark/sql/stream_customer_ddl_script.sh
+. /opt/spark/sql/stream_customer_event_history_ddl_script.sh
 ```
 ---
 
