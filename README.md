@@ -1322,7 +1322,18 @@ As you can see, this message contains the values of the record `before` and `aft
 ---
 #### Spark Exploration:
 
-In this spark job 
+In this spark job  [`consume_stream_customer_2_console.py`](./datagen/consume_stream_customer_2_console.py) we will consume the records from the topic `dgCustomer` and just stream them to our console.
+
+```
+spark-submit ~/datagen/consume_stream_customer_2_console.py
+```
+---
+In this spark job  [`consume_stream_txn_2_console.py`](./datagen/consume_stream_txn_2_console.py) we will consume the records from the topic  `dgTxn` and just stream them to our console.
+
+```
+spark-submit ~/datagen/consume_stream_customer_2_console.py
+```
+
 ---
 ---
 
