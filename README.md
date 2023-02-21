@@ -664,7 +664,7 @@ Notes here to refer to workshop 1 again or run all of those commands with these 
 
 ---
 
-Let's loada all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
+Let's load all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
 
 ```
 . /opt/spark/sql/iceberg_workshop_sql_items.sh
@@ -676,7 +676,17 @@ cd /opt/spark/sql
 . ice_spark-sql_i-cli.sh
 ```
 
-* to exit the shell type: `exit;` and hit `<return>`
+---
+
+In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/iceberg_workshop_sql_items.sh)  we will load all the transactions from workshop 1 as a pyspark batch job:
+
+```
+spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
+```
+
+---
+---
+
 
 
 
