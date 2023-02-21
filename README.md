@@ -678,7 +678,7 @@ cd /opt/spark/sql
 
 ---
 
-In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/iceberg_workshop_sql_items.sh)  we will load all the transactions from workshop 1 as a pyspark batch job:
+In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/load_ice_transactions_pyspark.py)  we will load all the transactions from workshop 1 as a pyspark batch job:
 
 ```
 spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
