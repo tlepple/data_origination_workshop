@@ -542,7 +542,7 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 
 
 ---
-##### Explore the `Connect` tab in the console from a browser:
+##### Explore the `Connect` tab in the Redpanda console from a browser:
   *  This view is only available when `Connect` processes are running.
   ---
   ![](./images/console_view_run_connect.png)
