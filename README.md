@@ -1342,7 +1342,7 @@ python3 ~/datagen/comsume_topic_dgCustomer.py 4
 ```
 ---
 
-In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_customer_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code `stream_customer_ddl.sql`](./spark_items/stream_customer_ddl.sql) to create our `stream_customer` table in iceberg.
+In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_customer_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_ddl.sql`](./spark_items/stream_customer_ddl.sql) to create our `stream_customer` table in iceberg.
 
 ```
 . /opt/spark/sql/stream_customer_ddl_script.sh
