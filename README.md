@@ -702,6 +702,9 @@ Document and comment on starting the `Debezium Server` here:
 
 
 ###  Final Summary:
+
+( wip ) needs more info for new sections:
+
 Integrating a database using Kafka Connect (via Debezium plugins) to stream data to a system like Red Panda can have several benefits:
 
   1.  **Real-time data streaming:** The integration provides a real-time stream of data from the SQL database to Red Panda, making it easier to analyze and process data in real-time.
