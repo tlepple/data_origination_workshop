@@ -636,7 +636,47 @@ In this spark streaming job  [`spark_from_dbz_customer_2_iceberg.py`](./datagen/
 . spark-submit ~/datagen/spark_from_dbz_customer_2_iceberg.py
 ```
 ---
+
+Let's explore our iceberg tables with the interactive `spark-sql` shell.
+
+```
+cd /opt/spark/sql
+
+. ice_spark-sql_i-cli.sh
+```
+
+* to exit the shell type: `exit;` and hit `<return>`
+
 ---
+
+Run the query to see some output:
+
+```
+SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
+```
+
+---
+
+
+---
+
+Notes here to refer to workshop 1 again or run all of those commands with these 2 commands:
+
+---
+
+Let's loada all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
+
+```
+. /opt/spark/sql/iceberg_workshop_sql_items.sh
+```
+
+```
+cd /opt/spark/sql
+
+. ice_spark-sql_i-cli.sh
+```
+
+* to exit the shell type: `exit;` and hit `<return>`
 
 
 
