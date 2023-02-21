@@ -1348,6 +1348,13 @@ In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_cus
 . /opt/spark/sql/stream_customer_ddl_script.sh
 ```
 ---
+
+In spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/consume_panda_2_iceberg_customer.py) we will consume our messages from the redpanda topic `dgCustomer` and append them into our `icecatalog.icecatalog.stream_customer` table in iceberg.
+
+```
+. /opt/spark/sql/stream_customer_ddl_script.sh
+```
+---
 ---
 
 
