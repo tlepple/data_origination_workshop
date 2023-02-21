@@ -536,6 +536,10 @@ export CLASSPATH=/home/datagen/kafka_connect/plugins/debezium-connector-postgres
 ---
 
 #####  Expected Output:
+
+In this link you can see the output:  [`connect.output`](./sample_output/connect.output) 
+
+
 ```
 [2023-01-31 16:00:53,288] INFO Kafka Connect standalone worker initializing ... (org.apache.kafka.connect.cli.ConnectStandalone:68)
 [2023-01-31 16:00:53,297] INFO WorkerInfo values: 
