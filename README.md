@@ -582,14 +582,10 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 
 ---
 ---
-As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics to our Iceberg database.
+As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics and deliver it into our Iceberg data lake.
 
 ---
----
-(old section... consider removing)
-As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database.   These will become invaluable in our next workshop.  There, we will set up the integration between the work accomplished here and my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).  Using the data generated here, we will be able to pick up these CDC records and deliver them downsteam into our data lake.  In that upcoming workshop, we will explore a few different tools that will share the same Iceberg catalog. It will demonstrate you have lots of options at your disposal as you build your solutions.
 
----
 ---
 #### Explore the Data:
 
