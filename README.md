@@ -687,12 +687,14 @@ spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
 ---
 ---
 
+(WIP)
+
+Document and comment on starting the `Debezium Server` here:
 
 
 
-
-
-
+---
+---
 
 
 
