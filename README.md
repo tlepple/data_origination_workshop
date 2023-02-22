@@ -584,7 +584,7 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 ---
 ---
 
-#  The excercies below this line are complete but still lack explanations and detail.
+#  The excercies below this line are complete but still lack explanations and detail.  This was going to be Workshop 3
 
 ---
 ---
