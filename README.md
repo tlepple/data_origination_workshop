@@ -575,6 +575,15 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 
  ![](./images/connect_ouput_detail_msg.png)
  
+ #### Kafka Connect Observations:
+
+---
+---
+As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics and deliver it into our Iceberg data lake.
+
+---
+
+ 
 ---
 ---
 ---
@@ -592,13 +601,7 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 ---
 ---
 ---
-#### Kafka Connect Observations:
 
----
----
-As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics and deliver it into our Iceberg data lake.
-
----
 
 ---
 #### Explore the Data:
