@@ -691,8 +691,148 @@ spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
 
 Document and comment on starting the `Debezium Server` here:
 
+Query the Iceberg catalog for list of current tables:
 
+```
+#  start the spark-sql cli in interactive mode:
+cd /opt/spark/sql
+. ice_spark-sql_i-cli.sh
 
+# run query:
+SHOW TABLES IN icecatalog.icecatalog:
+
+```
+
+---
+
+#### Expected Sample Output:
+
+```
+namespace       tableName                           isTemporary
+                customer
+                stream_customer
+                stream_customer_event_history
+                transactions
+
+```
+
+---
+
+Start the Debezium Server in a new terminal window:
+
+```
+cd ~/appdist/debezium-server-iceberg/
+
+bash run.sh
+```
+
+*  This will run until terminated and pull in database changes to our Iceberg Data Lake:
+
+---
+
+Explore our Iceberg Catalog now:
+
+```
+cd /opt/spark/sql
+. ice_spark-sql_i-cli.sh
+
+SHOW TABLES IN icecatalog.icecatalog:
+```
+---
+
+#### Expected Sample Output:
+
+```
+namespace       tableName                           isTemporary
+                cdc_localhost_datagen_customer
+                customer
+                stream_customer
+                stream_customer_event_history
+                transactions
+```
+
+---
+
+Query our new CDC table in our Data Lake that was replicated from Postgresql:
+
+```
+cd /opt/spark/sql
+. ice_spark-sql_i-cli.sh
+
+#  query:
+SELECT
+  cust_id,
+  last_name,
+  city,
+  state,
+  create_date,
+  __op,
+  __table,
+  __source_ts_ms,
+  __db,
+  __deleted
+FROM icecatalog.icecatalog.cdc_localhost_datagen_customer
+ORDER by cust_id;
+```
+---
+#### Expected Sample Output:
+
+```
+cust_id last_name       city            state   create_date             __op    __table         __source_ts_ms           __db       __deleted
+10      Jackson         North Kimberly  MP      2023-01-20 22:47:05     r       customer        2023-02-22 16:04:34.193 datagen     false
+11      Downs           Conwaychester   MD      2022-12-27 23:54:51     r       customer        2023-02-22 16:04:34.193 datagen     false
+12      Webster         Phillipmouth    VI      2023-01-17 20:54:46     r       customer        2023-02-22 16:04:34.193 datagen     false
+13      Miller          Jessicahaven    OH      2023-01-13 05:03:57     r       customer        2023-02-22 16:04:34.193 datagen     false
+Time taken: 0.384 seconds, Fetched 4 row(s)
+
+```
+---
+
+Add additional rows to our Postgresql table via `datagen`:
+
+```
+cd ~/datagen/
+python3 pg_upsert_dg.py 12 5
+```
+
+---
+
+Query our Updated Data Lake table that was replicated from updates applied in Postgresql: 
+
+```
+cd /opt/spark/sql
+. ice_spark-sql_i-cli.sh
+
+#  query:
+SELECT
+  cust_id,
+  last_name,
+  city,
+  state,
+  create_date,
+  __op,
+  __table,
+  __source_ts_ms,
+  __db,
+  __deleted
+FROM icecatalog.icecatalog.cdc_localhost_datagen_customer
+ORDER by cust_id;
+```
+---
+#### Expected Sample Output:
+
+```
+cust_id last_name           city                  state   create_date             __op    __table         __source_ts_ms          __db    __deleted
+10      Jackson             North Kimberly        MP      2023-01-20 22:47:05     r       customer        2023-02-22 16:06:19.9   datagen false
+11      Downs               Conwaychester         MD      2022-12-27 23:54:51     r       customer        2023-02-22 16:06:19.9   datagen false
+12      Cook                New Catherinemouth    NJ      2023-01-03 18:38:35     u       customer        2023-02-22 19:03:52.62  datagen false
+13      Ramos               West Laurabury        NY      2023-01-04 04:48:18     u       customer        2023-02-22 19:03:52.62  datagen false
+14      Scott               West Thomastown       AL      2022-12-29 07:21:28     c       customer        2023-02-22 19:03:52.62  datagen false
+15      Holden              East Danieltown       MT      2023-01-15 17:17:54     c       customer        2023-02-22 19:03:52.62  datagen false
+16      Carpenter           Lake Jamesberg        GU      2023-01-05 22:16:55     c       customer        2023-02-22 19:03:52.62  datagen false
+Time taken: 0.318 seconds, Fetched 7 row(s)
+```
+---
 ---
 ---
 
