@@ -766,6 +766,8 @@ rm /home/datagen/appdist/debezium-server-iceberg/conf/application.properties.exa
 # remove the zip file:
 rm /home/datagen/debezium-server-iceberg-dist-*-SNAPSHOT.zip
 
+# we need a directory to store offset info:
+mkdir ~//appdist/debezium-server-iceberg/data
 echo
 echo "---------------------------------------------------------------------"
 echo "Debezium Server setup complete..."
