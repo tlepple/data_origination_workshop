@@ -703,13 +703,13 @@ spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
 
 ---
 ---
+
 #  Debezium Server:
 ---
 ---
 
 
----
----
+
 #### Query the Iceberg catalog for list of current tables:
 
 ```
