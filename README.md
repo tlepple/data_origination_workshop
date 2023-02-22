@@ -789,7 +789,7 @@ python3 pg_upsert_dg.py 12 5
 
 ---
 
-#### Query our Updated Data Lake table that was replicated from updates applied in Postgresql: 
+#### Query our updated Data Lake table that was replicated from updates applied in Postgresql: 
 
 ```
 cd /opt/spark/sql
