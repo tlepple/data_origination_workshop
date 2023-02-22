@@ -762,7 +762,8 @@ bash run.sh
 cd /opt/spark/sql
 . ice_spark-sql_i-cli.sh
 
-#### SHOW TABLES IN icecatalog.icecatalog:
+# query:
+SHOW TABLES IN icecatalog.icecatalog:
 ```
 ---
 
