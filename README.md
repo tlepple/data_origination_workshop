@@ -136,7 +136,7 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 #  run it:
 . ~/data_origination_workshop/setup_datagen.sh
 ```
-  *  This should complete within 5 minutes.
+  *  This should complete within 10 minutes.
 ---
 
 ###  What is Redpanda?
