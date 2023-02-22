@@ -639,6 +639,20 @@ In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/c
 
 spark-submit ~/datagen/consume_panda_2_iceberg_customer.py
 ```
+
+---
+####  Review tables in our Iceberg datalake 
+```
+cd /opt/spark/sql
+
+. ice_spark-sql_i-cli.sh
+
+#  query 
+SHOW TABLES IN icecatalog.icecatalog;
+
+# Query 2:
+SELECT * FROM icecatalog.icecatalog.stream_customer;
+```
 ---
 
 In this shell script  [`stream_customer_event_history_ddl_script.sh`](./spark_items/stream_customer_event_history_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_event_history_ddl.sql`](./spark_items/stream_customer_event_history_ddl.sql) to create our `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.
@@ -688,11 +702,6 @@ Let's load all the customer data from workshop 1 in one simple `spark-sql` shell
 . /opt/spark/sql/iceberg_workshop_sql_items.sh
 ```
 
-```
-cd /opt/spark/sql
-
-. ice_spark-sql_i-cli.sh
-```
 
 ---
 
