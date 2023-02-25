@@ -388,6 +388,7 @@ mkdir -p /opt/spark/logs
 mkdir -p /opt/spark/spark-events
 mkdir -p /opt/spark/input
 mkdir -p /opt/spark/checkpoint
+mkdir -p /opt/spark/checkpoint2
 mkdir -p /opt/spark/sql
 
 ##########################################################################################
