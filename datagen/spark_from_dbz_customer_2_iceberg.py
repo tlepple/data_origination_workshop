@@ -134,7 +134,7 @@ def foreach_batch_function(microdf, batchId):
 ##########################################################################################
 
 streamQuery = (df.writeStream \
-    .option("checkpointLocation", "/opt/spark/checkpoint") \
+    .option("checkpointLocation", "/opt/spark/checkpoint2") \
     .foreachBatch(foreach_batch_function) \
     .trigger(processingTime='60 seconds') \
     .start() \
