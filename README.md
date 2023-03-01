@@ -50,6 +50,28 @@ The setup script will build and install our `Data Integration Platform` onto a s
 *  ssh into your new Ubuntu 20.04 instance and run the below command:
 
 ---
+### Create user datagen
+```
+##########################################################################################
+#  create an osuser datagen and add to sudo file
+##########################################################################################
+sudo useradd -m -s /usr/bin/bash datagen
+
+echo supersecret1 > passwd.txt
+echo supersecret1 >> passwd.txt
+
+sudo passwd datagen < passwd.txt
+
+rm -f passwd.txt
+sudo usermod -aG sudo datagen
+##########################################################################################
+#  let's complete this install as this user:
+##########################################################################################
+su - datagen 
+```
+
+---
+---
 
 ```
 sudo apt-get install git -y
