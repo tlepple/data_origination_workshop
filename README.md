@@ -76,7 +76,7 @@ If you didn't complete my first workshop and need a primer on Iceberg, you can c
 
 ---
 
-###  What is Redpanda?
+###  What is Redpanda
   * Information in this section was gathered from their website.  You can find more detailed information about their platform here:  [Red Panda](https://redpanda.com/platform)
 ---
 
