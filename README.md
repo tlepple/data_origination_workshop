@@ -636,8 +636,6 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 *  Please skip these 2 commands if you completed them by hand in the earlier reference to Workshop 1.
 
 ---
----
----
 
 Let's load all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
 
@@ -645,7 +643,9 @@ Let's load all the customer data from workshop 1 in one simple `spark-sql` shell
 . /opt/spark/sql/iceberg_workshop_sql_items.sh
 ```
 
-
+---
+---
+---
 ---
 
 In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/load_ice_transactions_pyspark.py)  we will load all the transactions from workshop 1 as a pyspark batch job:
