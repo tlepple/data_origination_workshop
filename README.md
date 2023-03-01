@@ -69,6 +69,13 @@ git clone https://github.com/tlepple/data_origination_workshop.git
   *  This should complete within 10 minutes.
 ---
 
+---
+###  Workshop One Refresher:
+
+If you didn't complete my first workshop and need a primer on Iceberg, you can complete that work again in this platform by following this guide:  [Workshop 1 Exercises]().   If you are already familiar with those items please proceed.   A later step has all of that workshop automated.
+
+---
+
 ###  What is Redpanda?
   * Information in this section was gathered from their website.  You can find more detailed information about their platform here:  [Red Panda](https://redpanda.com/platform)
 ---
