@@ -11,7 +11,8 @@ Tags:  Apache Iceberg | Minio | Apache SparkSQL | Apache PySpark | Ubuntu
 ---
 
 ## Objective:
-My goal in this workshop was to evaluate Apache Iceberg with data stored in an S3a-compliant object store on a traditional Linux server.  I like to understand how systems integrate, so I took the time to install all the components manually and then built the setup script in this repo so others could try it out too.  Please take the time to review that script [`setup_iceberg.sh`](./setup_iceberg.sh).  Hopefully it becomes a reference for you one day. 
+My goal in this workshop was to evaluate Apache Iceberg with data stored in an S3a-compliant object store on a traditional Linux server.  The original workshop for this is here: [Intro to Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).   The items were added to this workshop for those that want to combine the work into one.   It has been modified sligthly from the original to avoid port conflicts.   Documentation here may need addtional updates.
+
 
 ---
 ---
@@ -60,7 +61,7 @@ This image from Starburst.io is really good.
 
 ---
 
-This setup script will build a single node platform that will set up a local S3a compliant object store, install a local SQL database, install a single node Apache Iceberg processing engine and lay the groundwork for the support of our Apache Iceberg tables and catalog.   
+This setup script built a single node platform that set up a local S3a compliant object store, install a local SQL database, install a single node Apache Iceberg processing engine and lay the groundwork for the support of our Apache Iceberg tables and catalog.   
  
   ---
 ####  Object Storage Notes:
@@ -95,7 +96,7 @@ This setup script will build a single node platform that will set up a local S3a
 ---
 ---
 
-### The environment is now setup and we can test out the `AWS CLI` and the `Minio CLI`:
+### Testing the `AWS CLI` and the `Minio CLI`:
 
 ---
 ---
@@ -215,7 +216,7 @@ cd $SPARK_HOME
 ---
 
 #####  Check that the Spark GUI is up:
- * navigate to `http//<host ip address>:8080` in a browser
+ * navigate to `http//<host ip address>:8085` in a browser
 
 ---
 
