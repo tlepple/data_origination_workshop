@@ -388,7 +388,7 @@ In the setup script, we downloaded and installed all the components and needed j
 ---
 
 #####  The  property file that will link Kafka Connect to Red Panda is located here:
-  * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
+  * make sure you are logged into the OS as user `datagen` with a password of `supersecret1`
   
 ```
 su - datagen
