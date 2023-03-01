@@ -644,9 +644,6 @@ Let's load all the customer data from workshop 1 in one simple `spark-sql` shell
 ```
 
 ---
----
----
----
 
 In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/load_ice_transactions_pyspark.py)  we will load all the transactions from workshop 1 as a pyspark batch job:
 
@@ -654,6 +651,8 @@ In this spark job [`load_ice_transactions_pyspark.py`](./spark_items/load_ice_tr
 spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
 ```
 
+---
+---
 ---
 ---
 
