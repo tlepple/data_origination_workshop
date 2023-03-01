@@ -11,7 +11,7 @@ Tags:  Apache Iceberg | Minio | Apache SparkSQL | Apache PySpark | Ubuntu
 ---
 
 ## Objective:
-My goal in this workshop was to evaluate Apache Iceberg with data stored in an S3a-compliant object store on a traditional Linux server.  The original workshop for this is here: [Intro to Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).   The items were added to this workshop for those that want to combine the work into one.   It has been modified sligthly from the original to avoid port conflicts.   Documentation here may need addtional updates.
+My goal in this workshop was to evaluate Apache Iceberg with data stored in an S3a-compliant object store on a traditional Linux server.  The original workshop for this is here: [Intro to Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop).   The items here were added to this workshop for those that want to combine the work into one.   It has been modified sligthly from the original to avoid port conflicts.   Documentation here may need addtional updates.
 
 
 ---
