@@ -195,24 +195,8 @@ Click on the tab: `Buckets`
 ##  Apache Iceberg Processing Engine Setup:
 
 ---
-In this section, we are configuring our processing engine (Apache Spark) that will use some of its tools to build our Apache Iceberg catalog and let us interact with the data we will load.
+The setup here has changed since workshop one.   These items were started in the setup process in workshop 2.
 
----
-
-##### Start a standalone Spark Master Server 
-
-```
-cd $SPARK_HOME
-
-. ./sbin/start-master.sh
-```
----
-
-##### Start a Spark Worker Server 
-
-```
-. ./sbin/start-worker.sh spark://$(hostname -f):7077
-```
 ---
 
 #####  Check that the Spark GUI is up:
