@@ -946,7 +946,7 @@ In a series of upcoming workshops, I will build out and document some new techno
 
 If you have made it this far, I want to thank you for spending your time reviewing the materials. Please give me a 'Star' at the top of this page if you found it useful.
 
-Click here to return to workshop 2:  [`Workshop 2 Exercises`](./READ).
+Click here to return to workshop 2:  [`Workshop 2 Exercises`](./README.md).
 
 ---
 ---
