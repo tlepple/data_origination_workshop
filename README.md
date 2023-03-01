@@ -698,7 +698,7 @@ bash run.sh
 
 ---
 
-#### Explore our Iceberg Catalog now (in a new terminal window):
+#### Explore our Iceberg Catalog now (in the previous terminal window):
 
 ```
 cd /opt/spark/sql
