@@ -658,7 +658,7 @@ Debezium Server is an open-source distributed platform for change data capture (
 
 The Debezium Server provides a number of benefits, including the ability to capture data changes in real-time, the ability to process events in a scalable and fault-tolerant manner, and the ability to integrate with various data storage and streaming technologies. It is built using Apache Kafka and leverages the Kafka Connect API for connecting to various data sources and targets.
 
-Debezium Server supports a wide range of data sources, including popular databases like MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, Cassandra, and others. It also supports message queues like Apache Kafka, Apache Pulsar, and RabbitMQ, as well as file-based sources like Apache Cassandra and Apache Hadoop HDFS.
+Debezium Server supports a wide range of data sources, including popular databases like MySQL, PostgreSQL, Oracle, SQL Server, MongoDB, Cassandra, and others. It also supports message queues like Apache Kafka, Apache Pulsar, and RabbitMQ, as well as file-based sources like Apache Cassandra, Apache Hadoop HDFS and Apache Iceberg.
 
 Debezium Server can be deployed on-premises or in the cloud, and it is available under the Apache 2.0 open-source license, which means that it is free to use, modify, and distribute.
 
