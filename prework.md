@@ -1,6 +1,6 @@
 ---
 ---
-# Temp items for my setup  (Delete before releasing):
+# Temp items for my setup on proxmox:
 ```
 
 ##########################################################################################
