@@ -95,7 +95,7 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 ---
 ###  Workshop One Refresher:
 
-If you didn't complete my first workshop and need a primer on Iceberg, you can complete that work again in this platform by following this guide:  [Workshop 1 Exercises](./workshop1_revisit.md).   If you are already familiar with those items please proceed.   A later step has all of that workshop automated.
+If you didn't complete my first workshop and need a primer on Iceberg, you can complete that work again in this platform by following this guide:  [Workshop 1 Exercises](./workshop1_revisit.md).   If you are already familiar with those items please proceed.   A later step has all of that workshop automated if you prefer.
 
 ---
 
