@@ -830,7 +830,7 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 
 ###  Adminer access to PostgreSQL
 
-*  From a browser navigate to: `http://<your ip address>/adminer
+*  From a browser navigate to: `http://<your ip address>/adminer`
 
 
 ---
