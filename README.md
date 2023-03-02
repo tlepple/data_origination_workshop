@@ -652,7 +652,7 @@ spark-submit /opt/spark/sql/load_ice_transactions_pyspark.py
 ---
 ---
 
-#  Debezium Server:
+#  What is Debezium Server:
 ---
 Debezium Server is an open-source distributed platform for change data capture (CDC) that captures events from databases, message queues, and other systems in real-time and streams them to Kafka or other event streaming platforms. It is part of the Debezium project, which aims to simplify and automate the process of extracting change events from different sources and making them available to downstream applications.
 
@@ -666,7 +666,7 @@ You can find more information about Debezium Server here:  [Debezium Server Webs
 
 ---
 
-###  Observations:
+###  Debezium Server Observations:
 
 The use of `Debezium Server` greatly simplifies the amount of code needed to capture information in upsteam systems and automatically delivers it downstream to a destination.  It requires only a few configuration files.
  
