@@ -708,7 +708,6 @@ cd ~/appdist/debezium-server-iceberg/
 bash run.sh
 ```
 *  This will run until terminated and pull in database changes to our Iceberg Data Lake:
-*  To exit type `control` + `c`
 
 ---
 
