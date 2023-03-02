@@ -6,7 +6,7 @@
 ##########################################################################################
 #  notes:
 ##########################################################################################
--- I built a new standalone ubuntu 20 server to install this onto:
+-- I built a new standalone ubuntu 20 server to install this with proxmox:
 
 #  create a clone from the template
 qm clone 9400 670 --name ice-integration
