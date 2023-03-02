@@ -834,6 +834,7 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 
 ##### Sample website:
 
+![](./images/adminer_login_screen.png)
 
 ---
 ---
