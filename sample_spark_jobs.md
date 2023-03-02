@@ -2,7 +2,7 @@
 ---
 #### Addition Spark Exercises
 
-Here are some additional spark exaples that demonstrate how to interact with data in spark.
+Here are some additional spark examples that demonstrate how to interact with the data generated with spark.
 
 In this spark job  [`consume_stream_customer_2_console.py`](./datagen/consume_stream_customer_2_console.py) we will consume the records from the topic `dgCustomer` and just stream them to our console.
 
