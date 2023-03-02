@@ -24,7 +24,9 @@ OVERALL_START="$(date +%s)"
 #  install some OS utilities
 ##########################################################################################
 sudo apt-get install wget curl apt-transport-https unzip chrony -y
-sudo apt install -y figlet cowsay
+
+sudo apt install cowsay -y
+sudo apt install figlet -y
 sudo apt-get update
 
 ##########################################################################################
