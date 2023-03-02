@@ -14,12 +14,12 @@ mkdir -p "$(dirname "$OUTPUTLOG")"
 echo 
 
 # Redirect all stdout and stderr to respective files using tee
-#exec 1> >( tee -a "$OUTPUTLOG" )
-#exec 2> >( tee -a "$ERRORLOG" )
+exec 1> >( tee -a "$OUTPUTLOG" )
+exec 2> >( tee -a "$ERRORLOG" )
 
 # Redirect all stdout and stderr to respective files using 'script'
-exec 1> >( script --append  "$OUTPUTLOG" )
-exec 2> >( script --append  "$ERRORLOG" )
+#exec 1> >( script --append  "$OUTPUTLOG" )
+#exec 2> >( script --append  "$ERRORLOG" )
 
 #  start a timer:
 OVERALL_START="$(date +%s)"
