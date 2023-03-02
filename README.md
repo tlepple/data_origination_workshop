@@ -556,7 +556,7 @@ As you can see, this message contains the values of the record `before` and `aft
 
 ---
 
-In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_customer_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_ddl.sql`](./spark_items/stream_customer_ddl.sql) to create our `icecatalog.icecatalog.stream_customer` table in iceberg.
+In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_customer_ddl_script.sh) we will launch a `spark-sql` cli and run the DDL code [`stream_customer_ddl.sql`](./spark_items/stream_customer_ddl.sql) to create our `icecatalog.icecatalog.stream_customer` table in iceberg.
 
 ```
 . /opt/spark/sql/stream_customer_ddl_script.sh
