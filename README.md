@@ -264,15 +264,6 @@ The data generator app in this section accepts 3 integer arguments:
 #####  Call the `Data Generator` to stream some messages to our topics:
 ---
 
-We will switch to a different OS user `datagen` (password for user: `supersecret1`) where the data generation tool was installed during setup.  From a terminal window run:
-
-##### Command:
-```
-su - datagen
-```
-
-
-
 ```
 cd ~/datagen
 
@@ -415,7 +406,6 @@ In the setup script, we downloaded and installed all the components and needed j
   * make sure you are logged into the OS as user `datagen` with a password of `supersecret1`
   
 ```
-su - datagen
 
 cd ~/kafka_connect/configuration
 cat connect.properties
@@ -487,8 +477,6 @@ topic.prefix=pg_datagen2panda
   * make sure you are logged into OS as user `datagen` with a password of `supersecret1`
 
 ```
-su - datagen
-
 cd ~/kafka_connect/configuration
 
 export CLASSPATH=/home/datagen/kafka_connect/plugins/debezium-connector-postgres/*
