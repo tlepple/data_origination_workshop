@@ -69,12 +69,11 @@ sudo usermod -aG sudo datagen
 su - datagen 
 ```
 ---
+
 ###  Install Git tools and pull this repo.
 *  ssh into your new Ubuntu 20.04 instance and run the below command:
-*  
+ 
 ---
----
-
 ```
 sudo apt-get install git -y
 
