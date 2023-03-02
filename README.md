@@ -629,11 +629,12 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 
 #  Automation of Workshop 1 Exercises
 
-*  Please skip these 2 commands if you completed them by hand in the earlier reference to Workshop 1.  They were included again to add additional data to our applications for use with the `Debezium Server` in the next section.
+---
+---
+---
 
----
----
----
+
+*  Please skip these 2 commands if you completed them by hand in the earlier reference to Workshop 1.  They were included again to add additional data to our applications for use with the `Debezium Server` in the next section.
 
 Let's load all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
 
