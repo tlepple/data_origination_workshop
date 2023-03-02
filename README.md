@@ -666,7 +666,7 @@ If you recall, in an early exercise we ran some Spark code that grabbed these sa
 ---
 ---
 #### Debezium Server Configurations
-  *  Link to the configuration:  [Debezium Server Configuration}(.dbz_server/application.properties)
+  *  Link to the configuration:  [Debezium Server Configuration}(./dbz_server/application.properties)
 ---
 ---
 
