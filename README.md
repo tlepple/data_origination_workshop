@@ -533,23 +533,6 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics and deliver it into our Iceberg data lake.
 
 ---
-
- 
----
----
----
----
----
----
----
----
-
-#  The excercies below this line are complete but still lack explanations and detail.  This was going to be Workshop 3
-
----
----
----
----
 ---
 ---
 
