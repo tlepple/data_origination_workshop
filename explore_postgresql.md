@@ -1,4 +1,6 @@
-###  (WIP) SQL GUI client access to the PostgreSQL database can be explored using `Adminer` that is installed
+###  SQL GUI client to access the PostgreSQL databases
+
+* It uses a tool called `Adminer` that was installed during setup
 
 ---
 
