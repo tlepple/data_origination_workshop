@@ -662,8 +662,9 @@ Debezium Server supports a wide range of data sources, including popular databas
 
 Debezium Server can be deployed on-premises or in the cloud, and it is available under the Apache 2.0 open-source license, which means that it is free to use, modify, and distribute.
 
-You can find more information Debezium Server here:  
+You can find more information Debezium Server here:  [Debezium Server Website](https://debezium.io/documentation/reference/stable/operations/debezium-server.html)
 
+---
 ---
 
 
