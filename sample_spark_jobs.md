@@ -23,4 +23,4 @@ In this python job  [`comsume_topic_dgCustomer.py`](./datagen/comsume_topic_dgCu
 python3 ~/datagen/comsume_topic_dgCustomer.py 4
 ```
 
-Click here to return to the workshop:  [`Workshop 2 Exercises`](./README.md/#explore iceberg with spark).
+Click here to return to the workshop:  [`Workshop 2 Exercises`](./README.md/#explore-iceberg-with-spark).
