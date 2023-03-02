@@ -46,10 +46,6 @@ The setup script will build and install our `Data Integration Platform` onto a s
  * Instance Specs: (min 4 core w/ 16 GB ram & 30 GB of disk) -- add more RAM if you have it to spare.
 
 ---
-###  Install Git tools and pull this repo.
-*  ssh into your new Ubuntu 20.04 instance and run the below command:
-
----
 ### Create user datagen
 ```
 ##########################################################################################
@@ -69,7 +65,10 @@ sudo usermod -aG sudo datagen
 ##########################################################################################
 su - datagen 
 ```
-
+---
+###  Install Git tools and pull this repo.
+*  ssh into your new Ubuntu 20.04 instance and run the below command:
+*  
 ---
 ---
 
