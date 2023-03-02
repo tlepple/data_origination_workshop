@@ -779,7 +779,9 @@ python3 pg_upsert_dg.py 12 5
 
 ---
 
-#### Query our updated Data Lake table that was replicated from updates applied in Postgresql: 
+#### Review New & Updated Records
+
+* Query our updated Data Lake table that was replicated from updates applied in Postgresql and delivered to Iceberg (via the running Debezium Server)
 
 ```
 cd /opt/spark/sql
