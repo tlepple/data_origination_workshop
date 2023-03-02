@@ -1,6 +1,6 @@
 
 ---
-#### Addition Spark Exercises
+#### Addition Spark & Python Exercises:
 
 Here are some additional spark examples that demonstrate how to interact with the data generated with spark.
 
