@@ -730,7 +730,7 @@ namespace       tableName                           isTemporary
 
 ---
 
-#### Query our new CDC table `cdc_localhost_datagen_customer` in our Data Lake that was replicated from Postgresql:
+#### Query our new CDC table `cdc_localhost_datagen_customer` in our Data Lake that was replicated by `Debezium Server`:
 
 ```
 cd /opt/spark/sql
