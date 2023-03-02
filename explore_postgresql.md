@@ -10,6 +10,7 @@
 *  From a browser navigate to: `http://<your ip address>/adminer` 
 
 ##### `Datagen` database login screen:
+---
 
 ![](./images/adminer_login_screen.png)
 
@@ -23,6 +24,8 @@
 *  From a browser navigate to: `http://<your ip address>/adminer` 
 
 ##### `icecatalog` database login screen:
+---
+
 
 ![](./images/adminer_login_screen_icecatalog.png)
 
