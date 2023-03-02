@@ -12,6 +12,8 @@
 
 ![](./images/adminer_login_screen.png)
 
+---
+
 ####  Access the `icecatalog` database with these credentials:
   *  user     --> `icecatalog` 
   *  Password --> `supersecret1`
@@ -25,4 +27,5 @@
 
 ---
 ---
+
 Click here to return to main page:  [`Workshop 2 Exercises`](./README.md/#extra-credit).
