@@ -552,27 +552,7 @@ As you can see, this message contains the values of the record `before` and `aft
 ---
 
 
----
-#### Explore the Data:
 
-In this spark job  [`consume_stream_customer_2_console.py`](./datagen/consume_stream_customer_2_console.py) we will consume the records from the topic `dgCustomer` and just stream them to our console.
-
-```
-spark-submit ~/datagen/consume_stream_customer_2_console.py
-```
----
-In this spark job  [`consume_stream_txn_2_console.py`](./datagen/consume_stream_txn_2_console.py) we will consume the records from the topic  `dgTxn` and just stream them to our console.
-
-```
-spark-submit ~/datagen/consume_stream_txn_2_console.py
-```
-
----
-In this python job  [`comsume_topic_dgCustomer.py`](./datagen/comsume_topic_dgCustomer.py) we will consume 4 records from the topic  `dgCustomer` and just stream them to our console.
-
-```
-python3 ~/datagen/comsume_topic_dgCustomer.py 4
-```
 ---
 
 In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_customer_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_ddl.sql`](./spark_items/stream_customer_ddl.sql) to create our `icecatalog.icecatalog.stream_customer` table in iceberg.
