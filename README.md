@@ -625,11 +625,7 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 
 ---
 ---
----
-
-#  Automation of Workshop 1 Exercises
-
----
+#  Automation of Workshop 1 Exercises---
 ---
 ---
 
