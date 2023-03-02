@@ -678,7 +678,10 @@ It is capturing every change to our Postresql database including:
 If you recall, in an early exercise we ran some Spark code that grabbed these same change records pushed to a Redpanda topic from the Postgresql database (with Kafka Connect) but we had to write a significant amount of code for each table to achieve only half of the goal.  The Debezium Server is a much cleaner approach.   It is worth noting that signficant work is being developed by the open source community to bring this same functionality to `Kafka Connect`.  I expect to see lots of options soon.
 
 ---
-
+---
+##  Debezium Server Exercises:
+---
+---
 
 
 #### Query the Iceberg catalog for list of current tables:
