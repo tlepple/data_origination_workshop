@@ -551,6 +551,7 @@ As you can see, this message contains the values of the record `before` and `aft
 ---
 ---
 
+#### Explore Iceberg with Spark
 
 
 ---
