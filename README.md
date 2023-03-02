@@ -579,7 +579,7 @@ In this shell script  [`stream_customer_event_history_ddl_script.sh`](./spark_it
 ```
 ---
 
-In this spark streaming job  [`spark_from_dbz_customer_2_iceberg.py`](./datagen/spark_from_dbz_customer_2_iceberg.py) we will consume our messages loaded into topic `pg_datagen2panda.datagen.customer` from the `kafka_connect` processor and append them into the `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.  Spark Streaming does not have the ability to merge this data directly into our iceberg table yet.  This feature should become available soon.   In the interim we will have to create a seperate batch job to apply them.  In an upcoming section we will demonstrate a better solution that will merge this information and simplify the ammount of code needed to accomplish this task. This specific job will only append the activity to our table.
+In this spark streaming job  [`spark_from_dbz_customer_2_iceberg.py`](./datagen/spark_from_dbz_customer_2_iceberg.py) we will consume our messages loaded into topic `pg_datagen2panda.datagen.customer` from the `kafka_connect` processor and append them into the `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.  Spark Streaming does not have the ability to merge this data directly into our iceberg table yet.  This feature should become available soon.   In the interim, we will have to create a seperate batch job to apply them.  In an upcoming section we will demonstrate a better solution that will merge this information and simplify the ammount of code needed to accomplish this task. This specific job will only append the activity to our table.
 
 ```
 . spark-submit ~/datagen/spark_from_dbz_customer_2_iceberg.py
