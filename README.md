@@ -781,7 +781,7 @@ python3 pg_upsert_dg.py 12 5
 
 #### Review New & Updated Records
 
-* Query our updated Data Lake table and review the `inserts` and `updates` from the running Debezium Server service.
+* Query our updated Data Lake table and review the `inserts` and `updates` applied from the running Debezium Server service.
 
 ```
 cd /opt/spark/sql
