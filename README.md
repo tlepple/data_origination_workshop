@@ -819,13 +819,13 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 
 Integrating a database using Kafka Connect (via Debezium plugins) to stream data to a system like Red Panda can have several benefits:
 
-  1.  **Real-time data streaming:** The integration provides a real-time stream of data from the SQL database to Red Panda, making it easier to analyze and process data in real-time.
+  1.  **Real-time data streaming:** The integration provides a real-time stream of data from the SQL database to Red Panda and our Iceberg Data Lake, making it easier to analyze and process data in real-time.
 
-  2.  **Scalability:** Kafka Connect can handle high volume and velocity of data, allowing for scalability as the data grows.
+  2.  **Scalability:** Kafka Connect or the Debezium Server can handle high volume and velocity of data, allowing for scalability as the data grows.
 
-  3.  **Ease of Use:** Kafka Connect simplifies the process of integrating the SQL database with Red Panda, making it easier for developers to set up and maintain.
+  3.  **Ease of Use:** Kafka Connect & Debezizum Server simplifies the process of integrating the SQL database with Red Panda, making it easier for developers to set up and maintain.  
 
-  4.  **Improved data consistency:** The integration helps ensure data consistency by providing a single source of truth for data being streamed to Red Panda or any other downstream consumer.
+  4.  **Improved data consistency:** The integration helps ensure data consistency by providing a single source of truth for data being streamed to Red Panda or any other downstream consumer like our Iceberg Data Lake.
 
 However, the integration may also have challenges such as data compatibility, security, and performance. It is important to thoroughly assess the requirements and constraints before implementing the integration.
 
