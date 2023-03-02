@@ -838,7 +838,7 @@ If you have made it this far, I want to thank you for spending your time reviewi
 
 ####  Extra Credit
 
-* Interest in exploring the underlying PostgreSQL Database:
+* Interested in exploring the underlying PostgreSQL Database?
 [Explore Postgresql Database](./explore_postgresql.md)
 
 ---
