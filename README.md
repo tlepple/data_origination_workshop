@@ -665,6 +665,18 @@ Debezium Server can be deployed on-premises or in the cloud, and it is available
 You can find more information about Debezium Server here:  [Debezium Server Website](https://debezium.io/documentation/reference/stable/operations/debezium-server.html)
 
 ---
+
+###  Observations:
+
+The use of `Debezium Server` greatly simplifies the amount of code needed to capture information in upsteam systems and automatically delivers it downstream to a destination.  It requires only a few configuration files.
+ 
+It is capturing every change to our Postresql database including:
+  * inserts, updates, delete to tables
+  * adding columns to existing tables
+  * creation of new tables
+
+If you recall, in an early exercise we ran some Spark code that grabbed these same change records pushed to Redpanda topic from the Postgresql database (with Kafka Connect) but we had to write a significant amount of code for each table to achieve only half of the goal.  The Debezium Server is a much cleaner approach.   It is worth noting that signficant work is being developed by the open source community to bring this same functionality to `Kafka Connect`.  I expect to see lots of options soon.
+
 ---
 
 
