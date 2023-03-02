@@ -801,15 +801,6 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 ---
 ---
 ---
-####  Interest in exploring the underlying PostgreSQL Database:
-
-
-[Explore Postgresql Database](./explore_postgresql.md)
-
-
----
----
----
 
 ###  Final Summary:
 
@@ -830,6 +821,14 @@ However, the integration may also have challenges such as data compatibility, se
 ---
 
 If you have made it this far, I want to thank you for spending your time reviewing the materials. Please give me a 'Star' at the top of this page if you found it useful.
+
+---
+---
+
+####  Extra Credit
+
+* Interest in exploring the underlying PostgreSQL Database:
+[Explore Postgresql Database](./explore_postgresql.md)
 
 ---
 ---
