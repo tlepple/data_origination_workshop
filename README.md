@@ -534,6 +534,8 @@ As you can see, this message contains the values of the record `before` and `aft
 
 ---
 ---
+# Integration with our Apache Iceberg Data Lake Exercises
+---
 ---
 
 #### Load Data to Iceberg with Spark
