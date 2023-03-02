@@ -3,6 +3,7 @@
 ---
 
 ####  Access the `datagen` database with these credentials:
+---
   *  user     --> `datagen` 
   *  Password --> `supersecret1`
    
@@ -15,6 +16,7 @@
 ---
 
 ####  Access the `icecatalog` database with these credentials:
+---
   *  user     --> `icecatalog` 
   *  Password --> `supersecret1`
     
