@@ -828,7 +828,7 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 ---
 ---
 
-###  SQL GUI client access to the PostgreSQL database can be explored using `Adminer` that is installed
+###  (WIP) SQL GUI client access to the PostgreSQL database can be explored using `Adminer` that is installed
 
 *  From a browser navigate to: `http://<your ip address>/adminer` - user --> `datagen` with a pwd of --> `supersecret1`
 
