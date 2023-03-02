@@ -627,7 +627,7 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 ---
 ---
 
-#  Automation of Workshop 1 Exercises:  
+#  Automation of Workshop 1 Exercises
 
 *  Please skip these 2 commands if you completed them by hand in the earlier reference to Workshop 1.  They were included again to add additional data to our applications for use with the `Debezium Server` in the next section.
 
