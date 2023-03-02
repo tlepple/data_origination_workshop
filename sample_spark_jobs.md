@@ -24,3 +24,6 @@ python3 ~/datagen/comsume_topic_dgCustomer.py 4
 ```
 
 Click here to return to the workshop:  [`Workshop 2 Exercises`](./README.md/#explore-iceberg-with-spark).
+
+Automation of Workshop 1 Exercises
+[`Workshop 2 Exercises`](./README.md/#automation-of-workshop-1-excercises)
