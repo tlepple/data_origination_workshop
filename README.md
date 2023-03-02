@@ -50,6 +50,7 @@ The setup script will build and install our `Data Integration Platform` onto a s
 ### Create OS User `Datagen` 
 
 *  This user account will be the owner of all the objects that get installed
+*  Security is not in place for any of this workshop.
 
 ```
 ##########################################################################################
