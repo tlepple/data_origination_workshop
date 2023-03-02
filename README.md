@@ -804,7 +804,7 @@ Time taken: 0.318 seconds, Fetched 7 row(s)
 ####  Interest in exploring the underlying PostgreSQL Database:
 
 
-[Explore](./explore_postgresql.md)
+[Explore Postgresql Database](./explore_postgresql.md)
 
 
 ---
