@@ -14,7 +14,7 @@ Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezi
 ---
 
 
-# The Journey to Apache Iceberg with Red Panda & Debezium (WIP)
+# The Journey to Apache Iceberg with Red Panda & Debezium
 ---
 ---
 
