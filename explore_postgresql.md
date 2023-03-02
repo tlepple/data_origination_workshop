@@ -8,7 +8,7 @@
   *  
 *  From a browser navigate to: `http://<your ip address>/adminer` 
 
-##### `Datagen` database:
+##### `Datagen` database login screen:
 
 ![](./images/adminer_login_screen.png)
 
@@ -18,7 +18,7 @@
   *  
 *  From a browser navigate to: `http://<your ip address>/adminer` 
 
-##### `Datagen` database:
+##### `icecatalog` database login screen:
 
 ![](./images/adminer_login_screen_icecatalog.png)
 
