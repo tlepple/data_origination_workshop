@@ -838,8 +838,8 @@ If you have made it this far, I want to thank you for spending your time reviewi
 
 ####  Extra Credit
 
-* Interested in exploring the underlying PostgreSQL Database?
-[Explore Postgresql Database](./explore_postgresql.md)
+* Interested in exploring the underlying PostgreSQL Databases for `datagen` or the `Iceberg Catalog`?
+[Explore Databases in Postgresql](./explore_postgresql.md)
 
 ---
 ---
