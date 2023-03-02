@@ -839,7 +839,7 @@ If you have made it this far, I want to thank you for spending your time reviewi
 ####  Extra Credit
 
 * Interested in exploring the underlying PostgreSQL Databases for `datagen` or the database that hosts the `Iceberg Catalog`?
-[Explore Databases in Postgresql](./explore_postgresql.md)
+[Link to Explore Databases in Postgresql](./explore_postgresql.md)
 
 ---
 ---
