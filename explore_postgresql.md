@@ -5,3 +5,8 @@
 ##### Sample website:
 
 ![](./images/adminer_login_screen.png)
+
+
+---
+---
+Click here to return to main page:  [`Workshop 2 Exercises`](./README.md/#extra-credit).
