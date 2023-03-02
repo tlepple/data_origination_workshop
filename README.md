@@ -46,7 +46,10 @@ The setup script will build and install our `Data Integration Platform` onto a s
  * Instance Specs: (min 4 core w/ 16 GB ram & 30 GB of disk) -- add more RAM if you have it to spare.
 
 ---
-### Create user datagen
+### Create OS User `Datagen` 
+
+*  This user account will be the owner of all the objects that get installed
+
 ```
 ##########################################################################################
 #  create an osuser datagen and add to sudo file
