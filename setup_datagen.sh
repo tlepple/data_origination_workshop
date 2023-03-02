@@ -11,10 +11,15 @@ LOGPATH=${HOME}/data_origination_workshop/logs
 OUTPUTLOG=${LOGPATH}/logouput_`date +%d_%m_%y_%H.%M.%S`.log
 ERRORLOG=${LOGPATH}/logerror_`date +%d_%m_%y_%H.%M.%S`.log
 mkdir -p "$(dirname "$OUTPUTLOG")"
-# Redirect all stdout and stderr to respective files
-exec 1> >( tee -a "$OUTPUTLOG" )
-exec 2> >( tee -a "$ERRORLOG" )
+echo 
 
+# Redirect all stdout and stderr to respective files using tee
+#exec 1> >( tee -a "$OUTPUTLOG" )
+#exec 2> >( tee -a "$ERRORLOG" )
+
+# Redirect all stdout and stderr to respective files using 'script'
+exec 1> >( script --append --log-out "$OUTPUTLOG" )
+exec 2> >( script --append --log-out "$ERRORLOG" )
 
 #  start a timer:
 OVERALL_START="$(date +%s)"
