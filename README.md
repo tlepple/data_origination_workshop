@@ -550,7 +550,7 @@ In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_cus
 ```
 ---
 
-In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/consume_panda_2_iceberg_customer.py) we will consume our messages loaded into topic `dgCustomer` with our data generator and append them into our `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.
+In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/consume_panda_2_iceberg_customer.py) we will consume our messages loaded into topic `dgCustomer` with our data generator and append them into our `icecatalog.icecatalog.stream_custome` table in iceberg.
 
 ```
 
