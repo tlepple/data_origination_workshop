@@ -619,7 +619,7 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 
 ---
 
-####  Here are some aditional examples of Spark jobs that may be of interest:
+####  Here are some aditional exercises of Spark & Python that may be of interest:
 
 [Additional Spark Exercises](./sample_spark_jobs.md)
 
