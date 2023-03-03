@@ -829,7 +829,7 @@ Integrating a database using Kafka Connect (via Debezium plugins) to stream data
 
   2.  **Scalability:** Kafka Connect or the Debezium Server can handle high volume and velocity of data, allowing for scalability as the data grows.
 
-  3.  **Ease of Use:** Kafka Connect & Debezizum Server simplifies the process of integrating the SQL database and delivering it to other destinations, making it easier for developers to set up and maintain.  
+  3.  **Ease of Use:** Kafka Connect & Debeziuum Server simplifies the process of integrating the SQL database and delivering it to other destinations, making it easier for developers to set up and maintain.  
 
   4.  **Improved data consistency:** The integration helps ensure data consistency by providing a single source of truth for data being streamed to Red Panda or any other downstream consumer like our Iceberg Data Lake.
 
