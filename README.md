@@ -2,8 +2,8 @@
 Title:  The Journey to Apache Iceberg with Red Panda & Debezium
 Author:  Tim Lepple
 Last Updated:  3.02.2023
-Comments:  This repo will setup a data integration platform to evaluate some technology.
-Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium | Minio
+Comments:  This repo will set up a data integration platform to evaluate some technology.
+Tags:  Iceberg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezium | Minio
 ---
 
 
@@ -19,11 +19,11 @@ Tags:  Icegerg | Spark | Redpanda | PostgreSQL | Kafka Connect | Python | Debezi
 ---
 
 ## Objective:
-The goal of this workshop was to evaluate [Red Panda](https://redpanda.com/) and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Red Panda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
+The goal of this workshop was to evaluate [Redpanda](https://redpanda.com/) and Kafka Connect (with the Debezium CDC plugin). Set up a data generator that streams events directly into Redpanda and also into a traditional database platform and deliver it to an [Apache Iceberg](https://iceberg.apache.org/) data lake. 
 
-I took the time to install these components manually on a traditional linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_datagen.sh`](./setup_data_origination_apps.sh). Hopefully it becomes a reference for you one day if you use any of this technology.  
+I took the time to install these components manually on a traditional Linux server and then wrote the setup script in this repo so others could try it out too. Please take the time to review that script [`setup_datagen.sh`](./setup_data_origination_apps.sh). Hopefully, it will become a reference for you one day if you use any of this technology.  
 
-In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will be installed here too). For step-by-step instruction on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details.  All of the tasks from that workshop can be run on this new server.
+In this workshop, we will integrate this data platform and stream data from here into our Apache Iceberg data lake built in a previous workshop (all of those components will be installed here too). For step-by-step instructions on working with the Iceberg components, please check out my [Apache Iceberg Workshop](https://github.com/tlepple/iceberg-intro-workshop) for more details.  All of the tasks from that workshop can be run on this new server.
 
 ---
 ---
@@ -32,7 +32,7 @@ In this workshop, we will integrate this data platform and stream data from here
 
 ---
 
-The setup script will build and install our `Data Integration Platform` onto a single Linux instance.  It installs a data generating application, a local SQL database (PostgreSQL), a Red Panda instance, a stand-alone Kafka Connect instance, a Debezium plugin for Kafka Connect, a Debezium Server, Minio, Spark and Apache Iceberg.  In addition, it will configure them all to work together.   
+The setup script will build and install our `Data Integration Platform` onto a single Linux instance.  It installs a data-generating application, a local SQL database (PostgreSQL), a Red Panda instance, a stand-alone Kafka Connect instance, a Debezium plugin for Kafka Connect, a Debezium Server, Minio, Spark and Apache Iceberg.  In addition, it will configure them all to work together.   
  
 ---
 ---
@@ -47,7 +47,7 @@ The setup script will build and install our `Data Integration Platform` onto a s
  * If you are going to test this in `AWS`, it ran smoothly for me using AMI: `ami-03a311cadf2d2a6f8` in region: `us-east-2` with a instance type of: `t3.xlarge`
 
 ---
-### Create OS User `Datagen` 
+### Create an OS User `Datagen` 
 
 *  This user account will be the owner of all the objects that get installed
 *  Security is not in place for any of this workshop.
@@ -98,7 +98,7 @@ git clone https://github.com/tlepple/data_origination_workshop.git
 ---
 ###  Workshop One Refresher:
 
-If you didn't complete my first workshop and need a primer on Iceberg, you can complete that work again in this platform by following this guide:  [Workshop 1 Exercises](./workshop1_revisit.md).   If you are already familiar with those items please proceed.   A later step has all of that workshop automated if you prefer.
+If you didn't complete my first workshop and need a primer on Iceberg, you can complete that work again on this platform by following this guide:  [Workshop 1 Exercises](./workshop1_revisit.md).   If you are already familiar with those items please proceed.   A later step has all of that workshop automated if you prefer.
 
 ---
 
@@ -110,16 +110,16 @@ Redpanda is an event streaming platform: it provides the infrastructure for stre
 
 Producers are client applications that send data to Redpanda in the form of events. Redpanda safely stores these events in sequence and organizes them into topics, which represent a replayable log of changes in the system.
 
-Consumers are client applications that subscribe to Redpanda topics to asynchronously read events. Consumers can store, process, or react to the events.
+Consumers are client applications that subscribe to Redpanda topics to asynchronously read events. Consumers can store, process, or react to events.
 
 Redpanda decouples producers from consumers to allow for asynchronous event processing, event tracking, event manipulation, and event archiving. Producers and consumers interact with Redpanda using the Apache Kafka® API.
 
 | Event-driven architecture (Redpanda)     | Message-driven architecture |
 | ----------- | ----------- |
-| Producers send events to an event processing system (Redpanda) that acknowledges receipt of the write. This guarantees that the write is durable within the system and can be read by multiple consumers.     | Producers send messages directly to each consumer. The producer must wait for acknowledgement that the consumer received the message before it can continue with its processes.       |
+| Producers send events to an event processing system (Redpanda) that acknowledges receipt of the write. This guarantees that the write is durable within the system and can be read by multiple consumers.     | Producers send messages directly to each consumer. The producer must wait for acknowledgment that the consumer received the message before it can continue with its processes.       |
 
 
-Event streaming lets you extract value out of each event by analyzing, mining, or transforming it for insights. You can:
+Event streaming lets you extract value from each event by analyzing, mining, or transforming it for insights. You can:
 
   *  Take one event and consume it in multiple ways.
   *  Replay events from the past and route them to new processes in your application.
@@ -128,7 +128,7 @@ Event streaming lets you extract value out of each event by analyzing, mining, o
 
 
 ####  Redpanda differentiators:
-Redpanda is less complex and less costly than any other commerecial mission-critical event streaming platform. It's fast, it's easy, and it keeps your data safe.
+Redpanda is less complex and less costly than any other commercial mission-critical event streaming platform. It's fast, it's easy, and it keeps your data safe.
 
   *  Redpanda is designed for maximum performance on any data streaming workload.
 
@@ -136,7 +136,7 @@ Redpanda is less complex and less costly than any other commerecial mission-crit
 
   *  Redpanda is packaged as a single binary: it doesn't rely on any external systems.
 
-  *  It's compatible with the Kafka API, so it works with the full ecosystem of tools and integrations built on Kafka. Redpanda can be deployed on bare metal, containers, or virtual machines in a data center or in the cloud. Redpanda Console also makes it easy to set up, manage, and monitor your clusters. Additionally, Tiered Storage lets you offload log segments to cloud storage in near real time, providing infinite data retention and topic recovery.
+  *  It's compatible with the Kafka API, so it works with the full ecosystem of tools and integrations built on Kafka. Redpanda can be deployed on bare metal, containers, or virtual machines in a data center or in the cloud. Redpanda Console also makes it easy to set up, manage, and monitor your clusters. Additionally, Tiered Storage lets you offload log segments to cloud storage in near real-time, providing infinite data retention and topic recovery.
 
   *  Redpanda uses the Raft consensus algorithm throughout the platform to coordinate writing data to log files and replicating that data across multiple servers.
 
@@ -218,7 +218,7 @@ rpk topic consume movie_list --num 2
 
 ##  Explore the Red Panda GUI:
   *  Open a browser and navigate to your host ip address:  `http:\\<your ip address>:8888`  This will open the Red Panda GUI.  
-  *  This is not the standard port for the Redpanda Console.   It has been modified to avaoid confilcts with other tools used in this workshop
+  *  This is not the standard port for the Redpanda Console.   It has been modified to avoid confilcts with other tools used in this workshop
 
 ---
 ---
@@ -302,7 +302,7 @@ Transaction Done.
 ---
 
 ####  Explore messages in the Red Panda Console from a browser
-  * `http:\\<your ip address>:8888`  Make sure to click the `Topics` tab in the left side of our Console Application:
+  * `http:\\<your ip address>:8888`  Make sure to click the `Topics` tab on the left side of our Console Application:
 ---
 ##### Click on the topic `dgCustomer` from the list.
 
@@ -332,7 +332,7 @@ Change Data Capture (CDC) is a database technique used to track and record chang
 
 ##### Define `Kafka Connect`:
 
-Kafka Connect is a tool for scalable and reliable data import/export between Apache Kafka and other data systems. It allows you to integrate Kafka or Red Panda with sources such as databases, key-value stores, and file systems, as well as with sinks such as data warehouses and NoSQL databases. Kafka Connect provides pre-built connectors for popular data sources, and also supports custom connectors developed by users. It uses the publish-subscribe model of Kafka to ensure that data is transported between systems in a fault-tolerant and scalable manner.
+Kafka Connect is a tool for scalable and reliable data import/export between Apache Kafka and other data systems. It allows you to integrate Kafka or Red Panda with sources such as databases, key-value stores, and file systems, as well as with sinks such as data warehouses and NoSQL databases. Kafka Connect provides pre-built connectors for popular data sources and also supports custom connectors developed by users. It uses the publish-subscribe model of Kafka to ensure that data is transported between systems in a fault-tolerant and scalable manner.
 
 ---
 
@@ -344,14 +344,14 @@ Debezium is an open-source change data capture (CDC) platform that helps to stre
 
 ##### Why use these tools together?
 
-By combining CDC with Kafa Connect (and using the Debezium plugin) we easily roll out a new system that could eliminate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. This approach requires very little configuration and will have a minimal performance impact on your legacy databases.   It will also allow you harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
+By combining CDC with Kafa Connect (and using the Debezium plugin) we easily roll out a new system that could eliminate expensive legacy solutions for extracting data from databases and replicating them to a modern `Data Lake`. This approach requires very little configuration and will have a minimal performance impact on your legacy databases.   It will also allow you to harness data in your legacy applications and implement new real-time streaming applications to gather insights that were previously very difficult and expensive to get at.
 
 ---
 ---
 
 #### Integrate PostgreSQL with Kafka Connect:
 
-In these next few exercises we will load data into a sql database and configure Kafka Connect to extract the CDC records and stream them to a new topic in Red Panda.
+In these next few exercises, we will load data into a SQL database and configure Kafka Connect to extract the CDC records and stream them to a new topic in Red Panda.
 
 ---
 ---
@@ -421,7 +421,7 @@ cat connect.properties
 bootstrap.servers=localhost:9092
 
 #Cluster level converters
-#These applies when the connectors don't define any converter
+#These apply when the connectors don't define any converter
 key.converter=org.apache.kafka.connect.json.JsonConverter
 value.converter=org.apache.kafka.connect.json.JsonConverter
 
@@ -472,7 +472,7 @@ topic.prefix=pg_datagen2panda
 ---
 ###  Start the `Kafka Connect` processor:
   *  This will start our processor and pull all the CDC records out of the PostgreSQL database for our 'customer' table and ship them to a new Redpanda topic.  
-  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the processor when it completes use the commands `<control> + c`.
+  *  This process will run and pull the messages and then sleep until new messages get written to the originating database.   To exit out of the processor when it completes, use the commands `<control> + c`.
 ---
 
 ##### Start Kafka Connect:
@@ -488,7 +488,7 @@ export CLASSPATH=/home/datagen/kafka_connect/plugins/debezium-connector-postgres
 
 #####  Expected Output:
 
-In this link you can see the expected sample output:  [`connect.output`](./sample_output/connect.output) 
+In this link, you can see the expected sample output:  [`connect.output`](./sample_output/connect.output) 
 
 
 
@@ -530,7 +530,7 @@ In this link you can see the expected sample output:  [`connect.output`](./sampl
 
 ---
 ---
-As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section we explore loading all of the data currently in our redpanda topics and deliver it into our Iceberg data lake.
+As you can see, this message contains the values of the record `before` and `after` it was inserted into our PostgreSQL database. In this next section, we explore loading all of the data currently in our Redpanda topics and delivering it into our Iceberg data lake.
 
 ---
 ---
@@ -550,7 +550,7 @@ In this shell script  [`stream_customer_ddl_script.sh`](./spark_items/stream_cus
 ```
 ---
 
-In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/consume_panda_2_iceberg_customer.py) we will consume our messages loaded into topic `dgCustomer` with our data generator and append them into our `icecatalog.icecatalog.stream_customer` table in iceberg.
+In this spark streaming job  [`consume_panda_2_iceberg_customer.py`](./datagen/consume_panda_2_iceberg_customer.py) we will consume our messages loaded into topic `dgCustomer` with our data generator and append them into our `icecatalog.icecatalog.stream_customer` table in Iceberg.
 
 ```
 
@@ -572,14 +572,14 @@ SELECT * FROM icecatalog.icecatalog.stream_customer;
 ```
 ---
 
-In this shell script  [`stream_customer_event_history_ddl_script.sh`](./spark_items/stream_customer_event_history_ddl_script.sh) we will launch a `spark-sql` cli and run the this DDL code [`stream_customer_event_history_ddl.sql`](./spark_items/stream_customer_event_history_ddl.sql) to create our `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.
+In this shell script  [`stream_customer_event_history_ddl_script.sh`](./spark_items/stream_customer_event_history_ddl_script.sh) we will launch a `spark-sql` cli and run the DDL code [`stream_customer_event_history_ddl.sql`](./spark_items/stream_customer_event_history_ddl.sql) to create our `icecatalog.icecatalog.stream_customer_event_history` table in Iceberg.
 
 ```
 . /opt/spark/sql/stream_customer_event_history_ddl_script.sh
 ```
 ---
 
-In this spark streaming job  [`spark_from_dbz_customer_2_iceberg.py`](./datagen/spark_from_dbz_customer_2_iceberg.py) we will consume our messages loaded into topic `pg_datagen2panda.datagen.customer` from the `kafka_connect` processor and append them into the `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.  Spark Streaming does not have the ability to merge this data directly into our iceberg table yet.  This feature should become available soon.   In the interim, we will have to create a seperate batch job to apply them.  In an upcoming section we will demonstrate a better solution that will merge this information and simplify the amount of code needed to accomplish this task. This specific job will only append the activity to our table.
+In this spark streaming job  [`spark_from_dbz_customer_2_iceberg.py`](./datagen/spark_from_dbz_customer_2_iceberg.py) we will consume our messages loaded into topic `pg_datagen2panda.datagen.customer` from the `kafka_connect` processor and append them into the `icecatalog.icecatalog.stream_customer_event_history` table in iceberg.  Spark Streaming does not have the ability to merge this data directly into our Iceberg table yet.  This feature should become available soon.   In the interim, we will have to create a separate batch job to apply them.  In an upcoming section, we will demonstrate a better solution that will merge this information and simplify the amount of code needed to accomplish this task. This specific job will only append the activity to our table.
 
 ```
 . spark-submit ~/datagen/spark_from_dbz_customer_2_iceberg.py
@@ -606,7 +606,7 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 
 ---
 
-####  Here are some aditional exercises of Spark & Python that may be of interest:
+####  Here are some additional exercises of Spark & Python that may be of interest:
 
 [Additional Spark Exercises](./sample_spark_jobs.md)
 
@@ -619,7 +619,7 @@ SELECT * FROM icecatalog.icecatalog.stream_customer_event_history;
 
 *  Please skip these 2 commands if you completed them by hand in the earlier reference to Workshop 1.  They were included again to add additional data to our applications for use with the `Debezium Server` in the next section.
 
-Let's load all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the this DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
+Let's load all the customer data from workshop 1 in one simple `spark-sql` shell command.  In this shell script  [`iceberg_workshop_sql_items.sh`](./spark_items/iceberg_workshop_sql_items.sh) we will launch a `spark-sql` cli and run the is DDL code [`all_workshop1_items.sql`](./spark_items/all_workshop1_items.sql) to load our `icecatalog.icecatalog.customer` table in iceberg.
 
 ```
 . /opt/spark/sql/iceberg_workshop_sql_items.sh
@@ -654,14 +654,14 @@ You can find more information about Debezium Server here:  [Debezium Server Webs
 
 ###  Debezium Server Observations:
 
-The use of `Debezium Server` greatly simplifies the amount of code needed to capture information in upsteam systems and automatically delivers it downstream to a destination.  It requires only a few configuration files.
+The use of `Debezium Server` greatly simplifies the amount of code needed to capture information in upstream systems and automatically delivers it downstream to a destination.  It requires only a few configuration files.
  
-It is capturing every change to our Postresql database including:
+It is capturing every change to our PostresSQL database including:
   * inserts, updates, delete to tables
   * adding columns to existing tables
   * creation of new tables
 
-If you recall, in an early exercise we ran some Spark code that grabbed these same change records and pushed them to a Redpanda topic from the Postgresql database (with Kafka Connect). We had to write a significant amount of code for each table to achieve only half of the goal.  The Debezium Server is a much cleaner approach.   It is worth noting that signficant work is being developed by the open source community to bring this same functionality to `Kafka Connect`.  I expect to see lots of options soon.
+If you recall, in an early exercise we ran some Spark code that grabbed these same change records and pushed them to a Redpanda topic from the Postgresql database (with Kafka Connect). We had to write a significant amount of code for each table to achieve only half of the goal.  The Debezium Server is a much cleaner approach.   It is worth noting that significant work is being developed by the open-source community to bring this same functionality to `Kafka Connect`.  I expect to see lots of options soon.
 
 ---
 ---
@@ -675,7 +675,7 @@ If you recall, in an early exercise we ran some Spark code that grabbed these sa
 ---
 
 
-#### Query the Iceberg catalog for list of current tables:
+#### Query the Iceberg catalog for a list of current tables:
 
 ```
 #  start the spark-sql cli in interactive mode:
