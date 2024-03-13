@@ -538,7 +538,7 @@ sleep 10
 #  -o $HOME/minio-binaries/mc
 
 mkdir -p ~/minio-binaries
-cp ~/data_origination_workshop/downloads/$MINIO_FILE ~/minio-binaries
+cp ~/data_origination_workshop/downloads/$MINIO_FILE ~/minio-binaries/mc
 
 chmod +x $HOME/minio-binaries/mc
 export PATH=$PATH:$HOME/minio-binaries/
