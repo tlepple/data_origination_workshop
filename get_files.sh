@@ -55,7 +55,8 @@ PSQL_JDBC_JAR=https://jdbc.postgresql.org/download/postgresql-42.5.1.jar; echo "
 ##########################################################################################
 # MINIO ITEMS:
 ##########################################################################################
-MINIO_CLI_FILE=https://dl.min.io/client/mc/release/linux-amd64/mc; echo "MINIO_FILE=${MINIO_CLI_FILE##*/}" >> ~/file_variables.output
+#MINIO_CLI_FILE=https://dl.min.io/client/mc/release/linux-amd64/mc; echo "MINIO_FILE=${MINIO_CLI_FILE##*/}" >> ~/file_variables.output
+MINIO_CLI_FILE=https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-01-11T03-14-16Z; echo "MINIO_FILE=${MINIO_CLI_FILE##*/}" >> ~/file_variables.output
 MINIO_PACKAGE=https://dl.min.io/server/minio/release/linux-amd64/archive/minio_20230112020616.0.0_amd64.deb; echo "MINIO_PACKAGE_FILE=${MINIO_PACKAGE##*/}" >> ~/file_variables.output
 
 ##########################################################################################
