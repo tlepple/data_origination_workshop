@@ -723,7 +723,8 @@ echo
 # install debezium server items
 #########################################################################################
 cd ~
-git clone https://github.com/memiiso/debezium-server-iceberg.git
+# git clone https://github.com/memiiso/debezium-server-iceberg.git
+git clone -b 0.3 https://github.com/memiiso/debezium-server-iceberg.git
 cd debezium-server-iceberg
 
 
