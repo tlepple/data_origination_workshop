@@ -557,10 +557,10 @@ mc admin user add local icebergadmin supersecret1!
 ##########################################################################################
 #  need to add the 'readwrite' minio policy to this new user: (these are just like aws policies)
 ##########################################################################################
-# mc admin policy set local readwrite user=icebergadmin
+mc admin policy set local readwrite user=icebergadmin
 # line above was deprecated this week... 04.11.2023
 
-mc admin policy attach local readwrite --user icebergadmin
+#mc admin policy attach local readwrite --user icebergadmin
 
 ##########################################################################################
 #  create a new alias for this admin user:
