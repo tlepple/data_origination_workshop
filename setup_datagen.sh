@@ -724,8 +724,8 @@ echo
 #########################################################################################
 cd ~
 # git clone https://github.com/memiiso/debezium-server-iceberg.git
-git clone -b 0.3 https://github.com/memiiso/debezium-server-iceberg.git
-cd debezium-server-iceberg
+# git clone -b 0.3 https://github.com/memiiso/debezium-server-iceberg.git
+# cd debezium-server-iceberg
 
 
 echo
@@ -733,7 +733,7 @@ echo "---------------------------------------------------------------------"
 echo "starting maven build of Debezium Server..."
 echo "---------------------------------------------------------------------"
 echo
-mvn -Passembly -Dmaven.test.skip package
+# mvn -Passembly -Dmaven.test.skip package
 
 
 echo
@@ -747,7 +747,10 @@ echo "---------------------------------------------------------------------"
 echo "configure Debezium Server items..."
 echo "---------------------------------------------------------------------"
 echo
-cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
+# cp ~/debezium-server-iceberg/debezium-server-iceberg-dist/target/debezium-server-iceberg-dist-0.3.0-SNAPSHOT.zip ~
+
+# pull a compiled version 
+wget https://github.com/memiiso/debezium-server-iceberg/releases/download/0.3.0.Final/debezium-server-iceberg-dist-0.3.0.Final.zip
 
 unzip ~/debezium-server-iceberg-dist*.zip -d ~/appdist
 
