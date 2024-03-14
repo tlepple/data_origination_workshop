@@ -36,7 +36,8 @@ AWS_BUNDLE_JAR=https://repo1.maven.org/maven2/software/amazon/awssdk/bundle/2.19
 ##########################################################################################
 #  KAKFA CONNECT ITEMS:
 ##########################################################################################
-KCONNECT_FILE=https://dlcdn.apache.org/kafka/3.3.2/kafka_2.13-3.3.2.tgz; echo "KAFKA_CONNECT_FILE=${KCONNECT_FILE##*/}" >> ~/file_variables.output
+#KCONNECT_FILE=https://dlcdn.apache.org/kafka/3.3.2/kafka_2.13-3.3.2.tgz; echo "KAFKA_CONNECT_FILE=${KCONNECT_FILE##*/}" >> ~/file_variables.output
+KCONNECT_FILE=https://archive.apache.org/dist/kafka//3.3.2/kafka_2.13-3.3.2.tgz; echo "KAFKA_CONNECT_FILE=${KCONNECT_FILE##*/}" >> ~/file_variables.output
 KCONNECT_JDBC_JAR=https://jdbc.postgresql.org/download/postgresql-42.5.1.jar; echo "KCONNECT_JDBC_FILE=${KCONNECT_JDBC_JAR##*/}" >> ~/file_variables.output
 DBZ_CONNECT_FILE=https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/2.1.1.Final/debezium-connector-postgres-2.1.1.Final-plugin.tar.gz; echo "DEBEZIUM_CONNECT_FILE=${DBZ_CONNECT_FILE##*/}" >> ~/file_variables.output
 
